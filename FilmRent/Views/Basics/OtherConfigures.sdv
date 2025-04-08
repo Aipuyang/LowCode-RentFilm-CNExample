@@ -1,0 +1,1016 @@
+﻿{
+  "id": "page_8dd55ad3a325a1f",
+  "widget": "page",
+  "props": {
+    "ref": "page_8dd55ad3a325a1f",
+    "name": "OtherConfigures",
+    "title": "OtherConfigures"
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "tabs_36a4d9f3b4e71a0",
+      "widget": "tabs",
+      "props": {
+        "style": {},
+        "ref": "tabs_dab66283011508e",
+        "useLeftSlot": false,
+        "tabPosition": "left",
+        "activeKey": "$(self)[tabPane_1b778ccfc93a87b].key"
+      },
+      "children": [
+        {
+          "id": "tabPane_1b778ccfc93a87b",
+          "widget": "tabPane",
+          "props": {
+            "style": {},
+            "ref": "tabPane_e05d211c7fa2863",
+            "key": "8af88c433e199d9",
+            "tab": "语言"
+          },
+          "children": [
+            {
+              "id": "tableContainer_9f90dc435ff3f4c",
+              "widget": "tableContainer",
+              "props": {
+                "style": {},
+                "ref": "tableContainer_76e8c3f9a96f650",
+                "columns": [
+                  {
+                    "id": "tableColumn_0b07dc16c4084ecf8e36a9f2af3f2040",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_0b07dc16c4084ecf8e36a9f2af3f2040",
+                      "title": "LanguageId",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_3536c67360c732f].[assign_param_18f791db7925855].[00f1e2ed2ce948baa7e3c2ba37dbe21c]"
+                      },
+                      "hide": true
+                    },
+                    "children": [
+                      {
+                        "id": "text_b4a316e5024447769e2d55da0fb6f372",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_b4a316e5024447769e2d55da0fb6f372",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_3536c67360c732f].[assign_param_18f791db7925855].[00f1e2ed2ce948baa7e3c2ba37dbe21c]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_87f0d69ed4724034813e2a990088c049",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_87f0d69ed4724034813e2a990088c049",
+                      "title": "Name",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_3536c67360c732f].[assign_param_18f791db7925855].[a817c986d0ff452fa2fa9aae43b0727a]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "text_57ec362b90bc4da484ce6d79f2bc7040",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_57ec362b90bc4da484ce6d79f2bc7040",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_3536c67360c732f].[assign_param_18f791db7925855].[a817c986d0ff452fa2fa9aae43b0727a]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_b46b6fdb00f54d9bbcfde0a073a46ee7",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_b46b6fdb00f54d9bbcfde0a073a46ee7",
+                      "title": "LastUpdate",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_3536c67360c732f].[assign_param_18f791db7925855].[01306a96a0c44aa2afd89948f82efcfb]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "text_298038a03453471e9ba2a8acfc597d60",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_298038a03453471e9ba2a8acfc597d60",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_3536c67360c732f].[assign_param_18f791db7925855].[01306a96a0c44aa2afd89948f82efcfb]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_39e1e4fccfa265f",
+                    "widget": "tableColumn",
+                    "props": {
+                      "ref": "tableColumn_39e1e4fccfa265f",
+                      "dataIndex": "operation",
+                      "fixed": "right",
+                      "title": "操作列",
+                      "width": 180
+                    },
+                    "children": [
+                      {
+                        "id": "space_e6d60fbe2f42a5b",
+                        "widget": "space",
+                        "props": {
+                          "ref": "space_e6d60fbe2f42a5b",
+                          "size": 0
+                        },
+                        "children": [
+                          {
+                            "id": "popConfirm_c6858d18c97f073",
+                            "widget": "popConfirm",
+                            "props": {
+                              "style": {},
+                              "ref": "popConfirm_4ca20bab9a055a6",
+                              "icon": "antdv://ExclamationCircleOutlined",
+                              "events": {
+                                "confirm": {
+                                  "id": "event_9ec7805edeca440",
+                                  "widget": "event",
+                                  "children": [
+                                    {
+                                      "widget": "action_api",
+                                      "id": "action_bdea8c15d389609",
+                                      "props": {
+                                        "target": "&(ref)b433edef6e1d4427bf36b704464b4d82.[e743c54648cc4aa6a60e2657505072d3_del_func]",
+                                        "params": [
+                                          {
+                                            "id": "assign_param_09020f4cb14fb79",
+                                            "widget": "assign_param",
+                                            "props": {
+                                              "name": {
+                                                "kind": "Parameter",
+                                                "value": "&(self)[tableContainer_9f90dc435ff3f4c].columns.[popConfirm_c6858d18c97f073].events.confirm.[action_bdea8c15d389609].target.params.[e743c54648cc4aa6a60e2657505072d3_del_params_1]"
+                                              },
+                                              "value": {
+                                                "kind": "Members",
+                                                "value": "&(self)[tableContainer_9f90dc435ff3f4c].currentRow.[00f1e2ed2ce948baa7e3c2ba37dbe21c]"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "widget": "action_component",
+                                      "id": "action_3ef35ba220eb2ce",
+                                      "props": {
+                                        "target": "&(self)[tableContainer_9f90dc435ff3f4c].loadData"
+                                      }
+                                    }
+                                  ],
+                                  "props": {}
+                                }
+                              },
+                              "title": "删除当前数据",
+                              "description": "确定要删除当前数据吗？",
+                              "open": false
+                            },
+                            "children": [
+                              {
+                                "id": "button_a02167e7936486f",
+                                "widget": "button",
+                                "props": {
+                                  "style": {},
+                                  "ref": "button_3043a58cd9ea308",
+                                  "label": "删除",
+                                  "type": "link",
+                                  "size": "small",
+                                  "danger": true
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "search": {
+                  "col": {
+                    "width": {
+                      "kind": "span",
+                      "value": 8
+                    },
+                    "offset": 0
+                  },
+                  "showExpand": false,
+                  "displayRow": 1,
+                  "filter": [],
+                  "hideForm": true,
+                  "hideSearchActions": false
+                },
+                "dataSource": {
+                  "id": "function_d99fc40a05252d2",
+                  "widget": "function",
+                  "children": [
+                    {
+                      "id": "action_50ce3ba235db281",
+                      "widget": "action_api",
+                      "props": {
+                        "target": "&(ref)b433edef6e1d4427bf36b704464b4d82.[e743c54648cc4aa6a60e2657505072d3_page_func]",
+                        "params": [
+                          {
+                            "id": "assign_param_45256f0d06fda60",
+                            "widget": "assign_param",
+                            "props": {
+                              "name": {
+                                "kind": "Parameter",
+                                "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_50ce3ba235db281].target.params.[e743c54648cc4aa6a60e2657505072d3_page_params]"
+                              }
+                            },
+                            "children": [
+                              {
+                                "id": "assign_param_37ca85e8c9cb781",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_50ce3ba235db281].target.params.[e743c54648cc4aa6a60e2657505072d3_page_params].[62475dd3f2df4135a8d31830e5aab9ed]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": "&(self)[tableContainer_9f90dc435ff3f4c].pageNum"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "assign_param_2e3c9b5a6351f04",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_50ce3ba235db281].target.params.[e743c54648cc4aa6a60e2657505072d3_page_params].[6162f2cbdcea40ee9f5845791dd9359c]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": "&(self)[tableContainer_9f90dc435ff3f4c].pageSize"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "assign_param_f33054ac9ba5a4d",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_50ce3ba235db281].target.params.[e743c54648cc4aa6a60e2657505072d3_page_params].[2794f34490ac4aca97817a886c184ada]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": ""
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "action_3536c67360c732f",
+                      "widget": "action_adapter",
+                      "children": [
+                        {
+                          "id": "assign_param_18f791db7925855",
+                          "widget": "assign_param",
+                          "props": {
+                            "name": {
+                              "kind": "Members",
+                              "value": "&(self)[tableContainer_9f90dc435ff3f4c].data"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_50ce3ba235db281].target.result.[4be4523a12d6413f8bacb065db44fb22]"
+                            }
+                          }
+                        },
+                        {
+                          "id": "assign_param_ee90348c5bf77a4",
+                          "widget": "assign_param",
+                          "props": {
+                            "name": {
+                              "kind": "Members",
+                              "value": "&(self)[tableContainer_9f90dc435ff3f4c].total"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_50ce3ba235db281].target.result.[b04e0619191b412baf363228d2347a6a]"
+                            }
+                          }
+                        }
+                      ],
+                      "props": {}
+                    }
+                  ],
+                  "props": {}
+                },
+                "rowKey": {
+                  "kind": "Field",
+                  "value": "&(self)[tableContainer_9f90dc435ff3f4c].dataSource.[action_3536c67360c732f].[assign_param_18f791db7925855].[00f1e2ed2ce948baa7e3c2ba37dbe21c]"
+                },
+                "title": "电影语言",
+                "extra": [
+                  {
+                    "id": "button_7407f479cd5e12c",
+                    "widget": "button",
+                    "props": {
+                      "style": {},
+                      "ref": "button_41cbc265ecd84b9",
+                      "icon": "antdv://RotateLeftOutlined",
+                      "label": "",
+                      "size": "small",
+                      "events": {
+                        "onClick": {
+                          "id": "event_5c1e89818635c02",
+                          "widget": "event",
+                          "children": [
+                            {
+                              "widget": "action_component",
+                              "id": "action_910a2622c0b1f39",
+                              "props": {
+                                "target": "&(self)[tableContainer_9f90dc435ff3f4c].loadData"
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      },
+                      "type": "default",
+                      "tooltipText": "刷新"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "button_155f7f5bdae89bd",
+                    "widget": "button",
+                    "props": {
+                      "style": {},
+                      "ref": "button_2b05edc918469ae",
+                      "label": "",
+                      "icon": "antdv://PlusOutlined",
+                      "size": "small",
+                      "type": "primary",
+                      "events": {
+                        "onClick": {
+                          "id": "event_66ca956d1d6858f",
+                          "widget": "event",
+                          "children": [
+                            {
+                              "widget": "action_component",
+                              "id": "action_501f7f676791e99",
+                              "props": {
+                                "target": "&(self)[modal_80d0411201ba1f8].onOpen"
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      }
+                    },
+                    "children": []
+                  }
+                ],
+                "model": {
+                  "data": "$(ref)Languagee743c54648cc4aa6a60e2657505072d3.[e743c54648cc4aa6a60e2657505072d3]"
+                }
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "tabPane_31620682c88e0d4",
+          "widget": "tabPane",
+          "props": {
+            "style": {},
+            "ref": "tabPane_4a651c0edc47431",
+            "key": "263314b4bd4d690",
+            "tab": "分类"
+          },
+          "children": [
+            {
+              "id": "tableContainer_b81bc4b483b4908",
+              "widget": "tableContainer",
+              "props": {
+                "style": {},
+                "ref": "tableContainer_a5d99f896037a20",
+                "columns": [
+                  {
+                    "id": "tableColumn_b32b27f345be47818765c42f2337176e",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_b32b27f345be47818765c42f2337176e",
+                      "title": "CategoryId",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_b25013430ca65c5].[assign_param_237a6a472648c8b].[0e43a01cbe0949de8e7e0eb6f56095c2]"
+                      },
+                      "hide": true
+                    },
+                    "children": [
+                      {
+                        "id": "text_af89de621f7a4f3e81187007b22706a0",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_af89de621f7a4f3e81187007b22706a0",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_b25013430ca65c5].[assign_param_237a6a472648c8b].[0e43a01cbe0949de8e7e0eb6f56095c2]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_00340d55f9a141e986ad76fecacc780c",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_00340d55f9a141e986ad76fecacc780c",
+                      "title": "Name",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_b25013430ca65c5].[assign_param_237a6a472648c8b].[a66a9780db28404c8171cf9f798fee29]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "text_4eb06eacb8fe477a963a8c44486c209a",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_4eb06eacb8fe477a963a8c44486c209a",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_b25013430ca65c5].[assign_param_237a6a472648c8b].[a66a9780db28404c8171cf9f798fee29]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_f14836ae03e0439ca122901359bc51c8",
+                    "widget": "tableColumn",
+                    "props": {
+                      "style": {},
+                      "ref": "tableColumn_f14836ae03e0439ca122901359bc51c8",
+                      "title": "LastUpdate",
+                      "dataIndex": {
+                        "kind": "Field",
+                        "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_b25013430ca65c5].[assign_param_237a6a472648c8b].[77c16b0e0033437187900adf72954493]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "text_3aaadf62be5e4bd19355043c5e6b8144",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_3aaadf62be5e4bd19355043c5e6b8144",
+                          "textType": {
+                            "custom": false,
+                            "type": "default"
+                          },
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_b25013430ca65c5].[assign_param_237a6a472648c8b].[77c16b0e0033437187900adf72954493]"
+                          }
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  {
+                    "id": "tableColumn_9e5aaaf791ccd16",
+                    "widget": "tableColumn",
+                    "props": {
+                      "ref": "tableColumn_9e5aaaf791ccd16",
+                      "dataIndex": "operation",
+                      "fixed": "right",
+                      "title": "操作列",
+                      "width": 180
+                    },
+                    "children": [
+                      {
+                        "id": "space_dd00018b612b1b9",
+                        "widget": "space",
+                        "props": {
+                          "ref": "space_dd00018b612b1b9",
+                          "size": 0
+                        },
+                        "children": [
+                          {
+                            "id": "popConfirm_f03d8d25e699e8f",
+                            "widget": "popConfirm",
+                            "props": {
+                              "style": {},
+                              "ref": "popConfirm_58d7dd6a2b5871c",
+                              "icon": "antdv://ExclamationCircleOutlined",
+                              "events": {
+                                "confirm": {
+                                  "id": "event_4d6c6ead515393c",
+                                  "widget": "event",
+                                  "children": [
+                                    {
+                                      "widget": "action_api",
+                                      "id": "action_d2a4efe76af78e6",
+                                      "props": {
+                                        "target": "&(ref)77135d7aea0a49fdadcd6e6162b99a58.[aed740da02474d42a326ed73292981e6_del_func]",
+                                        "params": [
+                                          {
+                                            "id": "assign_param_5c2d5923833ac79",
+                                            "widget": "assign_param",
+                                            "props": {
+                                              "name": {
+                                                "kind": "Parameter",
+                                                "value": "&(self)[tableContainer_b81bc4b483b4908].columns.[popConfirm_f03d8d25e699e8f].events.confirm.[action_d2a4efe76af78e6].target.params.[aed740da02474d42a326ed73292981e6_del_params_1]"
+                                              },
+                                              "value": {
+                                                "kind": "Members",
+                                                "value": "&(self)[tableContainer_b81bc4b483b4908].currentRow.[0e43a01cbe0949de8e7e0eb6f56095c2]"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    {
+                                      "widget": "action_component",
+                                      "id": "action_4d128f595525823",
+                                      "props": {
+                                        "target": "&(self)[tableContainer_b81bc4b483b4908].loadData"
+                                      }
+                                    }
+                                  ],
+                                  "props": {}
+                                }
+                              },
+                              "title": "删除当前数据",
+                              "description": "确认要删除当前数据吗？",
+                              "open": false
+                            },
+                            "children": [
+                              {
+                                "id": "button_69fcf4e33dbd623",
+                                "widget": "button",
+                                "props": {
+                                  "style": {},
+                                  "ref": "button_bda333b6d4ed311",
+                                  "label": "删除",
+                                  "type": "link",
+                                  "size": "small",
+                                  "danger": true
+                                },
+                                "children": []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "search": {
+                  "col": {
+                    "width": {
+                      "kind": "span",
+                      "value": 8
+                    },
+                    "offset": 0
+                  },
+                  "showExpand": false,
+                  "displayRow": 1,
+                  "filter": [],
+                  "hideForm": true,
+                  "hideSearchActions": false
+                },
+                "model": {
+                  "data": "&(ref)Languagee743c54648cc4aa6a60e2657505072d3.[aed740da02474d42a326ed73292981e6]"
+                },
+                "dataSource": {
+                  "id": "function_79c174e576f2839",
+                  "widget": "function",
+                  "children": [
+                    {
+                      "id": "action_8b4eb72136bbef5",
+                      "widget": "action_api",
+                      "props": {
+                        "target": "&(ref)77135d7aea0a49fdadcd6e6162b99a58.[aed740da02474d42a326ed73292981e6_page_func]",
+                        "params": [
+                          {
+                            "id": "assign_param_e0b105157c40a58",
+                            "widget": "assign_param",
+                            "props": {
+                              "name": {
+                                "kind": "Parameter",
+                                "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_8b4eb72136bbef5].target.params.[aed740da02474d42a326ed73292981e6_page_params]"
+                              }
+                            },
+                            "children": [
+                              {
+                                "id": "assign_param_0ec1d2a73ceff58",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_8b4eb72136bbef5].target.params.[aed740da02474d42a326ed73292981e6_page_params].[62475dd3f2df4135a8d31830e5aab9ed]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": "&(self)[tableContainer_b81bc4b483b4908].pageNum"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "assign_param_ce49943b6dfd7c3",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_8b4eb72136bbef5].target.params.[aed740da02474d42a326ed73292981e6_page_params].[6162f2cbdcea40ee9f5845791dd9359c]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": "&(self)[tableContainer_b81bc4b483b4908].pageSize"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "assign_param_8477fad0c62fa00",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_8b4eb72136bbef5].target.params.[aed740da02474d42a326ed73292981e6_page_params].[2794f34490ac4aca97817a886c184ada]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": ""
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "id": "action_b25013430ca65c5",
+                      "widget": "action_adapter",
+                      "children": [
+                        {
+                          "id": "assign_param_237a6a472648c8b",
+                          "widget": "assign_param",
+                          "props": {
+                            "name": {
+                              "kind": "Members",
+                              "value": "&(self)[tableContainer_b81bc4b483b4908].data"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_8b4eb72136bbef5].target.result.[4be4523a12d6413f8bacb065db44fb22]"
+                            }
+                          }
+                        },
+                        {
+                          "id": "assign_param_ed75621f5d610cc",
+                          "widget": "assign_param",
+                          "props": {
+                            "name": {
+                              "kind": "Members",
+                              "value": "&(self)[tableContainer_b81bc4b483b4908].total"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_8b4eb72136bbef5].target.result.[b04e0619191b412baf363228d2347a6a]"
+                            }
+                          }
+                        }
+                      ],
+                      "props": {}
+                    }
+                  ],
+                  "props": {}
+                },
+                "rowKey": {
+                  "kind": "Field",
+                  "value": "&(self)[tableContainer_b81bc4b483b4908].dataSource.[action_b25013430ca65c5].[assign_param_237a6a472648c8b].[0e43a01cbe0949de8e7e0eb6f56095c2]"
+                },
+                "title": "电影分类",
+                "extra": [
+                  {
+                    "id": "button_01c5c787bd73188",
+                    "widget": "button",
+                    "props": {
+                      "style": {},
+                      "ref": "button_ce3d610df79c5e7",
+                      "label": "",
+                      "icon": "antdv://Loading3QuartersOutlined",
+                      "type": "primary",
+                      "size": "small",
+                      "events": {
+                        "onClick": {
+                          "id": "event_55ceeae96430533",
+                          "widget": "event",
+                          "children": [
+                            {
+                              "widget": "action_component",
+                              "id": "action_031c44851f4217b",
+                              "props": {
+                                "target": "&(self)[tableContainer_b81bc4b483b4908].loadData"
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      },
+                      "tooltipText": "刷新"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "button_f094fafd565a508",
+                    "widget": "button",
+                    "props": {
+                      "style": {},
+                      "ref": "button_077f9bf03c4e38c",
+                      "label": "",
+                      "icon": "antdv://PlusOutlined",
+                      "type": "primary",
+                      "size": "small",
+                      "events": {
+                        "onClick": {
+                          "id": "event_03b661df129ff1b",
+                          "widget": "event",
+                          "children": [
+                            {
+                              "widget": "action_component",
+                              "id": "action_6baa4feac561a4d",
+                              "props": {
+                                "target": "&(self)[modal_30d277f80a9eb85].onOpen"
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      }
+                    },
+                    "children": []
+                  }
+                ]
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modal_30d277f80a9eb85",
+      "widget": "modal",
+      "props": {
+        "style": {},
+        "ref": "modal_categoryCreate",
+        "destroyOnClose": true,
+        "footer": [
+          {
+            "id": "button_0e903e300ecb657",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_e4b53b6df637b55",
+              "label": "确认",
+              "type": "primary",
+              "events": {
+                "onClick": {
+                  "id": "event_7cac80132bb1ec4",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_component",
+                      "id": "action_b4a86e3737c2283",
+                      "props": {
+                        "target": "&(self)[include_a53e758da540ffa].page.link.exposes.[fd3e0d84d527436fa8641ff1b55c8354]"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_2871c0f54d211dd",
+                      "props": {
+                        "target": "&(self)[modal_30d277f80a9eb85].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "button_849d0b57536e203",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_150e7d3119d9c3f",
+              "label": "取消",
+              "events": {
+                "onClick": {
+                  "id": "event_d72295f1e265856",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "id": "action_component_38f181c008754de",
+                      "widget": "action_component",
+                      "props": {
+                        "target": "&(self)[modal_30d277f80a9eb85].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          }
+        ],
+        "title": "创建分类"
+      },
+      "children": [
+        {
+          "id": "include_a53e758da540ffa",
+          "widget": "include",
+          "props": {
+            "style": {},
+            "ref": "include_b45ffe62513423e",
+            "page": {
+              "id": "action_895c60ccc807c8f",
+              "widget": "action_frame",
+              "props": {
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)1254905d79334915b07eb4ac7f6c17b4"
+                },
+                "params": []
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "modal_80d0411201ba1f8",
+      "widget": "modal",
+      "props": {
+        "style": {},
+        "ref": "modal_48c06d68ef3c3e6",
+        "destroyOnClose": true,
+        "footer": [
+          {
+            "id": "button_a708a3c922a71c1",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_99cced8460457ff",
+              "label": "确认",
+              "type": "primary",
+              "events": {
+                "onClick": {
+                  "id": "event_cb162794e9f2015",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_component",
+                      "id": "action_99873c1e1da57aa",
+                      "props": {
+                        "target": "&(self)[include_5db873701770240].page.link.exposes.[e87c1fc56841439882d42b7c8f45462f]"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_bc6cbed807efb26",
+                      "props": {
+                        "target": "&(self)[modal_80d0411201ba1f8].onClose"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_8b0c0056d0b2acf",
+                      "props": {
+                        "target": ""
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "button_7d0d2ec788f78ba",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_3b36f63fbe15cda",
+              "label": "取消",
+              "events": {
+                "onClick": {
+                  "id": "event_ecda0a06b1e6a20",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "id": "action_component_13214a6a089e58a",
+                      "widget": "action_component",
+                      "props": {
+                        "target": "&(self)[modal_80d0411201ba1f8].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          }
+        ],
+        "title": "创建语言"
+      },
+      "children": [
+        {
+          "id": "include_5db873701770240",
+          "widget": "include",
+          "props": {
+            "style": {},
+            "ref": "include_8d236f1fb8168fa",
+            "page": {
+              "id": "action_55038f0a6a2ff45",
+              "widget": "action_frame",
+              "props": {
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)f8567e7ad13e408ca59c8576e170ba9b"
+                },
+                "params": []
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "references": {
+    "b433edef6e1d4427bf36b704464b4d82": "..\\..\\Logics\\Language.sdlg",
+    "77135d7aea0a49fdadcd6e6162b99a58": "..\\..\\Logics\\Category.sdlg",
+    "f8567e7ad13e408ca59c8576e170ba9b": "LanguageCreate.sdv",
+    "1254905d79334915b07eb4ac7f6c17b4": "CategoryCreate.sdv",
+    "Languagee743c54648cc4aa6a60e2657505072d3": "..\\..\\Pagila.sde"
+  },
+  "version": "1.0.0"
+}

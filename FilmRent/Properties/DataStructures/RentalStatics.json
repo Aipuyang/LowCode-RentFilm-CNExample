@@ -1,0 +1,55 @@
+﻿{
+  "id": "18ef5ab465c34b0fa07b1e105f17a98e",
+  "widget": "model",
+  "props": {
+    "name": "RentalStatics",
+    "displayName": "RentalStatics"
+  },
+  "children": [
+    {
+      "id": "09f85c5c177942b1945a5a14e1f23353",
+      "widget": "field",
+      "props": {
+        "displayName": "Category",
+        "name": "Category",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "488ac78361704efe93da105190132043",
+      "widget": "field",
+      "props": {
+        "displayName": "FilmCount",
+        "name": "FilmCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "9e800adf1ae645d9bbc33f5378c623d3",
+      "widget": "field",
+      "props": {
+        "displayName": "RentTimes",
+        "name": "RentTimes",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "16cbdd575aba464badee28027207a0cf",
+      "widget": "field",
+      "props": {
+        "displayName": "RentAmount",
+        "name": "RentAmount",
+        "dataType": "Decimal",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

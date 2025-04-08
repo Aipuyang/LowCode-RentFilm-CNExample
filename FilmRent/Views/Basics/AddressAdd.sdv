@@ -1,0 +1,332 @@
+﻿{
+  "id": "page_01ccd65641b641f784240b61cd6a1403",
+  "widget": "page",
+  "props": {
+    "ref": "page_01ccd65641b641f784240b61cd6a1403",
+    "name": "AddressAdd",
+    "title": "Address",
+    "params": [
+      {
+        "id": "dd8c97c8ecd0885",
+        "widget": "parameter",
+        "props": {
+          "name": "cityName",
+          "dataType": "String",
+          "isCollection": false,
+          "isNullable": false
+        }
+      },
+      {
+        "id": "48d7b9541ebd316",
+        "widget": "parameter",
+        "props": {
+          "name": "cityId",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ],
+    "rules": [
+      {
+        "id": "ca7ffd1fc651f4d",
+        "widget": "required_validation",
+        "props": {
+          "name": "表单校验 1",
+          "errorMessage": "电话信息不能为空",
+          "applyComponents": [
+            "$(self)[formItem_7b6e47edab7145c19acd68b4946b8c46]"
+          ]
+        }
+      }
+    ],
+    "exposes": [
+      {
+        "id": "6ae7afd1038f475fbacf8854677742c5",
+        "target": "&(self)[button_df22cde916ff400da5337c9346ebfb3d].onClick"
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "card_44a2d5242d414c80acee9a9fd16a3dee",
+      "widget": "card",
+      "props": {
+        "ref": "card_44a2d5242d414c80acee9a9fd16a3dee",
+        "title": "",
+        "extra": [],
+        "hideActions": true
+      },
+      "children": [
+        {
+          "id": "formContainer_726c8e6c7c694384926bb7dbaf2ff338",
+          "widget": "formContainer",
+          "props": {
+            "ref": "formContainer_726c8e6c7c694384926bb7dbaf2ff338",
+            "labelAlign": "left",
+            "layout": "vertical",
+            "colon": false,
+            "labelCol": {
+              "width": {
+                "kind": "span",
+                "value": 4
+              }
+            },
+            "set": {
+              "id": "function_f88cc9d2e7484b4ca84d2759914cca72",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_c57eb22e3f5d462291b946f0bc2ae2a4",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)0b9a8b0da9f0465d87a7a0bdfd4091fe.[177b46ae6b9647e197c0188165720a1a_add_func]"
+                  }
+                }
+              ],
+              "props": {}
+            }
+          },
+          "children": [
+            {
+              "id": "formItem_5d76192a78324e02a6befd4fe4792073",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_5d76192a78324e02a6befd4fe4792073",
+                "label": "地址",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[adb2296176464501998d93110099f78f]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_1cd2f46cbb83d87",
+                  "widget": "input",
+                  "props": {
+                    "ref": "input_6ebbb07d8433dba",
+                    "size": "middle",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[adb2296176464501998d93110099f78f]"
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "formItem_4216eb97a1114a08a1a17620ec14e99d",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_4216eb97a1114a08a1a17620ec14e99d",
+                "label": "附加地址",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[b5e19300c10c470398fe87f67d938444]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_5072408853d146a88218105215ddea9f",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_5072408853d146a88218105215ddea9f",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[b5e19300c10c470398fe87f67d938444]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_b481dddd13ed4aeeb3a3af0cb59c88fe",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_b481dddd13ed4aeeb3a3af0cb59c88fe",
+                "label": "区域",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[9c536acf8b0c48d18666040c8d19c36a]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_4ced137c211e4888a3eca51e7a01cb72",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_4ced137c211e4888a3eca51e7a01cb72",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[9c536acf8b0c48d18666040c8d19c36a]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_2138be643ba34b6f8c38266a40df6958",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_2138be643ba34b6f8c38266a40df6958",
+                "label": "城市",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[92659db441884005a8c7642b30d2e703]"
+                },
+                "hide": true
+              },
+              "children": [
+                {
+                  "id": "numberInput_687761b332564738afa698edb5fcd98e",
+                  "widget": "numberInput",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "numberInput_687761b332564738afa698edb5fcd98e",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[92659db441884005a8c7642b30d2e703]"
+                    },
+                    "default": {
+                      "kind": "Props",
+                      "value": "$(self)[page_01ccd65641b641f784240b61cd6a1403].params.[48d7b9541ebd316]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_e01afbb45e4f198",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_2e2991f62034b15",
+                "label": "城市",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[92659db441884005a8c7642b30d2e703]"
+                }
+              },
+              "children": [
+                {
+                  "id": "tag_2461517d04326b9",
+                  "widget": "tag",
+                  "props": {
+                    "style": {},
+                    "ref": "tag_d3a176f063e4626",
+                    "value": {
+                      "kind": "Props",
+                      "value": "$(self)[page_01ccd65641b641f784240b61cd6a1403].params.[dd8c97c8ecd0885]"
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "formItem_a1319a20f3fa450bb2d6970df25e2ee4",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_a1319a20f3fa450bb2d6970df25e2ee4",
+                "label": "邮编",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[408da8cfcbf54dfcbe7644019027cd9b]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_5048cb5d081d40a59c8383c557c183bb",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_5048cb5d081d40a59c8383c557c183bb",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[408da8cfcbf54dfcbe7644019027cd9b]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_7b6e47edab7145c19acd68b4946b8c46",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_7b6e47edab7145c19acd68b4946b8c46",
+                "label": "电话",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[83e4f768677c4b6ebc922add7272f941]"
+                },
+                "rules": [
+                  {
+                    "id": "c113a4fecb79f42",
+                    "widget": "rule",
+                    "props": {
+                      "target": "&(self)[page_01ccd65641b641f784240b61cd6a1403].rules.[ca7ffd1fc651f4d]"
+                    }
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "id": "input_abb3c66786fe48a1a391041d682b9bcd",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_abb3c66786fe48a1a391041d682b9bcd",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_726c8e6c7c694384926bb7dbaf2ff338].set.[action_c57eb22e3f5d462291b946f0bc2ae2a4].target.params.[177b46ae6b9647e197c0188165720a1a_add_params].[83e4f768677c4b6ebc922add7272f941]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "flex_1a111b4521574eb2925580a55793a995",
+              "widget": "flex",
+              "props": {
+                "ref": "flex_1a111b4521574eb2925580a55793a995",
+                "justify": "end"
+              },
+              "children": [
+                {
+                  "id": "button_df22cde916ff400da5337c9346ebfb3d",
+                  "widget": "button",
+                  "props": {
+                    "style": {
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                      "flexBasis": "auto"
+                    },
+                    "ref": "button_Submit",
+                    "htmlType": "submit",
+                    "label": "提交",
+                    "type": "primary"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "0b9a8b0da9f0465d87a7a0bdfd4091fe": "..\\..\\Logics\\Address.sdlg"
+  },
+  "version": "1.0.0"
+}

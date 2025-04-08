@@ -1,0 +1,77 @@
+﻿{
+  "id": "f3744691d7b14b52a1b102d477cd8cc6",
+  "widget": "model",
+  "props": {
+    "displayName": "CusFilmModel",
+    "name": "CusFilmModel"
+  },
+  "children": [
+    {
+      "id": "eabcac6dec7b48b5bc1c0596337a252c",
+      "widget": "field",
+      "props": {
+        "displayName": "FilmId",
+        "name": "FilmId",
+        "dataType": "Int32",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "6f0a82506854477cb84a9dbd28a14e46",
+      "widget": "field",
+      "props": {
+        "displayName": "名称",
+        "name": "Title",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "903997bcddcf4ffca0bcaeebf4b366bc",
+      "widget": "field",
+      "props": {
+        "displayName": "发行年份",
+        "name": "ReleaseYear",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "691be4a31e9e4ef484325c9583aeb2de",
+      "widget": "field",
+      "props": {
+        "displayName": "语言",
+        "name": "Language",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "cbc2b45691b74ca0940d75e3f36f6a53",
+      "widget": "field",
+      "props": {
+        "displayName": "租赁时长",
+        "name": "RentalDuration",
+        "dataType": "Int16",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "944019d4029b4e44b385445e9888c839",
+      "widget": "field",
+      "props": {
+        "displayName": "租金",
+        "name": "RentalRate",
+        "dataType": "Decimal",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

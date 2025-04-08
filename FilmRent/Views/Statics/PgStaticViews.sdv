@@ -1,0 +1,765 @@
+﻿{
+  "id": "page_8dd60ace48953cb",
+  "widget": "page",
+  "props": {
+    "ref": "page_8dd60ace48953cb",
+    "name": "PgStaticViews",
+    "title": "PgStaticViews"
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "row_c1331e72f07422d",
+      "widget": "row",
+      "props": {
+        "style": {},
+        "ref": "row_d6e91b4f814dcfc",
+        "gutter": {
+          "enabled": true,
+          "value": [
+            10,
+            0
+          ]
+        }
+      },
+      "children": [
+        {
+          "id": "col_89745948a49c856",
+          "widget": "col",
+          "props": {
+            "style": {},
+            "ref": "col_7f0fa2d3b3c53c6",
+            "width": {
+              "kind": "flex",
+              "value": 1
+            }
+          },
+          "children": [
+            {
+              "id": "card_6164261cf08a4ad",
+              "widget": "card",
+              "props": {
+                "style": {},
+                "ref": "card_a6f9412eb611701",
+                "extra": [],
+                "title": "电影数量统计",
+                "hideActions": true
+              },
+              "children": [
+                {
+                  "id": "pie_029c1c00b43c8ae",
+                  "widget": "pie",
+                  "props": {
+                    "style": {},
+                    "ref": "pie_68a19c7f139c092",
+                    "names": {
+                      "kind": "Field",
+                      "value": "&(self)[pie_029c1c00b43c8ae].dataSource.[action_7f8234493908bf0].[assign_param_ba6d7ed930f5ad0].[490fa51110a840a69da52adc02246290]"
+                    },
+                    "values": {
+                      "kind": "Field",
+                      "value": "&(self)[pie_029c1c00b43c8ae].dataSource.[action_7f8234493908bf0].[assign_param_ba6d7ed930f5ad0].[cb29f117236f4a3d93f0df972d456849]"
+                    },
+                    "title": {
+                      "text": "电影部数统计",
+                      "subtext": "",
+                      "textFontSize": 18,
+                      "subtextFontSize": 12
+                    },
+                    "titlePosition": {
+                      "type": "options",
+                      "options": "top/center",
+                      "top": "",
+                      "left": "",
+                      "textAlign": "left"
+                    },
+                    "startAngle": 90,
+                    "padAngle": 0,
+                    "borderRadius": 0,
+                    "legend": {
+                      "show": true,
+                      "position": "top/right/vertical",
+                      "itemWidth": 20,
+                      "itemHeight": 12,
+                      "textFontSize": 12,
+                      "icon": "roundRect"
+                    },
+                    "seriesLabel": {
+                      "show": true,
+                      "position": "outside",
+                      "fontSize": 12
+                    },
+                    "tooltip": {
+                      "show": true,
+                      "textFontSize": 12
+                    },
+                    "color": [
+                      "#1677FF",
+                      "#91CC75",
+                      "#FAC858",
+                      "#EE6666",
+                      "#73C0DE",
+                      "#5470C6",
+                      "#3BA272",
+                      "#FC8452",
+                      "#9A60B4",
+                      "#EA7CCC"
+                    ],
+                    "model": {
+                      "data": "&(ref)a5909b22fb794436bc25bde12a62673c.[a5909b22fb794436bc25bde12a62673c]"
+                    },
+                    "dataSource": {
+                      "id": "function_ec8499640a9d49d",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_7c9e1c5ab10f282",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)d09d7badcd614b93afb9ca02a7da4add.[f2596ca6dc6a46eeb9117848b4d08c01]",
+                            "params": []
+                          }
+                        },
+                        {
+                          "id": "action_7f8234493908bf0",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_ba6d7ed930f5ad0",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[pie_029c1c00b43c8ae].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[pie_029c1c00b43c8ae].dataSource.[action_7c9e1c5ab10f282].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "roseType": false,
+                    "donutChar": true
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "col_7a62ca954a9ec8c",
+          "widget": "col",
+          "props": {
+            "style": {},
+            "ref": "col_b8ede2c1f0235a2",
+            "width": {
+              "kind": "flex",
+              "value": 1
+            }
+          },
+          "children": [
+            {
+              "id": "card_95c6cd99cb76b22",
+              "widget": "card",
+              "props": {
+                "style": {},
+                "ref": "card_0206e545694d9b5",
+                "extra": [
+                  {
+                    "id": "select_109999196440e34",
+                    "widget": "select",
+                    "props": {
+                      "style": {
+                        "width": "200px"
+                      },
+                      "ref": "select_ae7d5324ae8c6fb",
+                      "defaultItemLabel": "全部",
+                      "default": "1",
+                      "fieldName": {
+                        "kind": "Field",
+                        "value": "&(self)[card_95c6cd99cb76b22].extra.[select_109999196440e34].dataSource.[action_ff70001f78558bb].[assign_param_47cae7b80d0decb].[adb2296176464501998d93110099f78f]"
+                      },
+                      "fieldValue": {
+                        "kind": "Field",
+                        "value": "&(self)[card_95c6cd99cb76b22].extra.[select_109999196440e34].dataSource.[action_ff70001f78558bb].[assign_param_47cae7b80d0decb].[c0a282dc2199480385001e179fcf8420]"
+                      },
+                      "dataSource": {
+                        "id": "function_27daadf707883fe",
+                        "widget": "function",
+                        "children": [
+                          {
+                            "id": "action_7024b47862bfff4",
+                            "widget": "action_api",
+                            "props": {
+                              "target": "&(ref)a6da5100755a4b369d9a411d52e42c2a.[177b46ae6b9647e197c0188165720a1a_list_func]",
+                              "params": []
+                            }
+                          },
+                          {
+                            "id": "action_ff70001f78558bb",
+                            "widget": "action_adapter",
+                            "children": [
+                              {
+                                "id": "assign_param_47cae7b80d0decb",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Members",
+                                    "value": "&(self)[card_95c6cd99cb76b22].extra.[select_109999196440e34].data"
+                                  },
+                                  "value": {
+                                    "kind": "Field",
+                                    "value": "&(self)[card_95c6cd99cb76b22].extra.[select_109999196440e34].dataSource.[action_7024b47862bfff4].target.result"
+                                  }
+                                }
+                              }
+                            ],
+                            "props": {}
+                          }
+                        ],
+                        "props": {}
+                      },
+                      "placeholder": "请选择商店",
+                      "model": {
+                        "data": "&(ref)8dd55881d950d47.[177b46ae6b9647e197c0188165720a1a]"
+                      }
+                    },
+                    "children": []
+                  }
+                ],
+                "title": "电影库存",
+                "hideActions": false
+              },
+              "children": [
+                {
+                  "id": "pie_cd21673a8458aa8",
+                  "widget": "pie",
+                  "props": {
+                    "style": {},
+                    "ref": "pie_ed945c206ccd5f7",
+                    "names": {
+                      "kind": "Field",
+                      "value": "&(self)[pie_cd21673a8458aa8].dataSource.[action_dd2d293fb237b4f].[assign_param_c8463d61fc94244].[490fa51110a840a69da52adc02246290]"
+                    },
+                    "values": {
+                      "kind": "Field",
+                      "value": "&(self)[pie_cd21673a8458aa8].dataSource.[action_dd2d293fb237b4f].[assign_param_c8463d61fc94244].[cb29f117236f4a3d93f0df972d456849]"
+                    },
+                    "title": {
+                      "text": "电影库存统计",
+                      "subtext": "",
+                      "textFontSize": 18,
+                      "subtextFontSize": 12
+                    },
+                    "titlePosition": {
+                      "type": "options",
+                      "options": "top/center",
+                      "top": "",
+                      "left": "",
+                      "textAlign": "left"
+                    },
+                    "startAngle": 90,
+                    "padAngle": 0,
+                    "borderRadius": 0,
+                    "legend": {
+                      "show": true,
+                      "position": "top/right/vertical",
+                      "itemWidth": 20,
+                      "itemHeight": 12,
+                      "textFontSize": 12,
+                      "icon": "roundRect"
+                    },
+                    "seriesLabel": {
+                      "show": true,
+                      "position": "outside",
+                      "fontSize": 12
+                    },
+                    "tooltip": {
+                      "show": true,
+                      "textFontSize": 12
+                    },
+                    "color": [
+                      "#1677FF",
+                      "#91CC75",
+                      "#FAC858",
+                      "#EE6666",
+                      "#73C0DE",
+                      "#5470C6",
+                      "#3BA272",
+                      "#FC8452",
+                      "#9A60B4",
+                      "#EA7CCC"
+                    ],
+                    "dataSource": {
+                      "id": "function_5706caeb39b8cb4",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_0a8e223a88e0624",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)d09d7badcd614b93afb9ca02a7da4add.[918009a1b7d7487bb3da48a8ea0219a1]",
+                            "params": [
+                              {
+                                "id": "assign_param_b5136b0c93b2b3a",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[pie_cd21673a8458aa8].dataSource.[action_0a8e223a88e0624].target.params.[a16f4ab312e849cfb13a0f1341aa37ac]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": "&(self)[card_95c6cd99cb76b22].extra.[select_109999196440e34].value"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "action_dd2d293fb237b4f",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_c8463d61fc94244",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[pie_cd21673a8458aa8].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[pie_cd21673a8458aa8].dataSource.[action_0a8e223a88e0624].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "model": {
+                      "data": "&(ref)a5909b22fb794436bc25bde12a62673c.[a5909b22fb794436bc25bde12a62673c]"
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "row_c2d93a7eb8399e7",
+      "widget": "row",
+      "props": {
+        "style": {
+          "marginTop": "10px"
+        },
+        "ref": "row_cb7ca1be068f5d8",
+        "gutter": {
+          "enabled": true,
+          "value": [
+            10,
+            0
+          ]
+        }
+      },
+      "children": [
+        {
+          "id": "col_c1fcb73e548558e",
+          "widget": "col",
+          "props": {
+            "style": {},
+            "ref": "col_607b3567b3cac82",
+            "width": {
+              "kind": "flex",
+              "value": 1
+            }
+          },
+          "children": [
+            {
+              "id": "card_d240085cc4bc910",
+              "widget": "card",
+              "props": {
+                "style": {},
+                "ref": "card_3dd70ee54788c9b",
+                "extra": [],
+                "title": "电影租赁额",
+                "hideActions": true
+              },
+              "children": [
+                {
+                  "id": "bar_00f9acf75c21ebb",
+                  "widget": "bar",
+                  "props": {
+                    "style": {},
+                    "ref": "bar_878c1176c2a2794",
+                    "xAxis": {
+                      "data": {
+                        "kind": "Field",
+                        "value": "&(self)[bar_00f9acf75c21ebb].dataSource.[action_38cfe7bd9814ffb].[assign_param_0423edf6baaf370].[09f85c5c177942b1945a5a14e1f23353]"
+                      },
+                      "name": "电影分类",
+                      "nameLocation": "end",
+                      "axisLine": true,
+                      "axisTick": true,
+                      "splitLine": false,
+                      "boundaryGap": true,
+                      "labelFontSize": 12
+                    },
+                    "yAxis": [
+                      {
+                        "data": {
+                          "kind": "Field",
+                          "value": "&(self)[bar_00f9acf75c21ebb].dataSource.[action_38cfe7bd9814ffb].[assign_param_0423edf6baaf370].[488ac78361704efe93da105190132043]"
+                        },
+                        "name": "租赁次数"
+                      },
+                      {
+                        "data": {
+                          "kind": "Field",
+                          "value": "&(self)[bar_00f9acf75c21ebb].dataSource.[action_38cfe7bd9814ffb].[assign_param_0423edf6baaf370].[16cbdd575aba464badee28027207a0cf]"
+                        },
+                        "name": "营业额"
+                      }
+                    ],
+                    "title": {
+                      "text": "电影租赁营业额",
+                      "subtext": "",
+                      "textFontSize": 18,
+                      "subtextFontSize": 12
+                    },
+                    "titlePosition": {
+                      "type": "options",
+                      "options": "top/center",
+                      "top": "",
+                      "left": "",
+                      "textAlign": "left"
+                    },
+                    "legend": {
+                      "show": true,
+                      "position": "top/right/vertical",
+                      "itemWidth": 20,
+                      "itemHeight": 12,
+                      "textFontSize": 12,
+                      "icon": "roundRect"
+                    },
+                    "seriesLabel": {
+                      "show": true,
+                      "position": "inside",
+                      "fontSize": 12
+                    },
+                    "tooltip": {
+                      "show": true,
+                      "textFontSize": 12
+                    },
+                    "color": [
+                      "#1677FF",
+                      "#91CC75",
+                      "#FAC858",
+                      "#EE6666",
+                      "#73C0DE",
+                      "#5470C6",
+                      "#3BA272",
+                      "#FC8452",
+                      "#9A60B4",
+                      "#EA7CCC"
+                    ],
+                    "dataSource": {
+                      "id": "function_b5ca2b891ba2860",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_fec66f587c25f61",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)d09d7badcd614b93afb9ca02a7da4add.[a726897c7c3a4d0cb642f787c3f40208]",
+                            "params": []
+                          }
+                        },
+                        {
+                          "id": "action_38cfe7bd9814ffb",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_0423edf6baaf370",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[bar_00f9acf75c21ebb].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[bar_00f9acf75c21ebb].dataSource.[action_fec66f587c25f61].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "model": {
+                      "data": "&(ref)18ef5ab465c34b0fa07b1e105f17a98e.[18ef5ab465c34b0fa07b1e105f17a98e]"
+                    },
+                    "yAxisLine": true,
+                    "yAxisTick": true
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "col_a0d37b24c1f4c82",
+          "widget": "col",
+          "props": {
+            "style": {},
+            "ref": "col_f5b678c07ab3ad2",
+            "width": {
+              "kind": "flex",
+              "value": 1
+            }
+          },
+          "children": [
+            {
+              "id": "card_1f02f237e9762fa",
+              "widget": "card",
+              "props": {
+                "style": {},
+                "ref": "card_c0b994e71449e72",
+                "extra": [
+                  {
+                    "id": "select_1ae2a5257be04f6",
+                    "widget": "select",
+                    "props": {
+                      "style": {
+                        "width": "200px"
+                      },
+                      "ref": "select_51df36766cad7bb",
+                      "defaultItemLabel": "全部",
+                      "default": "1",
+                      "fieldName": {
+                        "kind": "Field",
+                        "value": "&(self)[card_1f02f237e9762fa].extra.[select_1ae2a5257be04f6].dataSource.[action_a5d68fad5ba283e].[assign_param_53771b989ca4268].[a66a9780db28404c8171cf9f798fee29]"
+                      },
+                      "fieldValue": {
+                        "kind": "Field",
+                        "value": "&(self)[card_1f02f237e9762fa].extra.[select_1ae2a5257be04f6].dataSource.[action_a5d68fad5ba283e].[assign_param_53771b989ca4268].[0e43a01cbe0949de8e7e0eb6f56095c2]"
+                      },
+                      "dataSource": {
+                        "id": "function_88c1e27f8932d1f",
+                        "widget": "function",
+                        "children": [
+                          {
+                            "id": "action_350f2f3d156aecb",
+                            "widget": "action_api",
+                            "props": {
+                              "target": "&(ref)4766d423ef1f4255be7d37570f97f341.[aed740da02474d42a326ed73292981e6_list_func]",
+                              "params": []
+                            }
+                          },
+                          {
+                            "id": "action_a5d68fad5ba283e",
+                            "widget": "action_adapter",
+                            "children": [
+                              {
+                                "id": "assign_param_53771b989ca4268",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Members",
+                                    "value": "&(self)[card_1f02f237e9762fa].extra.[select_1ae2a5257be04f6].data"
+                                  },
+                                  "value": {
+                                    "kind": "Field",
+                                    "value": "&(self)[card_1f02f237e9762fa].extra.[select_1ae2a5257be04f6].dataSource.[action_350f2f3d156aecb].target.result"
+                                  }
+                                }
+                              }
+                            ],
+                            "props": {}
+                          }
+                        ],
+                        "props": {}
+                      },
+                      "placeholder": "电影分类",
+                      "model": {
+                        "data": "&(ref)8dd55881d950d47.[aed740da02474d42a326ed73292981e6]"
+                      }
+                    },
+                    "children": []
+                  }
+                ],
+                "title": "电影租赁频次",
+                "hideActions": false
+              },
+              "children": [
+                {
+                  "id": "line_ececab69f1d933d",
+                  "widget": "line",
+                  "props": {
+                    "style": {},
+                    "ref": "line_cf0cbea54ace5a0",
+                    "xAxis": {
+                      "data": {
+                        "kind": "Field",
+                        "value": "&(self)[line_ececab69f1d933d].dataSource.[action_7da8b52d01bcdb9].[assign_param_046c9ca88e6818b].[09f85c5c177942b1945a5a14e1f23353]"
+                      },
+                      "name": "电影",
+                      "nameLocation": "end",
+                      "axisLine": true,
+                      "axisTick": true,
+                      "splitLine": false,
+                      "boundaryGap": false,
+                      "labelFontSize": 12
+                    },
+                    "yAxis": [
+                      {
+                        "data": {
+                          "kind": "Field",
+                          "value": "&(self)[line_ececab69f1d933d].dataSource.[action_7da8b52d01bcdb9].[assign_param_046c9ca88e6818b].[488ac78361704efe93da105190132043]"
+                        },
+                        "name": "出租频次"
+                      },
+                      {
+                        "data": {
+                          "kind": "Field",
+                          "value": "&(self)[line_ececab69f1d933d].dataSource.[action_7da8b52d01bcdb9].[assign_param_046c9ca88e6818b].[9e800adf1ae645d9bbc33f5378c623d3]"
+                        },
+                        "name": "出租时长(天)"
+                      }
+                    ],
+                    "title": {
+                      "text": "电影收视率统计",
+                      "subtext": "",
+                      "textFontSize": 18,
+                      "subtextFontSize": 12
+                    },
+                    "titlePosition": {
+                      "type": "options",
+                      "options": "top/center",
+                      "top": "",
+                      "left": "",
+                      "textAlign": "left"
+                    },
+                    "legend": {
+                      "show": true,
+                      "position": "top/right/vertical",
+                      "itemWidth": 20,
+                      "itemHeight": 12,
+                      "textFontSize": 12,
+                      "icon": "roundRect"
+                    },
+                    "seriesLabel": {
+                      "show": true,
+                      "position": "inside",
+                      "fontSize": 12
+                    },
+                    "tooltip": {
+                      "show": true,
+                      "textFontSize": 12
+                    },
+                    "color": [
+                      "#1677FF",
+                      "#91CC75",
+                      "#FAC858",
+                      "#EE6666",
+                      "#73C0DE",
+                      "#5470C6",
+                      "#3BA272",
+                      "#FC8452",
+                      "#9A60B4",
+                      "#EA7CCC"
+                    ],
+                    "dataSource": {
+                      "id": "function_1879d8d39967e85",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_0a0c9f1d16d10b5",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)d09d7badcd614b93afb9ca02a7da4add.[8e034d3bdb8a4ec9b92dce8ffa771352]",
+                            "params": [
+                              {
+                                "id": "assign_param_414f81b7310285b",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[line_ececab69f1d933d].dataSource.[action_0a0c9f1d16d10b5].target.params.[9e1aaf04765d474ca7aeddc5f1ee9bbe]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": "&(self)[card_1f02f237e9762fa].extra.[select_1ae2a5257be04f6].value"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "id": "action_7da8b52d01bcdb9",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_046c9ca88e6818b",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[line_ececab69f1d933d].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[line_ececab69f1d933d].dataSource.[action_0a0c9f1d16d10b5].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "model": {
+                      "data": "&(ref)18ef5ab465c34b0fa07b1e105f17a98e.[18ef5ab465c34b0fa07b1e105f17a98e]"
+                    },
+                    "yAxisTick": true,
+                    "yAxisLine": true
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "d09d7badcd614b93afb9ca02a7da4add": "..\\..\\Logics\\PigilaStatics.sdlg",
+    "8dd55881d950d47": "..\\..\\Pagila.sde",
+    "a6da5100755a4b369d9a411d52e42c2a": "..\\..\\Logics\\Address.sdlg",
+    "4766d423ef1f4255be7d37570f97f341": "..\\..\\Logics\\Category.sdlg",
+    "a5909b22fb794436bc25bde12a62673c": "..\\..\\Properties\\DataStructures\\CategoryStaticModel.json",
+    "18ef5ab465c34b0fa07b1e105f17a98e": "..\\..\\Properties\\DataStructures\\RentalStatics.json"
+  },
+  "version": "1.0.0"
+}

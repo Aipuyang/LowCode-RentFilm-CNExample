@@ -1,0 +1,44 @@
+﻿{
+  "id": "a5909b22fb794436bc25bde12a62673c",
+  "widget": "model",
+  "props": {
+    "name": "CategoryStaticModel",
+    "displayName": "CategoryStaticModel"
+  },
+  "children": [
+    {
+      "id": "490fa51110a840a69da52adc02246290",
+      "widget": "field",
+      "props": {
+        "displayName": "CategoryName",
+        "name": "CategoryName",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "cb29f117236f4a3d93f0df972d456849",
+      "widget": "field",
+      "props": {
+        "displayName": "FilmCount",
+        "name": "FilmCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "3492c6dfae5d44fc98ed21bfe2ff6562",
+      "widget": "field",
+      "props": {
+        "displayName": "FilmAmount",
+        "name": "FilmAmount",
+        "dataType": "Double",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

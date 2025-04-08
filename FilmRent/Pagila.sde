@@ -1,0 +1,2282 @@
+﻿{
+  "id": "8dd55881d950d47",
+  "widget": "database",
+  "props": {
+    "name": "Pagila",
+    "dbType": "PostgreSQL",
+    "connectionString": "Host=YourHost;Database=pagila;Username=YourUser;Password=YourPassword;Connection Lifetime=0;Target Session Attributes=any",
+    "x": 659,
+    "y": -80
+  },
+  "children": [
+    {
+      "id": "e966734c54904dbb8a2603132f94be69",
+      "widget": "table",
+      "props": {
+        "name": "Actor",
+        "displayName": "Actor",
+        "schema": "public",
+        "tableName": "actor",
+        "indexes": [
+          {
+            "name": "actor_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[8d6a4aae4d8042d386640e7b2709dc41]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_actor_last_name",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[905a286f88b44ee4a1f784f19003a125]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1440,
+        "y": 616
+      },
+      "children": [
+        {
+          "id": "8d6a4aae4d8042d386640e7b2709dc41",
+          "props": {
+            "name": "ActorId",
+            "displayName": "ActorId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('actor_actor_id_seq'::regclass)",
+            "columnName": "actor_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "9cdcefd22c50471baf442ce7280dd97f",
+          "props": {
+            "name": "FirstName",
+            "displayName": "FirstName",
+            "dataType": "String",
+            "columnName": "first_name",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "905a286f88b44ee4a1f784f19003a125",
+          "props": {
+            "name": "LastName",
+            "displayName": "LastName",
+            "dataType": "String",
+            "columnName": "last_name",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "359fb27652154d43a3844ed168a108fb",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "d5c1ff92b0264ba8bee400972de1a70a",
+          "widget": "field",
+          "props": {
+            "displayName": "FullName",
+            "name": "FullName",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "computed": true,
+            "computedType": "Expression",
+            "expression": "$(exp)&(self)[e966734c54904dbb8a2603132f94be69].[9cdcefd22c50471baf442ce7280dd97f] + \" \" + &(self)[e966734c54904dbb8a2603132f94be69].[905a286f88b44ee4a1f784f19003a125]"
+          }
+        },
+        {
+          "id": "169f7e7c6da94b2a94116a91f4c49798_1d2adf6611ec48cd88be03e19040ee9a_dependency",
+          "props": {
+            "name": "FilmActors",
+            "dataType": "$(self)[169f7e7c6da94b2a94116a91f4c49798]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "177b46ae6b9647e197c0188165720a1a",
+      "widget": "table",
+      "props": {
+        "name": "Address",
+        "displayName": "Address",
+        "schema": "public",
+        "tableName": "address",
+        "foreignKeys": [
+          {
+            "id": "f31c4e6929ba48549be57ab018931886",
+            "name": "address_city_id_fkey",
+            "refTable": "$(self)[5cb3f1f95f2f4e97aa07d66c0bdccc4a]",
+            "refColumns": [
+              "$(self)[5cb3f1f95f2f4e97aa07d66c0bdccc4a].[dd218ff484d9424d963cfe20b81034bf]"
+            ],
+            "columns": [
+              "$(self)[177b46ae6b9647e197c0188165720a1a].[92659db441884005a8c7642b30d2e703]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "address_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[c0a282dc2199480385001e179fcf8420]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_city_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[92659db441884005a8c7642b30d2e703]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1440,
+        "y": 820
+      },
+      "children": [
+        {
+          "id": "c0a282dc2199480385001e179fcf8420",
+          "props": {
+            "name": "AddressId",
+            "displayName": "AddressId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('address_address_id_seq'::regclass)",
+            "columnName": "address_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "adb2296176464501998d93110099f78f",
+          "props": {
+            "name": "Address1",
+            "dataType": "String",
+            "columnName": "address",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "b5e19300c10c470398fe87f67d938444",
+          "props": {
+            "name": "Address2",
+            "displayName": "Address2",
+            "dataType": "String",
+            "nullable": true,
+            "columnName": "address2",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "9c536acf8b0c48d18666040c8d19c36a",
+          "props": {
+            "name": "District",
+            "displayName": "District",
+            "dataType": "String",
+            "columnName": "district",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "92659db441884005a8c7642b30d2e703",
+          "props": {
+            "name": "CityId",
+            "displayName": "CityId",
+            "dataType": "Int32",
+            "columnName": "city_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "408da8cfcbf54dfcbe7644019027cd9b",
+          "props": {
+            "name": "PostalCode",
+            "displayName": "PostalCode",
+            "dataType": "String",
+            "nullable": true,
+            "columnName": "postal_code",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "83e4f768677c4b6ebc922add7272f941",
+          "props": {
+            "name": "Phone",
+            "displayName": "Phone",
+            "dataType": "String",
+            "columnName": "phone",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "5ab6379437f84a639776002cb16cbd3a",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "5cb3f1f95f2f4e97aa07d66c0bdccc4a_f31c4e6929ba48549be57ab018931886_principal",
+          "props": {
+            "name": "City",
+            "dataType": "$(self)[5cb3f1f95f2f4e97aa07d66c0bdccc4a]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "0f7fa5d8ed5b4e5d92d308b1c7260423_632f382303264568b1b15dc5b02e7b90_dependency",
+          "props": {
+            "name": "Customers",
+            "dataType": "$(self)[0f7fa5d8ed5b4e5d92d308b1c7260423]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "9ceaa3a233c9458ba7efcdf115827385_212dd662907d4364abfc9f4eeae60a6c_dependency",
+          "props": {
+            "name": "Stafves",
+            "dataType": "$(self)[9ceaa3a233c9458ba7efcdf115827385]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "dc5241d1f74446d88be2beff59d20167_6d4486c977744506aa5c7fdd6b2dc615_dependency",
+          "props": {
+            "name": "Stores",
+            "dataType": "$(self)[dc5241d1f74446d88be2beff59d20167]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "aed740da02474d42a326ed73292981e6",
+      "widget": "table",
+      "props": {
+        "name": "Category",
+        "displayName": "Category",
+        "schema": "public",
+        "tableName": "category",
+        "indexes": [
+          {
+            "name": "category_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[0e43a01cbe0949de8e7e0eb6f56095c2]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1440,
+        "y": 0
+      },
+      "children": [
+        {
+          "id": "0e43a01cbe0949de8e7e0eb6f56095c2",
+          "props": {
+            "name": "CategoryId",
+            "displayName": "CategoryId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('category_category_id_seq'::regclass)",
+            "columnName": "category_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "a66a9780db28404c8171cf9f798fee29",
+          "props": {
+            "name": "Name",
+            "displayName": "Name",
+            "dataType": "String",
+            "columnName": "name",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "77c16b0e0033437187900adf72954493",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "4a1fdaadb30b484bbb0b1d0f6996bdcc_d3fdff2de1ae46a984fa666747f7f67d_dependency",
+          "props": {
+            "name": "FilmCategories",
+            "dataType": "$(self)[4a1fdaadb30b484bbb0b1d0f6996bdcc]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "5cb3f1f95f2f4e97aa07d66c0bdccc4a",
+      "widget": "table",
+      "props": {
+        "name": "City",
+        "displayName": "City",
+        "schema": "public",
+        "tableName": "city",
+        "foreignKeys": [
+          {
+            "id": "807a3bcc323e4775b7f1821cddfb77f4",
+            "name": "city_country_id_fkey",
+            "refTable": "$(self)[47191da05fb744cabec939299189eecc]",
+            "refColumns": [
+              "$(self)[47191da05fb744cabec939299189eecc].[3a4cd5c073d541ab9d69bdbe5ade3350]"
+            ],
+            "columns": [
+              "$(self)[5cb3f1f95f2f4e97aa07d66c0bdccc4a].[d32ed87cce8c4b42927ce06189a59545]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "city_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[dd218ff484d9424d963cfe20b81034bf]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_country_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[d32ed87cce8c4b42927ce06189a59545]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1840,
+        "y": 180
+      },
+      "children": [
+        {
+          "id": "dd218ff484d9424d963cfe20b81034bf",
+          "props": {
+            "name": "CityId",
+            "displayName": "CityId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('city_city_id_seq'::regclass)",
+            "columnName": "city_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "90c16e6802614d73965bb7998cca74a3",
+          "props": {
+            "name": "City1",
+            "dataType": "String",
+            "columnName": "city",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "d32ed87cce8c4b42927ce06189a59545",
+          "props": {
+            "name": "CountryId",
+            "displayName": "CountryId",
+            "dataType": "Int32",
+            "columnName": "country_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "eda69188fe83493794d1296806e70198",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "177b46ae6b9647e197c0188165720a1a_f31c4e6929ba48549be57ab018931886_dependency",
+          "props": {
+            "name": "Addresses",
+            "dataType": "$(self)[177b46ae6b9647e197c0188165720a1a]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "47191da05fb744cabec939299189eecc_807a3bcc323e4775b7f1821cddfb77f4_principal",
+          "props": {
+            "name": "Country",
+            "dataType": "$(self)[47191da05fb744cabec939299189eecc]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "47191da05fb744cabec939299189eecc",
+      "widget": "table",
+      "props": {
+        "name": "Country",
+        "displayName": "Country",
+        "schema": "public",
+        "tableName": "country",
+        "indexes": [
+          {
+            "name": "country_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[3a4cd5c073d541ab9d69bdbe5ade3350]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 2240,
+        "y": 0
+      },
+      "children": [
+        {
+          "id": "3a4cd5c073d541ab9d69bdbe5ade3350",
+          "props": {
+            "name": "CountryId",
+            "displayName": "CountryId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('country_country_id_seq'::regclass)",
+            "columnName": "country_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "3965c7d88fe1488fb1a728050c0bb4c6",
+          "props": {
+            "name": "Country1",
+            "dataType": "String",
+            "columnName": "country",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "b241ea9095704bf3baf1c0b01a27df0a",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "5cb3f1f95f2f4e97aa07d66c0bdccc4a_807a3bcc323e4775b7f1821cddfb77f4_dependency",
+          "props": {
+            "name": "Cities",
+            "dataType": "$(self)[5cb3f1f95f2f4e97aa07d66c0bdccc4a]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "0f7fa5d8ed5b4e5d92d308b1c7260423",
+      "widget": "table",
+      "props": {
+        "name": "Customer",
+        "displayName": "Customer",
+        "schema": "public",
+        "tableName": "customer",
+        "foreignKeys": [
+          {
+            "id": "874853a21e8642bfb1f78bbd17af088c",
+            "name": "customer_store_id_fkey",
+            "refTable": "$(self)[dc5241d1f74446d88be2beff59d20167]",
+            "refColumns": [
+              "$(self)[dc5241d1f74446d88be2beff59d20167].[2c345e9167e144108e03739741fcc314]"
+            ],
+            "columns": [
+              "$(self)[0f7fa5d8ed5b4e5d92d308b1c7260423].[5685507b3183430bac773c6dd5d8d244]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "632f382303264568b1b15dc5b02e7b90",
+            "name": "customer_address_id_fkey",
+            "refTable": "$(self)[177b46ae6b9647e197c0188165720a1a]",
+            "refColumns": [
+              "$(self)[177b46ae6b9647e197c0188165720a1a].[c0a282dc2199480385001e179fcf8420]"
+            ],
+            "columns": [
+              "$(self)[0f7fa5d8ed5b4e5d92d308b1c7260423].[06cf223a245e421c90424a43d64d5145]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "customer_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[c6a0e8b3a7c848e8b3042ceec615385e]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_address_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[06cf223a245e421c90424a43d64d5145]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_store_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[5685507b3183430bac773c6dd5d8d244]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_last_name",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[66a37dba7ed94154acca708881c2b048]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1040,
+        "y": 636
+      },
+      "children": [
+        {
+          "id": "c6a0e8b3a7c848e8b3042ceec615385e",
+          "props": {
+            "name": "CustomerId",
+            "displayName": "CustomerId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('customer_customer_id_seq'::regclass)",
+            "columnName": "customer_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "5685507b3183430bac773c6dd5d8d244",
+          "props": {
+            "name": "StoreId",
+            "displayName": "StoreId",
+            "dataType": "Int32",
+            "columnName": "store_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "d6c88c67fc6d46898e979a68d7b3005f",
+          "props": {
+            "name": "FirstName",
+            "displayName": "FirstName",
+            "dataType": "String",
+            "columnName": "first_name",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "66a37dba7ed94154acca708881c2b048",
+          "props": {
+            "name": "LastName",
+            "displayName": "LastName",
+            "dataType": "String",
+            "columnName": "last_name",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "47c324bc372141248136609304237eba",
+          "props": {
+            "name": "Email",
+            "displayName": "Email",
+            "dataType": "String",
+            "nullable": true,
+            "columnName": "email",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "06cf223a245e421c90424a43d64d5145",
+          "props": {
+            "name": "AddressId",
+            "displayName": "AddressId",
+            "dataType": "Int32",
+            "columnName": "address_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "0ae16c50c65e4757a0c95cf5d7223ffd",
+          "props": {
+            "name": "Activebool",
+            "displayName": "Activebool",
+            "dataType": "Boolean",
+            "defaultValueType": "Sql",
+            "defaultValue": "true",
+            "columnName": "activebool",
+            "columnType": "boolean"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "565ea14874994d4588e12227219855f9",
+          "props": {
+            "name": "CreateDate",
+            "displayName": "CreateDate",
+            "dataType": "DateOnly",
+            "defaultValueType": "Sql",
+            "defaultValue": "CURRENT_DATE",
+            "columnName": "create_date",
+            "columnType": "date"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "bed5cb4644d84f6fad9e75cdf3430f3a",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "f8a939c4558941b8ad0db7a7d3106f7a",
+          "props": {
+            "name": "Active",
+            "displayName": "Active",
+            "dataType": "Int32",
+            "nullable": true,
+            "columnName": "active",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "dc5241d1f74446d88be2beff59d20167_874853a21e8642bfb1f78bbd17af088c_principal",
+          "props": {
+            "name": "Store",
+            "dataType": "$(self)[dc5241d1f74446d88be2beff59d20167]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "177b46ae6b9647e197c0188165720a1a_632f382303264568b1b15dc5b02e7b90_principal",
+          "props": {
+            "name": "Address",
+            "dataType": "$(self)[177b46ae6b9647e197c0188165720a1a]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "8d661c77d8b54396bdb8560840fdea84_105d7a8db15a423c8952a95b14eb74b8_dependency",
+          "props": {
+            "name": "Rentals",
+            "dataType": "$(self)[8d661c77d8b54396bdb8560840fdea84]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "2bc2243cb1c5400bbafbf348b6d61072",
+      "widget": "table",
+      "props": {
+        "name": "Film",
+        "displayName": "Film",
+        "schema": "public",
+        "tableName": "film",
+        "foreignKeys": [
+          {
+            "id": "e9f884fb9e5449bfa1b4e37364063239",
+            "name": "film_original_language_id_fkey",
+            "refTable": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
+            "refColumns": [
+              "$(self)[e743c54648cc4aa6a60e2657505072d3].[00f1e2ed2ce948baa7e3c2ba37dbe21c]"
+            ],
+            "columns": [
+              "$(self)[2bc2243cb1c5400bbafbf348b6d61072].[159d12f67b264836812b4c88cf600169]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "a3bc980155434b6a9a6efc474564e0d6",
+            "name": "film_language_id_fkey",
+            "refTable": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
+            "refColumns": [
+              "$(self)[e743c54648cc4aa6a60e2657505072d3].[00f1e2ed2ce948baa7e3c2ba37dbe21c]"
+            ],
+            "columns": [
+              "$(self)[2bc2243cb1c5400bbafbf348b6d61072].[2fa1c23370464bc0b518a124e8eca1b1]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "film_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[ea3078341c2e43b899afa9d859878991]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_language_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[2fa1c23370464bc0b518a124e8eca1b1]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_original_language_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[159d12f67b264836812b4c88cf600169]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_title",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[9ac5b12d18734d4ba06ec1e8a7cf1824]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1440,
+        "y": 156
+      },
+      "children": [
+        {
+          "id": "ea3078341c2e43b899afa9d859878991",
+          "props": {
+            "name": "FilmId",
+            "displayName": "FilmId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('film_film_id_seq'::regclass)",
+            "columnName": "film_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "9ac5b12d18734d4ba06ec1e8a7cf1824",
+          "props": {
+            "name": "Title",
+            "displayName": "Title",
+            "dataType": "String",
+            "columnName": "title",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "9395b1dd77414fb4bce341df84448b37",
+          "props": {
+            "name": "Description",
+            "displayName": "Description",
+            "dataType": "String",
+            "nullable": true,
+            "columnName": "description",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "2e94541946ce4ab99a57be4b3ef70b96",
+          "props": {
+            "name": "ReleaseYear",
+            "displayName": "ReleaseYear",
+            "dataType": "Int32",
+            "nullable": true,
+            "columnName": "release_year",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "2fa1c23370464bc0b518a124e8eca1b1",
+          "props": {
+            "name": "LanguageId",
+            "displayName": "LanguageId",
+            "dataType": "Int32",
+            "columnName": "language_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "159d12f67b264836812b4c88cf600169",
+          "props": {
+            "name": "OriginalLanguageId",
+            "displayName": "OriginalLanguageId",
+            "dataType": "Int32",
+            "nullable": true,
+            "columnName": "original_language_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "4dcc6718553741e6b6ba0ec0c2efa448",
+          "props": {
+            "name": "RentalDuration",
+            "displayName": "RentalDuration",
+            "dataType": "Int16",
+            "defaultValueType": "Sql",
+            "defaultValue": "3",
+            "columnName": "rental_duration",
+            "columnType": "smallint"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "d74cb5e16ac84cb9a43134ac5d97a4b0",
+          "props": {
+            "name": "RentalRate",
+            "displayName": "RentalRate",
+            "dataType": "Decimal",
+            "defaultValueType": "Sql",
+            "defaultValue": "4.99",
+            "columnName": "rental_rate",
+            "columnType": "numeric"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "7b67701a03264d6ab88e2068af1ccf66",
+          "props": {
+            "name": "Length",
+            "displayName": "Length",
+            "dataType": "Int16",
+            "nullable": true,
+            "columnName": "length",
+            "columnType": "smallint"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "59f382ad8a5c4292a9e8c48924ec61b0",
+          "props": {
+            "name": "ReplacementCost",
+            "displayName": "ReplacementCost",
+            "dataType": "Decimal",
+            "defaultValueType": "Sql",
+            "defaultValue": "19.99",
+            "columnName": "replacement_cost",
+            "columnType": "numeric"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "bfe6ec3b21124da5aafc0838d7a9ca62",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "e743c54648cc4aa6a60e2657505072d3_e9f884fb9e5449bfa1b4e37364063239_principal",
+          "props": {
+            "name": "Language",
+            "dataType": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "e743c54648cc4aa6a60e2657505072d3_a3bc980155434b6a9a6efc474564e0d6_principal",
+          "props": {
+            "name": "Language1",
+            "dataType": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "169f7e7c6da94b2a94116a91f4c49798_b733325dc1a2455f844db28073b563c6_dependency",
+          "props": {
+            "name": "FilmActors",
+            "dataType": "$(self)[169f7e7c6da94b2a94116a91f4c49798]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "4a1fdaadb30b484bbb0b1d0f6996bdcc_fb9595a889c642a4b66edc0982030d17_dependency",
+          "props": {
+            "name": "FilmCategories",
+            "dataType": "$(self)[4a1fdaadb30b484bbb0b1d0f6996bdcc]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "0b0536e5915c4849a4810ee87dcbbac3_f96069f16b334087911ad788c7d0cad7_dependency",
+          "props": {
+            "name": "Inventories",
+            "dataType": "$(self)[0b0536e5915c4849a4810ee87dcbbac3]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "169f7e7c6da94b2a94116a91f4c49798",
+      "widget": "table",
+      "props": {
+        "name": "FilmActor",
+        "displayName": "FilmActor",
+        "schema": "public",
+        "tableName": "film_actor",
+        "foreignKeys": [
+          {
+            "id": "b733325dc1a2455f844db28073b563c6",
+            "name": "film_actor_film_id_fkey",
+            "refTable": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "refColumns": [
+              "$(self)[2bc2243cb1c5400bbafbf348b6d61072].[ea3078341c2e43b899afa9d859878991]"
+            ],
+            "columns": [
+              "$(self)[169f7e7c6da94b2a94116a91f4c49798].[451a841b5d6e4bbbaee0b5f953cbbdef]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "1d2adf6611ec48cd88be03e19040ee9a",
+            "name": "film_actor_actor_id_fkey",
+            "refTable": "$(self)[e966734c54904dbb8a2603132f94be69]",
+            "refColumns": [
+              "$(self)[e966734c54904dbb8a2603132f94be69].[8d6a4aae4d8042d386640e7b2709dc41]"
+            ],
+            "columns": [
+              "$(self)[169f7e7c6da94b2a94116a91f4c49798].[32a6f971ef374df6a8689bcdaf4dfaaa]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "film_actor_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[32a6f971ef374df6a8689bcdaf4dfaaa]",
+                "direction": "Asc"
+              },
+              {
+                "column": "$(self)[451a841b5d6e4bbbaee0b5f953cbbdef]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_film_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[451a841b5d6e4bbbaee0b5f953cbbdef]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1040,
+        "y": 180
+      },
+      "children": [
+        {
+          "id": "32a6f971ef374df6a8689bcdaf4dfaaa",
+          "props": {
+            "name": "ActorId",
+            "displayName": "ActorId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "columnName": "actor_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "451a841b5d6e4bbbaee0b5f953cbbdef",
+          "props": {
+            "name": "FilmId",
+            "displayName": "FilmId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "columnName": "film_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "99ac0e8b274549308a3887855657d257",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "2bc2243cb1c5400bbafbf348b6d61072_b733325dc1a2455f844db28073b563c6_principal",
+          "props": {
+            "name": "Film",
+            "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "e966734c54904dbb8a2603132f94be69_1d2adf6611ec48cd88be03e19040ee9a_principal",
+          "props": {
+            "name": "Actor",
+            "dataType": "$(self)[e966734c54904dbb8a2603132f94be69]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "4a1fdaadb30b484bbb0b1d0f6996bdcc",
+      "widget": "table",
+      "props": {
+        "name": "FilmCategory",
+        "displayName": "FilmCategory",
+        "schema": "public",
+        "tableName": "film_category",
+        "foreignKeys": [
+          {
+            "id": "fb9595a889c642a4b66edc0982030d17",
+            "name": "film_category_film_id_fkey",
+            "refTable": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "refColumns": [
+              "$(self)[2bc2243cb1c5400bbafbf348b6d61072].[ea3078341c2e43b899afa9d859878991]"
+            ],
+            "columns": [
+              "$(self)[4a1fdaadb30b484bbb0b1d0f6996bdcc].[1bf96be6c0cc4999afc63b769760a2df]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "d3fdff2de1ae46a984fa666747f7f67d",
+            "name": "film_category_category_id_fkey",
+            "refTable": "$(self)[aed740da02474d42a326ed73292981e6]",
+            "refColumns": [
+              "$(self)[aed740da02474d42a326ed73292981e6].[0e43a01cbe0949de8e7e0eb6f56095c2]"
+            ],
+            "columns": [
+              "$(self)[4a1fdaadb30b484bbb0b1d0f6996bdcc].[cf9f6eff80174f188675b3be9967a2b9]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "film_category_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[1bf96be6c0cc4999afc63b769760a2df]",
+                "direction": "Asc"
+              },
+              {
+                "column": "$(self)[cf9f6eff80174f188675b3be9967a2b9]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1040,
+        "y": 0
+      },
+      "children": [
+        {
+          "id": "1bf96be6c0cc4999afc63b769760a2df",
+          "props": {
+            "name": "FilmId",
+            "displayName": "FilmId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "columnName": "film_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "cf9f6eff80174f188675b3be9967a2b9",
+          "props": {
+            "name": "CategoryId",
+            "displayName": "CategoryId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "columnName": "category_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "ff6be339146b4495b07fba8f68a5f667",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "2bc2243cb1c5400bbafbf348b6d61072_fb9595a889c642a4b66edc0982030d17_principal",
+          "props": {
+            "name": "Film",
+            "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "aed740da02474d42a326ed73292981e6_d3fdff2de1ae46a984fa666747f7f67d_principal",
+          "props": {
+            "name": "Category",
+            "dataType": "$(self)[aed740da02474d42a326ed73292981e6]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "0b0536e5915c4849a4810ee87dcbbac3",
+      "widget": "table",
+      "props": {
+        "name": "Inventory",
+        "displayName": "Inventory",
+        "schema": "public",
+        "tableName": "inventory",
+        "foreignKeys": [
+          {
+            "id": "3a673d0d72e747bdbc4e6c539adebb89",
+            "name": "inventory_store_id_fkey",
+            "refTable": "$(self)[dc5241d1f74446d88be2beff59d20167]",
+            "refColumns": [
+              "$(self)[dc5241d1f74446d88be2beff59d20167].[2c345e9167e144108e03739741fcc314]"
+            ],
+            "columns": [
+              "$(self)[0b0536e5915c4849a4810ee87dcbbac3].[137ef5a7c5844a608ae42a9baaacafff]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "f96069f16b334087911ad788c7d0cad7",
+            "name": "inventory_film_id_fkey",
+            "refTable": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "refColumns": [
+              "$(self)[2bc2243cb1c5400bbafbf348b6d61072].[ea3078341c2e43b899afa9d859878991]"
+            ],
+            "columns": [
+              "$(self)[0b0536e5915c4849a4810ee87dcbbac3].[5b86400ce45549cd938292e7409d68f8]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "inventory_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[42b5c2dd5c7a4808bad12f8a91e5da5d]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_store_id_film_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[5b86400ce45549cd938292e7409d68f8]",
+                "direction": "Asc"
+              },
+              {
+                "column": "$(self)[137ef5a7c5844a608ae42a9baaacafff]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1040,
+        "y": 360
+      },
+      "children": [
+        {
+          "id": "42b5c2dd5c7a4808bad12f8a91e5da5d",
+          "props": {
+            "name": "InventoryId",
+            "displayName": "InventoryId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('inventory_inventory_id_seq'::regclass)",
+            "columnName": "inventory_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "5b86400ce45549cd938292e7409d68f8",
+          "props": {
+            "name": "FilmId",
+            "displayName": "FilmId",
+            "dataType": "Int32",
+            "columnName": "film_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "137ef5a7c5844a608ae42a9baaacafff",
+          "props": {
+            "name": "StoreId",
+            "displayName": "StoreId",
+            "dataType": "Int32",
+            "columnName": "store_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "398aa22f50cf4c8e9d6b78cd323a352f",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "bc9b96f067bb4cf895c2503a34bf7588",
+          "widget": "field",
+          "props": {
+            "displayName": "IsFree",
+            "name": "IsFree",
+            "dataType": "Boolean",
+            "nullable": false,
+            "defaultValueType": "Value",
+            "defaultValue": "true"
+          }
+        },
+        {
+          "id": "182d3699ffc4405eb49cc79fc0aaf9ce",
+          "widget": "field",
+          "props": {
+            "displayName": "IsRented",
+            "name": "IsRented",
+            "dataType": "Boolean",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "computed": true,
+            "computedType": "Expression",
+            "expression": "$(exp)!&(self)[0b0536e5915c4849a4810ee87dcbbac3].[bc9b96f067bb4cf895c2503a34bf7588]"
+          }
+        },
+        {
+          "id": "dc5241d1f74446d88be2beff59d20167_3a673d0d72e747bdbc4e6c539adebb89_principal",
+          "props": {
+            "name": "Store",
+            "dataType": "$(self)[dc5241d1f74446d88be2beff59d20167]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "2bc2243cb1c5400bbafbf348b6d61072_f96069f16b334087911ad788c7d0cad7_principal",
+          "props": {
+            "name": "Film",
+            "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "8d661c77d8b54396bdb8560840fdea84_ea0ccdffc6164323accd02320eec780d_dependency",
+          "props": {
+            "name": "Rentals",
+            "dataType": "$(self)[8d661c77d8b54396bdb8560840fdea84]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "e743c54648cc4aa6a60e2657505072d3",
+      "widget": "table",
+      "props": {
+        "name": "Language",
+        "displayName": "Language",
+        "schema": "public",
+        "tableName": "language",
+        "indexes": [
+          {
+            "name": "language_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[00f1e2ed2ce948baa7e3c2ba37dbe21c]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1840,
+        "y": 0
+      },
+      "children": [
+        {
+          "id": "00f1e2ed2ce948baa7e3c2ba37dbe21c",
+          "props": {
+            "name": "LanguageId",
+            "displayName": "LanguageId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('language_language_id_seq'::regclass)",
+            "columnName": "language_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "a817c986d0ff452fa2fa9aae43b0727a",
+          "props": {
+            "name": "Name",
+            "displayName": "Name",
+            "dataType": "String",
+            "length": 20,
+            "columnName": "name",
+            "columnType": "character"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "01306a96a0c44aa2afd89948f82efcfb",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "2bc2243cb1c5400bbafbf348b6d61072_e9f884fb9e5449bfa1b4e37364063239_dependency",
+          "props": {
+            "name": "Films",
+            "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "2bc2243cb1c5400bbafbf348b6d61072_a3bc980155434b6a9a6efc474564e0d6_dependency",
+          "props": {
+            "name": "Films1",
+            "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "b5fc4ba6967b482fa1920a79d68c70c9",
+      "widget": "table",
+      "props": {
+        "name": "Payment",
+        "displayName": "Payment",
+        "schema": "public",
+        "tableName": "payment",
+        "x": 180,
+        "y": 1542
+      },
+      "children": [
+        {
+          "id": "5a287f6e71a34b1a82368373580e242f",
+          "props": {
+            "name": "PaymentId",
+            "displayName": "PaymentId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('payment_payment_id_seq'::regclass)",
+            "columnName": "payment_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "b5fd6f9530db4965af1eaacad078aa1e",
+          "props": {
+            "name": "CustomerId",
+            "displayName": "CustomerId",
+            "dataType": "Int32",
+            "columnName": "customer_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "39329a1bddc14d5c99da2c25555d72ab",
+          "props": {
+            "name": "StaffId",
+            "displayName": "StaffId",
+            "dataType": "Int32",
+            "columnName": "staff_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "8b062174a9684d4eb443f2321c8ca226",
+          "props": {
+            "name": "RentalId",
+            "displayName": "RentalId",
+            "dataType": "Int32",
+            "columnName": "rental_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "e7fa8c47e8374ac7b838dec7ddbf26a7",
+          "props": {
+            "name": "Amount",
+            "displayName": "Amount",
+            "dataType": "Decimal",
+            "columnName": "amount",
+            "columnType": "numeric"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "40480f7c515242ff8b570ee96fd6307c",
+          "props": {
+            "name": "PaymentDate",
+            "displayName": "PaymentDate",
+            "primaryKey": true,
+            "dataType": "DateTime",
+            "columnName": "payment_date",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        }
+      ]
+    },
+    {
+      "id": "8d661c77d8b54396bdb8560840fdea84",
+      "widget": "table",
+      "props": {
+        "name": "Rental",
+        "displayName": "Rental",
+        "schema": "public",
+        "tableName": "rental",
+        "foreignKeys": [
+          {
+            "id": "ad6ad535ec8f424d9ed8932ed67e7ed0",
+            "name": "rental_staff_id_fkey",
+            "refTable": "$(self)[9ceaa3a233c9458ba7efcdf115827385]",
+            "refColumns": [
+              "$(self)[9ceaa3a233c9458ba7efcdf115827385].[ae0767c2708a40e5a478db22655e4010]"
+            ],
+            "columns": [
+              "$(self)[8d661c77d8b54396bdb8560840fdea84].[77ddad4d4770434d8e8af60257a4e59d]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "ea0ccdffc6164323accd02320eec780d",
+            "name": "rental_inventory_id_fkey",
+            "refTable": "$(self)[0b0536e5915c4849a4810ee87dcbbac3]",
+            "refColumns": [
+              "$(self)[0b0536e5915c4849a4810ee87dcbbac3].[42b5c2dd5c7a4808bad12f8a91e5da5d]"
+            ],
+            "columns": [
+              "$(self)[8d661c77d8b54396bdb8560840fdea84].[10ede5a73f4c49f0a9516a997de79472]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "105d7a8db15a423c8952a95b14eb74b8",
+            "name": "rental_customer_id_fkey",
+            "refTable": "$(self)[0f7fa5d8ed5b4e5d92d308b1c7260423]",
+            "refColumns": [
+              "$(self)[0f7fa5d8ed5b4e5d92d308b1c7260423].[c6a0e8b3a7c848e8b3042ceec615385e]"
+            ],
+            "columns": [
+              "$(self)[8d661c77d8b54396bdb8560840fdea84].[11beda4940ea470b847a57892c3dc812]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "rental_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[58477a63af6d451fbe538d6fe1c73365]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_fk_inventory_id",
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[10ede5a73f4c49f0a9516a997de79472]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_unq_rental_rental_date_inventory_id_customer_id",
+            "unique": true,
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[be8e7bb5a049451ab8203ac5e090af8f]",
+                "direction": "Asc"
+              },
+              {
+                "column": "$(self)[10ede5a73f4c49f0a9516a997de79472]",
+                "direction": "Asc"
+              },
+              {
+                "column": "$(self)[11beda4940ea470b847a57892c3dc812]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 640,
+        "y": 0
+      },
+      "children": [
+        {
+          "id": "58477a63af6d451fbe538d6fe1c73365",
+          "props": {
+            "name": "RentalId",
+            "displayName": "RentalId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('rental_rental_id_seq'::regclass)",
+            "columnName": "rental_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "be8e7bb5a049451ab8203ac5e090af8f",
+          "props": {
+            "name": "RentalDate",
+            "displayName": "RentalDate",
+            "dataType": "DateTime",
+            "columnName": "rental_date",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "10ede5a73f4c49f0a9516a997de79472",
+          "props": {
+            "name": "InventoryId",
+            "displayName": "InventoryId",
+            "dataType": "Int32",
+            "columnName": "inventory_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "11beda4940ea470b847a57892c3dc812",
+          "props": {
+            "name": "CustomerId",
+            "displayName": "CustomerId",
+            "dataType": "Int32",
+            "columnName": "customer_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "f55901363bc447a3b5fce0c0b4c72ad8",
+          "props": {
+            "name": "ReturnDate",
+            "displayName": "ReturnDate",
+            "dataType": "DateTime",
+            "nullable": true,
+            "columnName": "return_date",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "77ddad4d4770434d8e8af60257a4e59d",
+          "props": {
+            "name": "StaffId",
+            "displayName": "StaffId",
+            "dataType": "Int32",
+            "columnName": "staff_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "ce862412523c49eaa5a2373b3c6c8ce7",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "6b962a855485481083ae34d4cb38d2fb",
+          "widget": "field",
+          "props": {
+            "displayName": "已支付",
+            "name": "IsPayed",
+            "dataType": "Boolean",
+            "nullable": false,
+            "defaultValueType": "Value",
+            "defaultValue": "false"
+          }
+        },
+        {
+          "id": "5dfddb48514642e683e04e0dc9bcaf20",
+          "widget": "field",
+          "props": {
+            "displayName": "IsReturned",
+            "name": "IsReturned",
+            "dataType": "Boolean",
+            "nullable": false,
+            "defaultValueType": "Value",
+            "computed": true,
+            "computedType": "Expression",
+            "expression": "$(exp)IsNotNull(&(self)[8d661c77d8b54396bdb8560840fdea84].[f55901363bc447a3b5fce0c0b4c72ad8]) && &(self)[8d661c77d8b54396bdb8560840fdea84].[f55901363bc447a3b5fce0c0b4c72ad8] <= Now()"
+          }
+        },
+        {
+          "id": "60291887da7c4de4b886b756a43f736d",
+          "widget": "field",
+          "props": {
+            "displayName": "RentAmount",
+            "name": "RentAmount",
+            "dataType": "Decimal",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "computed": true,
+            "computedType": "Expression",
+            "expression": "$(exp)&(self)[8d661c77d8b54396bdb8560840fdea84].[0b0536e5915c4849a4810ee87dcbbac3_ea0ccdffc6164323accd02320eec780d_principal].[2bc2243cb1c5400bbafbf348b6d61072_f96069f16b334087911ad788c7d0cad7_principal].[d74cb5e16ac84cb9a43134ac5d97a4b0]"
+          }
+        },
+        {
+          "id": "9ceaa3a233c9458ba7efcdf115827385_ad6ad535ec8f424d9ed8932ed67e7ed0_principal",
+          "props": {
+            "name": "Staff",
+            "dataType": "$(self)[9ceaa3a233c9458ba7efcdf115827385]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "0b0536e5915c4849a4810ee87dcbbac3_ea0ccdffc6164323accd02320eec780d_principal",
+          "props": {
+            "name": "Inventory",
+            "dataType": "$(self)[0b0536e5915c4849a4810ee87dcbbac3]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "0f7fa5d8ed5b4e5d92d308b1c7260423_105d7a8db15a423c8952a95b14eb74b8_principal",
+          "props": {
+            "name": "Customer",
+            "dataType": "$(self)[0f7fa5d8ed5b4e5d92d308b1c7260423]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "9ceaa3a233c9458ba7efcdf115827385",
+      "widget": "table",
+      "props": {
+        "name": "Staff",
+        "displayName": "Staff",
+        "schema": "public",
+        "tableName": "staff",
+        "foreignKeys": [
+          {
+            "id": "b7bc81a687144c98a6370d7e5bb41748",
+            "name": "staff_store_id_fkey",
+            "refTable": "$(self)[dc5241d1f74446d88be2beff59d20167]",
+            "refColumns": [
+              "$(self)[dc5241d1f74446d88be2beff59d20167].[2c345e9167e144108e03739741fcc314]"
+            ],
+            "columns": [
+              "$(self)[9ceaa3a233c9458ba7efcdf115827385].[70aefb0599eb4aa8b8dd71ba7c0f7d9c]"
+            ],
+            "deleteRule": "NoAction"
+          },
+          {
+            "id": "212dd662907d4364abfc9f4eeae60a6c",
+            "name": "staff_address_id_fkey",
+            "refTable": "$(self)[177b46ae6b9647e197c0188165720a1a]",
+            "refColumns": [
+              "$(self)[177b46ae6b9647e197c0188165720a1a].[c0a282dc2199480385001e179fcf8420]"
+            ],
+            "columns": [
+              "$(self)[9ceaa3a233c9458ba7efcdf115827385].[cfed3cdf94de4922817424527ca1e049]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "staff_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[ae0767c2708a40e5a478db22655e4010]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1040,
+        "y": 1008
+      },
+      "children": [
+        {
+          "id": "ae0767c2708a40e5a478db22655e4010",
+          "props": {
+            "name": "StaffId",
+            "displayName": "StaffId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('staff_staff_id_seq'::regclass)",
+            "columnName": "staff_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "a9f39c5b91b242a99837acbf17dc79b2",
+          "props": {
+            "name": "FirstName",
+            "displayName": "FirstName",
+            "dataType": "String",
+            "columnName": "first_name",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "d2e7536ad72a4699aad3c5bb4a30691d",
+          "props": {
+            "name": "LastName",
+            "displayName": "LastName",
+            "dataType": "String",
+            "columnName": "last_name",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "cfed3cdf94de4922817424527ca1e049",
+          "props": {
+            "name": "AddressId",
+            "displayName": "AddressId",
+            "dataType": "Int32",
+            "columnName": "address_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "1c7921d940444858b74be09830e2fbd5",
+          "props": {
+            "name": "Email",
+            "displayName": "Email",
+            "dataType": "String",
+            "nullable": true,
+            "columnName": "email",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "70aefb0599eb4aa8b8dd71ba7c0f7d9c",
+          "props": {
+            "name": "StoreId",
+            "displayName": "StoreId",
+            "dataType": "Int32",
+            "columnName": "store_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "d9d3f3a1db664bc581983835bf3d96cb",
+          "props": {
+            "name": "Active",
+            "displayName": "Active",
+            "dataType": "Boolean",
+            "defaultValueType": "Sql",
+            "defaultValue": "true",
+            "columnName": "active",
+            "columnType": "boolean"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "6e77d318df05488c85651a9fba53131b",
+          "props": {
+            "name": "Username",
+            "displayName": "Username",
+            "dataType": "String",
+            "columnName": "username",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "2abae654025244e0b3ab25f0bb7184c6",
+          "props": {
+            "name": "Password",
+            "displayName": "Password",
+            "dataType": "String",
+            "nullable": true,
+            "columnName": "password",
+            "columnType": "text"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "2d9282fc8550468aaffddd49174a33ae",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "c6f2cb5c82bd4bc6a46d654de47beff1",
+          "props": {
+            "name": "Picture",
+            "isCollection": true,
+            "displayName": "Picture",
+            "dataType": "Byte",
+            "nullable": true,
+            "columnName": "picture",
+            "columnType": "bytea"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "8d661c77d8b54396bdb8560840fdea84_ad6ad535ec8f424d9ed8932ed67e7ed0_dependency",
+          "props": {
+            "name": "Rentals",
+            "dataType": "$(self)[8d661c77d8b54396bdb8560840fdea84]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "dc5241d1f74446d88be2beff59d20167_b7bc81a687144c98a6370d7e5bb41748_principal",
+          "props": {
+            "name": "Store",
+            "dataType": "$(self)[dc5241d1f74446d88be2beff59d20167]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal",
+          "props": {
+            "name": "Address",
+            "dataType": "$(self)[177b46ae6b9647e197c0188165720a1a]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    },
+    {
+      "id": "dc5241d1f74446d88be2beff59d20167",
+      "widget": "table",
+      "props": {
+        "name": "Store",
+        "displayName": "Store",
+        "schema": "public",
+        "tableName": "store",
+        "foreignKeys": [
+          {
+            "id": "6d4486c977744506aa5c7fdd6b2dc615",
+            "name": "store_address_id_fkey",
+            "refTable": "$(self)[177b46ae6b9647e197c0188165720a1a]",
+            "refColumns": [
+              "$(self)[177b46ae6b9647e197c0188165720a1a].[c0a282dc2199480385001e179fcf8420]"
+            ],
+            "columns": [
+              "$(self)[dc5241d1f74446d88be2beff59d20167].[0b65f8c948a74c6a860c6dcb164ac2f3]"
+            ],
+            "deleteRule": "NoAction"
+          }
+        ],
+        "indexes": [
+          {
+            "name": "store_pkey",
+            "unique": true,
+            "type": "Key",
+            "columns": [
+              {
+                "column": "$(self)[2c345e9167e144108e03739741fcc314]",
+                "direction": "Asc"
+              }
+            ]
+          },
+          {
+            "name": "idx_unq_manager_staff_id",
+            "unique": true,
+            "type": "Index",
+            "columns": [
+              {
+                "column": "$(self)[4d24ee3d277847a799bd6a1588a93f8a]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "x": 1440,
+        "y": 1192
+      },
+      "children": [
+        {
+          "id": "2c345e9167e144108e03739741fcc314",
+          "props": {
+            "name": "StoreId",
+            "displayName": "StoreId",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Sql",
+            "defaultValue": "nextval('store_store_id_seq'::regclass)",
+            "columnName": "store_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "4d24ee3d277847a799bd6a1588a93f8a",
+          "props": {
+            "name": "ManagerStaffId",
+            "displayName": "ManagerStaffId",
+            "dataType": "Int32",
+            "columnName": "manager_staff_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "0b65f8c948a74c6a860c6dcb164ac2f3",
+          "props": {
+            "name": "AddressId",
+            "displayName": "AddressId",
+            "dataType": "Int32",
+            "columnName": "address_id",
+            "columnType": "integer"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "70d425842e9c4911a827b82e03531ce7",
+          "props": {
+            "name": "LastUpdate",
+            "displayName": "LastUpdate",
+            "dataType": "DateTime",
+            "defaultValueType": "Sql",
+            "defaultValue": "now()",
+            "columnName": "last_update",
+            "columnType": "timestamp with time zone"
+          },
+          "widget": "column"
+        },
+        {
+          "id": "0f7fa5d8ed5b4e5d92d308b1c7260423_874853a21e8642bfb1f78bbd17af088c_dependency",
+          "props": {
+            "name": "Customers",
+            "dataType": "$(self)[0f7fa5d8ed5b4e5d92d308b1c7260423]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "0b0536e5915c4849a4810ee87dcbbac3_3a673d0d72e747bdbc4e6c539adebb89_dependency",
+          "props": {
+            "name": "Inventories",
+            "dataType": "$(self)[0b0536e5915c4849a4810ee87dcbbac3]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "9ceaa3a233c9458ba7efcdf115827385_b7bc81a687144c98a6370d7e5bb41748_dependency",
+          "props": {
+            "name": "Stafves",
+            "dataType": "$(self)[9ceaa3a233c9458ba7efcdf115827385]",
+            "nullable": true,
+            "isCollection": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        },
+        {
+          "id": "177b46ae6b9647e197c0188165720a1a_6d4486c977744506aa5c7fdd6b2dc615_principal",
+          "props": {
+            "name": "Address",
+            "dataType": "$(self)[177b46ae6b9647e197c0188165720a1a]",
+            "nullable": true,
+            "isRelationship": true
+          },
+          "widget": "field"
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

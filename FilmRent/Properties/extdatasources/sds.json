@@ -1,0 +1,78 @@
+﻿{
+  "id": "d6d913efb4f84c12b23153aa675a619b",
+  "widget": "staticdatasource",
+  "props": {
+    "name": "Static"
+  },
+  "children": [
+    {
+      "id": "986eda68049e44aa8a70e3dbb1b0859e",
+      "widget": "model_static",
+      "props": {
+        "name": "RatingSource",
+        "group": "Default",
+        "isItemModel": true,
+        "dataType": "String",
+        "value": ""
+      },
+      "children": [
+        {
+          "id": "bce28a86a07b4bef987d3449a70e819a",
+          "widget": "field",
+          "props": {
+            "displayName": "适合所有人",
+            "name": "适合所有人",
+            "dataType": "String",
+            "defaultValueType": "Value",
+            "defaultValue": "G"
+          }
+        },
+        {
+          "id": "d049439a0345490881b8f884e9dcc7d1",
+          "widget": "field",
+          "props": {
+            "displayName": "需家长陪同",
+            "name": "需家长陪同",
+            "dataType": "String",
+            "defaultValueType": "Value",
+            "defaultValue": "PG"
+          }
+        },
+        {
+          "id": "ccce8be165e444e280ae0993b2784786",
+          "widget": "field",
+          "props": {
+            "displayName": "不适合13岁以下",
+            "name": "不适合13岁以下",
+            "dataType": "String",
+            "defaultValueType": "Value",
+            "defaultValue": "PG-13"
+          }
+        },
+        {
+          "id": "cc1ad084beb2487797bc8469ffe6d07b",
+          "widget": "field",
+          "props": {
+            "displayName": "限制级",
+            "name": "限制级",
+            "dataType": "String",
+            "defaultValueType": "Value",
+            "defaultValue": "R"
+          }
+        },
+        {
+          "id": "99ebdac99e114c26a75fcdd74c216073",
+          "widget": "field",
+          "props": {
+            "displayName": "不适合17岁以下",
+            "name": "不适合17岁以下",
+            "dataType": "String",
+            "defaultValueType": "Value",
+            "defaultValue": "NC-17"
+          }
+        }
+      ]
+    }
+  ],
+  "version": "1.0.0"
+}

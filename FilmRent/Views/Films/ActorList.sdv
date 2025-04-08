@@ -1,0 +1,479 @@
+﻿{
+  "id": "page_8dd56677fc18713",
+  "widget": "page",
+  "props": {
+    "ref": "page_8dd56677fc18713",
+    "name": "ActorList",
+    "title": "ActorList",
+    "params": [
+      {
+        "id": "77c280e06747ef9",
+        "widget": "parameter",
+        "props": {
+          "name": "fileId",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      },
+      {
+        "id": "57a557de36cb957",
+        "widget": "parameter",
+        "props": {
+          "name": "fileName",
+          "dataType": "String",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ]
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "card_8bd6b4cb1d23367",
+      "widget": "card",
+      "props": {
+        "style": {},
+        "ref": "card_ce056ab1ab85de0",
+        "extra": [
+          {
+            "id": "button_fdf13fe70c6fd60",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_5d4d09dbf131601",
+              "label": "绑定",
+              "size": "middle",
+              "events": {
+                "onClick": {
+                  "id": "event_ddc461d35dd2a34",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_component",
+                      "id": "action_0a4ef2d7025c574",
+                      "props": {
+                        "target": "&(self)[modal_1ed1039c0376388].onOpen"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          }
+        ],
+        "title": [
+          {
+            "id": "space_5ca116b80b6173a",
+            "widget": "space",
+            "props": {
+              "style": {},
+              "ref": "space_9c1380c6d8183f0",
+              "align": "center"
+            },
+            "children": [
+              {
+                "id": "title_d3b0341e479f003",
+                "widget": "title",
+                "props": {
+                  "style": {},
+                  "ref": "title_ea34ad83a0b00ce",
+                  "level": 2,
+                  "value": {
+                    "kind": "Props",
+                    "value": "$(self)[page_8dd56677fc18713].params.[57a557de36cb957]"
+                  }
+                },
+                "children": []
+              },
+              {
+                "id": "title_f194e46efd62056",
+                "widget": "title",
+                "props": {
+                  "style": {},
+                  "ref": "title_a3526832bdf1b58",
+                  "level": 3,
+                  "color": "#817E7EFF",
+                  "value": "-演员列表"
+                },
+                "children": []
+              }
+            ]
+          }
+        ],
+        "hideActions": false
+      },
+      "children": [
+        {
+          "id": "list_92cd83190acc306",
+          "widget": "list",
+          "props": {
+            "style": {},
+            "ref": "list_33b0a645048e4d7",
+            "itemLayout": "vertical",
+            "paginationMode": "none",
+            "loadMoreText": "加载更多",
+            "model": {
+              "data": "&(ref)8dd55881d950d47.[e966734c54904dbb8a2603132f94be69]"
+            },
+            "bordered": false,
+            "split": true,
+            "dataSource": {
+              "id": "function_cb9d70683c282f1",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_8577b16cdd3fc4c",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)20bfbf8970c44454b5d3f6bcb388e9d2.[d17d82f54c4e457bbbb4a720bfed0357]",
+                    "params": [
+                      {
+                        "id": "assign_param_0f06f1d3d3d14ba",
+                        "widget": "assign_param",
+                        "props": {
+                          "name": {
+                            "kind": "Parameter",
+                            "value": "&(self)[list_92cd83190acc306].dataSource.[action_8577b16cdd3fc4c].target.params.[2b59fa2822894b9383351c7157cdc589]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "assign_param_aa6733229dd866d",
+                            "widget": "assign_param",
+                            "props": {
+                              "name": {
+                                "kind": "Parameter",
+                                "value": "&(self)[list_92cd83190acc306].dataSource.[action_8577b16cdd3fc4c].target.params.[2b59fa2822894b9383351c7157cdc589].[9bc51d8140a049e8ae9457a53b4f7c62]"
+                              },
+                              "value": {
+                                "kind": "Props",
+                                "value": "$(self)[page_8dd56677fc18713].params.[77c280e06747ef9]"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "action_a1b6f6333fb5377",
+                  "widget": "action_adapter",
+                  "children": [
+                    {
+                      "id": "assign_param_4c2a145d42691eb",
+                      "widget": "assign_param",
+                      "props": {
+                        "name": {
+                          "kind": "Members",
+                          "value": "&(self)[list_92cd83190acc306].data"
+                        },
+                        "value": {
+                          "kind": "Field",
+                          "value": "&(self)[list_92cd83190acc306].dataSource.[action_8577b16cdd3fc4c].target.result"
+                        }
+                      }
+                    },
+                    {
+                      "id": "assign_param_5dd801e52b24b24",
+                      "widget": "assign_param",
+                      "props": {
+                        "name": {
+                          "kind": "Members",
+                          "value": "&(self)[list_92cd83190acc306].total"
+                        },
+                        "value": {
+                          "kind": "Field",
+                          "value": ""
+                        }
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              ],
+              "props": {}
+            }
+          },
+          "children": [
+            {
+              "id": "listItem_40f82e303d67b56",
+              "widget": "listItem",
+              "props": {
+                "style": {},
+                "ref": "listItem_f07df1c2797457e"
+              },
+              "children": [
+                {
+                  "id": "flex_0b99702441c022e",
+                  "widget": "flex",
+                  "props": {
+                    "style": {},
+                    "ref": "flex_961015396adcb4e",
+                    "gap": {
+                      "custom": false,
+                      "type": "middle"
+                    },
+                    "justify": "space-between",
+                    "align": "end"
+                  },
+                  "children": [
+                    {
+                      "id": "title_fef6cae9f9c39a5",
+                      "widget": "title",
+                      "props": {
+                        "style": {},
+                        "ref": "title_0246cbc12af0c3d",
+                        "value": {
+                          "kind": "Field",
+                          "value": "&(self)[list_92cd83190acc306].dataSource.[action_a1b6f6333fb5377].[assign_param_4c2a145d42691eb].[d5c1ff92b0264ba8bee400972de1a70a]"
+                        },
+                        "level": 4
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "popConfirm_794f3fd4da663c1",
+                      "widget": "popConfirm",
+                      "props": {
+                        "style": {},
+                        "ref": "popConfirm_3122127d4cb5bab",
+                        "icon": "antdv://ExclamationCircleOutlined",
+                        "events": {
+                          "confirm": {
+                            "id": "event_b0e3788a8555841",
+                            "widget": "event",
+                            "children": [
+                              {
+                                "widget": "action_api",
+                                "id": "action_367f62e9e0e2980",
+                                "props": {
+                                  "target": "&(ref)20bfbf8970c44454b5d3f6bcb388e9d2.[857f56a90ae94164be4276d097ec7c0c]",
+                                  "params": [
+                                    {
+                                      "id": "assign_param_622eb79f8c54c8b",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[popConfirm_794f3fd4da663c1].events.confirm.[action_367f62e9e0e2980].target.params.[276f76c0a78549abb12f9e0b3d3c66d9]"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[list_92cd83190acc306].currentRow.[8d6a4aae4d8042d386640e7b2709dc41]"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "assign_param_f8a756629ebad32",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[popConfirm_794f3fd4da663c1].events.confirm.[action_367f62e9e0e2980].target.params.[afc0ddbc34924286a72022fff7233961]"
+                                        },
+                                        "value": {
+                                          "kind": "Props",
+                                          "value": "$(self)[page_8dd56677fc18713].params.[77c280e06747ef9]"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "widget": "action_component",
+                                "id": "action_fa98ad14083c791",
+                                "props": {
+                                  "target": "&(self)[list_92cd83190acc306].loadData"
+                                }
+                              }
+                            ],
+                            "props": {}
+                          }
+                        },
+                        "open": false,
+                        "title": "解绑",
+                        "description": "确认移除当前演员吗"
+                      },
+                      "children": [
+                        {
+                          "id": "button_c664f077bc126f8",
+                          "widget": "button",
+                          "props": {
+                            "style": {},
+                            "ref": "button_5a1007a03728079",
+                            "label": "移除",
+                            "type": "link",
+                            "size": "small",
+                            "danger": true
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modal_1ed1039c0376388",
+      "widget": "modal",
+      "props": {
+        "style": {},
+        "ref": "modal_0c852209995a079",
+        "destroyOnClose": true,
+        "footer": [
+          {
+            "id": "button_244e34917e17be4",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_51c9b95857dc7b8",
+              "label": "确认",
+              "type": "primary",
+              "events": {
+                "onClick": {
+                  "id": "event_d77640cf805bb6d",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_api",
+                      "id": "action_3eee0a40d0dcc0d",
+                      "props": {
+                        "target": "&(ref)20bfbf8970c44454b5d3f6bcb388e9d2.[8791475a2b0c489baaeda91f2d2cbcaa]",
+                        "params": [
+                          {
+                            "id": "assign_param_a27b5b2f254940a",
+                            "widget": "assign_param",
+                            "props": {
+                              "name": {
+                                "kind": "Parameter",
+                                "value": "&(self)[modal_1ed1039c0376388].footer.[button_244e34917e17be4].events.onClick.[action_3eee0a40d0dcc0d].target.params.[3fa2684bb37b420abe0e9b0266aa4249]"
+                              }
+                            },
+                            "children": [
+                              {
+                                "id": "assign_param_4ebd3c2ffce7352",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[modal_1ed1039c0376388].footer.[button_244e34917e17be4].events.onClick.[action_3eee0a40d0dcc0d].target.params.[3fa2684bb37b420abe0e9b0266aa4249].[da40dfb44f474471ba5505be923917f6]"
+                                  },
+                                  "value": {
+                                    "kind": "Props",
+                                    "value": "$(self)[page_8dd56677fc18713].params.[77c280e06747ef9]"
+                                  }
+                                }
+                              },
+                              {
+                                "id": "assign_param_08497c09dc4d1dd",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[modal_1ed1039c0376388].footer.[button_244e34917e17be4].events.onClick.[action_3eee0a40d0dcc0d].target.params.[3fa2684bb37b420abe0e9b0266aa4249].[e86ae45b26b943248166d0a08498ae5e]"
+                                  },
+                                  "value": {
+                                    "kind": "Members",
+                                    "value": "&(self)[include_6f142abc96bf67d].page.link.exposes.[a3ac3ea9652549208abba686df3b9939].[8d6a4aae4d8042d386640e7b2709dc41]"
+                                  }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_eb8667470f5ada9",
+                      "props": {
+                        "target": "&(self)[modal_1ed1039c0376388].onClose"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_427ca400256aab4",
+                      "props": {
+                        "target": "&(self)[list_92cd83190acc306].loadData"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "button_09e4db840bf1f21",
+            "widget": "button",
+            "props": {
+              "style": {},
+              "ref": "button_6f6fabfc528a9b8",
+              "label": "取消",
+              "events": {
+                "onClick": {
+                  "id": "event_b6b0af60d97a8c0",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "id": "action_component_8e2a4a90c97a88d",
+                      "widget": "action_component",
+                      "props": {
+                        "target": "&(self)[modal_1ed1039c0376388].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          }
+        ],
+        "title": "选择演员",
+        "width": 600,
+        "keyboard": false
+      },
+      "children": [
+        {
+          "id": "include_6f142abc96bf67d",
+          "widget": "include",
+          "props": {
+            "style": {},
+            "ref": "include_391f8473771c8e4",
+            "page": {
+              "id": "action_eaff51b530d4549",
+              "widget": "action_frame",
+              "props": {
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)fa90a5d7e841490eaf5d93ed1db69a9d"
+                },
+                "params": []
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "references": {
+    "20bfbf8970c44454b5d3f6bcb388e9d2": "..\\..\\Logics\\Actor.sdlg",
+    "fa90a5d7e841490eaf5d93ed1db69a9d": "ActorSelect.sdv",
+    "8dd55881d950d47": "..\\..\\Pagila.sde"
+  },
+  "version": "1.0.0"
+}

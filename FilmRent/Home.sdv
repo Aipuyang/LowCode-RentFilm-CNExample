@@ -1,0 +1,11 @@
+﻿{
+  "id": "page_715328458349259",
+  "widget": "page",
+  "props": {
+    "ref": "page_715328458349259",
+    "name": "Home",
+    "title": "首页",
+    "params": []
+  },
+  "version": "1.0.0"
+}

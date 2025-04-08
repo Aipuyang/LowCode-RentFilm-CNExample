@@ -1,0 +1,146 @@
+﻿{
+  "id": "page_db55575579b840a6a976f3cfec68b3d6",
+  "widget": "page",
+  "props": {
+    "ref": "page_db55575579b840a6a976f3cfec68b3d6",
+    "name": "ActorCreate",
+    "title": "Actor",
+    "params": [],
+    "rules": [],
+    "exposes": [
+      {
+        "id": "85adcbeca24d4b0eb6e4deda29c55e6d",
+        "target": "&(self)[button_5b5abd7f17bb4a00b4fa34c3c3a92827].onClick"
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "card_048fdd8b2e714416b41d66da7657344a",
+      "widget": "card",
+      "props": {
+        "ref": "card_048fdd8b2e714416b41d66da7657344a",
+        "title": "",
+        "extra": [],
+        "hideActions": true
+      },
+      "children": [
+        {
+          "id": "formContainer_585ce163ad53418fbf7fa37e6037c9fd",
+          "widget": "formContainer",
+          "props": {
+            "ref": "formContainer_585ce163ad53418fbf7fa37e6037c9fd",
+            "labelAlign": "left",
+            "layout": "vertical",
+            "colon": false,
+            "labelCol": {
+              "width": {
+                "kind": "span",
+                "value": 4
+              }
+            },
+            "set": {
+              "id": "function_5925dc9e7a664b45899e82aff7fce507",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_b8f873d38d6c415c943884db51074598",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)2a61f4e4ea8943f1a87f06b572b87bb4.[e966734c54904dbb8a2603132f94be69_add_func]"
+                  }
+                }
+              ],
+              "props": {}
+            }
+          },
+          "children": [
+            {
+              "id": "formItem_facc26d07a154001814bf458fc16b23d",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_facc26d07a154001814bf458fc16b23d",
+                "label": "FirstName",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_585ce163ad53418fbf7fa37e6037c9fd].set.[action_b8f873d38d6c415c943884db51074598].target.params.[e966734c54904dbb8a2603132f94be69_add_params].[9cdcefd22c50471baf442ce7280dd97f]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_e853ed1bdae640c49f65f2b06b10c010",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_e853ed1bdae640c49f65f2b06b10c010",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_585ce163ad53418fbf7fa37e6037c9fd].set.[action_b8f873d38d6c415c943884db51074598].target.params.[e966734c54904dbb8a2603132f94be69_add_params].[9cdcefd22c50471baf442ce7280dd97f]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_9a90af2fd7c342c392235f3156ce2a73",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_9a90af2fd7c342c392235f3156ce2a73",
+                "label": "LastName",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_585ce163ad53418fbf7fa37e6037c9fd].set.[action_b8f873d38d6c415c943884db51074598].target.params.[e966734c54904dbb8a2603132f94be69_add_params].[905a286f88b44ee4a1f784f19003a125]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_b2f687546e104632bfb5845a1f4ebc1b",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_b2f687546e104632bfb5845a1f4ebc1b",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_585ce163ad53418fbf7fa37e6037c9fd].set.[action_b8f873d38d6c415c943884db51074598].target.params.[e966734c54904dbb8a2603132f94be69_add_params].[905a286f88b44ee4a1f784f19003a125]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "flex_f39f606c3a18496b82a6c82188173105",
+              "widget": "flex",
+              "props": {
+                "ref": "flex_f39f606c3a18496b82a6c82188173105",
+                "justify": "end"
+              },
+              "children": [
+                {
+                  "id": "button_5b5abd7f17bb4a00b4fa34c3c3a92827",
+                  "widget": "button",
+                  "props": {
+                    "style": {
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                      "flexBasis": "auto"
+                    },
+                    "ref": "button_Submit",
+                    "htmlType": "submit",
+                    "label": "提交",
+                    "type": "primary"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "2a61f4e4ea8943f1a87f06b572b87bb4": "..\\..\\Logics\\Actor.sdlg"
+  },
+  "version": "1.0.0"
+}

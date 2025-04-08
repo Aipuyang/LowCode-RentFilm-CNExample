@@ -1,0 +1,77 @@
+﻿{
+  "id": "6b4108289a374e43ad9c5a33acdecd6a",
+  "widget": "model",
+  "props": {
+    "displayName": "StoreDetail",
+    "name": "StoreDetail"
+  },
+  "children": [
+    {
+      "id": "62e49bbbe81b4b7493788592b6690139",
+      "widget": "field",
+      "props": {
+        "displayName": "StoreId",
+        "name": "StoreId",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "d260872b4e9f4438a95d02f916d94193",
+      "widget": "field",
+      "props": {
+        "displayName": "Contry",
+        "name": "Contry",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "b4457484de4d4e0b9a065b03ddda00d7",
+      "widget": "field",
+      "props": {
+        "displayName": "City",
+        "name": "City",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "e900e866ba7a45dc977bba882f3e47f1",
+      "widget": "field",
+      "props": {
+        "displayName": "District",
+        "name": "District",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "3b02862d71ff48948e119be3084cd15c",
+      "widget": "field",
+      "props": {
+        "displayName": "Address",
+        "name": "Address",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "ccc15774c9934917853e3ad8b74fe59c",
+      "widget": "field",
+      "props": {
+        "displayName": "Manager",
+        "name": "Manager",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

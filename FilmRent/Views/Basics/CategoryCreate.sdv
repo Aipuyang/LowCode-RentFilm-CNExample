@@ -1,0 +1,119 @@
+﻿{
+  "id": "page_edc5f80a67884abbaa15795de0921acd",
+  "widget": "page",
+  "props": {
+    "ref": "page_edc5f80a67884abbaa15795de0921acd",
+    "name": "CategoryCreate",
+    "title": "Category",
+    "params": [],
+    "rules": [],
+    "exposes": [
+      {
+        "id": "fd3e0d84d527436fa8641ff1b55c8354",
+        "target": "&(self)[button_20dfcb80c2c749918a891778b01fc025].onClick"
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "card_0b3214f70e814804abdf18327ccd21cb",
+      "widget": "card",
+      "props": {
+        "ref": "card_0b3214f70e814804abdf18327ccd21cb",
+        "title": "",
+        "extra": [],
+        "hideActions": true
+      },
+      "children": [
+        {
+          "id": "formContainer_1a50a3c3516c4ad194e43689a57538c7",
+          "widget": "formContainer",
+          "props": {
+            "ref": "formContainer_1a50a3c3516c4ad194e43689a57538c7",
+            "labelAlign": "left",
+            "layout": "vertical",
+            "colon": false,
+            "labelCol": {
+              "width": {
+                "kind": "span",
+                "value": 4
+              }
+            },
+            "set": {
+              "id": "function_7eb1413a5d194a4392115132c9021ebc",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_5fbd53b53f9d4f11ae4cbcf9e81616ca",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)36b762c8e58a43758fedd5e7f18d4e19.[aed740da02474d42a326ed73292981e6_add_func]"
+                  }
+                }
+              ],
+              "props": {}
+            }
+          },
+          "children": [
+            {
+              "id": "formItem_c07bbe60d4924f74874d1236955ec5e7",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_c07bbe60d4924f74874d1236955ec5e7",
+                "label": "Name",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_1a50a3c3516c4ad194e43689a57538c7].set.[action_5fbd53b53f9d4f11ae4cbcf9e81616ca].target.params.[aed740da02474d42a326ed73292981e6_add_params].[a66a9780db28404c8171cf9f798fee29]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_be8df7afccf54232b097d114c9daab33",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_be8df7afccf54232b097d114c9daab33",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_1a50a3c3516c4ad194e43689a57538c7].set.[action_5fbd53b53f9d4f11ae4cbcf9e81616ca].target.params.[aed740da02474d42a326ed73292981e6_add_params].[a66a9780db28404c8171cf9f798fee29]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "flex_929aeae56ad54a2888bb8b5193680782",
+              "widget": "flex",
+              "props": {
+                "ref": "flex_929aeae56ad54a2888bb8b5193680782",
+                "justify": "end"
+              },
+              "children": [
+                {
+                  "id": "button_20dfcb80c2c749918a891778b01fc025",
+                  "widget": "button",
+                  "props": {
+                    "style": {
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                      "flexBasis": "auto"
+                    },
+                    "ref": "button_Submit",
+                    "htmlType": "submit",
+                    "label": "提交",
+                    "type": "primary"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "36b762c8e58a43758fedd5e7f18d4e19": "..\\..\\Logics\\Category.sdlg"
+  },
+  "version": "1.0.0"
+}

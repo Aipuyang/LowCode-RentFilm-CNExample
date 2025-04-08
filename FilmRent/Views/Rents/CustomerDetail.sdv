@@ -1,0 +1,325 @@
+﻿{
+  "id": "page_e474f82d48bc4bac8f3db1c4082d1fc0",
+  "widget": "page",
+  "props": {
+    "ref": "page_e474f82d48bc4bac8f3db1c4082d1fc0",
+    "name": "CustomerDetail",
+    "title": "CustomerDetail",
+    "params": [
+      {
+        "id": "d14c1cb0dec9497f9123dd2921458bdf",
+        "widget": "parameter",
+        "props": {
+          "name": "customerId",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "descriptions_80df653a050a4bae9c77237a47d20a8b",
+      "widget": "descriptions",
+      "props": {
+        "ref": "descriptions_80df653a050a4bae9c77237a47d20a8b",
+        "model": {
+          "data": "&(ref)8dd55881d950d47.[0f7fa5d8ed5b4e5d92d308b1c7260423]"
+        },
+        "title": [
+          {
+            "id": "space_05186ba9622e4fd2a0723f5dcba64b1d",
+            "widget": "space",
+            "props": {
+              "style": {
+                "height": "40px"
+              },
+              "ref": "space_05186ba9622e4fd2a0723f5dcba64b1d",
+              "align": "end",
+              "direction": "horizontal",
+              "size": 8
+            },
+            "children": [
+              {
+                "id": "title_c6e7577343844aecac1e85b1078b46ca",
+                "widget": "title",
+                "props": {
+                  "ref": "title_c6e7577343844aecac1e85b1078b46ca",
+                  "value": "Customer",
+                  "level": 4,
+                  "style": {
+                    "display": "inline"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "bordered": true,
+        "column": 3,
+        "layout": "vertical",
+        "descriptionsItems": [
+          {
+            "id": "descriptionsItem_81671309cc6c4ff0b872e245e971a0c6",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_81671309cc6c4ff0b872e245e971a0c6",
+              "label": "CustomerId",
+              "span": 1,
+              "hide": true
+            },
+            "children": [
+              {
+                "id": "text_fabb8a4caaac4aa58422a6e664592a9d",
+                "widget": "text",
+                "props": {
+                  "ref": "text_fabb8a4caaac4aa58422a6e664592a9d",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[c6a0e8b3a7c848e8b3042ceec615385e]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_16af9b9764a24b9999a74f6c69941002",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_16af9b9764a24b9999a74f6c69941002",
+              "label": "商店",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_61bc1273847e4fb493f37c12c174c972",
+                "widget": "text",
+                "props": {
+                  "ref": "text_61bc1273847e4fb493f37c12c174c972",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[dc5241d1f74446d88be2beff59d20167_874853a21e8642bfb1f78bbd17af088c_principal].[177b46ae6b9647e197c0188165720a1a_6d4486c977744506aa5c7fdd6b2dc615_principal].[adb2296176464501998d93110099f78f]"
+                  },
+                  "suffix": "店"
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_f64da84ef4ac416ea72ea1fb57559ab5",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_f64da84ef4ac416ea72ea1fb57559ab5",
+              "label": "FirstName",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_95a32f79652d495a83ffaee5d2c0f77d",
+                "widget": "text",
+                "props": {
+                  "ref": "text_95a32f79652d495a83ffaee5d2c0f77d",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[d6c88c67fc6d46898e979a68d7b3005f]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_b7a493274de744aeac0083a0407a28e6",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_b7a493274de744aeac0083a0407a28e6",
+              "label": "LastName",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_cab20242f98c4e17936f649c0b44d62a",
+                "widget": "text",
+                "props": {
+                  "ref": "text_cab20242f98c4e17936f649c0b44d62a",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[66a37dba7ed94154acca708881c2b048]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_8521abec36884498a00734ffdeb37f9c",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_8521abec36884498a00734ffdeb37f9c",
+              "label": "Email",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_9902cf54e8d94da9bd727a0aa7abf3d3",
+                "widget": "text",
+                "props": {
+                  "ref": "text_9902cf54e8d94da9bd727a0aa7abf3d3",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[47c324bc372141248136609304237eba]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_62888aaaa25a4fc1b3b15bb4465cd925",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_62888aaaa25a4fc1b3b15bb4465cd925",
+              "label": "地址",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_8379cc19cdb5437d940f31846854673e",
+                "widget": "text",
+                "props": {
+                  "ref": "text_8379cc19cdb5437d940f31846854673e",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[177b46ae6b9647e197c0188165720a1a_632f382303264568b1b15dc5b02e7b90_principal].[adb2296176464501998d93110099f78f]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_e273de8a85704b1ebfe1a26786d34f8c",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_e273de8a85704b1ebfe1a26786d34f8c",
+              "label": "已激活",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "tag_26d4455968844e8bb7efba00c37e38b6",
+                "widget": "tag",
+                "props": {
+                  "ref": "tag_26d4455968844e8bb7efba00c37e38b6",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[0ae16c50c65e4757a0c95cf5d7223ffd]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_2ea1818b2a56484aad27c069579fef50",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_2ea1818b2a56484aad27c069579fef50",
+              "label": "CreateDate",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_80c2cd66e09a4f66870826b3ab411dda",
+                "widget": "text",
+                "props": {
+                  "ref": "text_80c2cd66e09a4f66870826b3ab411dda",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[565ea14874994d4588e12227219855f9]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_2ec84521d1514438986e0eabe1b5dc7c",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_2ec84521d1514438986e0eabe1b5dc7c",
+              "label": "LastUpdate",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_1d8340235b144b6c8ce03c71ba191082",
+                "widget": "text",
+                "props": {
+                  "ref": "text_1d8340235b144b6c8ce03c71ba191082",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ee0040d9eb3b134].[assign_param_73c5392294387a2].[bed5cb4644d84f6fad9e75cdf3430f3a]"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "hideActions": true,
+        "dataSource": {
+          "id": "function_f19ae7fecb4f536",
+          "widget": "function",
+          "children": [
+            {
+              "id": "action_ace61fb49d2f79e",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)23c145da0f484bf1b2303b1af5c1a0a3.[0f7fa5d8ed5b4e5d92d308b1c7260423_get_func]",
+                "params": [
+                  {
+                    "id": "assign_param_7c7fc37b5b3cc67",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ace61fb49d2f79e].target.params.[0f7fa5d8ed5b4e5d92d308b1c7260423_get_params_1]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_e474f82d48bc4bac8f3db1c4082d1fc0].params.[d14c1cb0dec9497f9123dd2921458bdf]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "action_ee0040d9eb3b134",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "assign_param_73c5392294387a2",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[descriptions_80df653a050a4bae9c77237a47d20a8b].dataSource.[action_ace61fb49d2f79e].target.result"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        }
+      },
+      "children": []
+    }
+  ],
+  "references": {
+    "23c145da0f484bf1b2303b1af5c1a0a3": "..\\..\\Logics\\Customer.sdlg",
+    "8dd55881d950d47": "..\\..\\Pagila.sde"
+  },
+  "version": "1.0.0"
+}

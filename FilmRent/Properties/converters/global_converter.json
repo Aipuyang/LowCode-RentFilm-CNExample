@@ -1,0 +1,74 @@
+﻿{
+  "id": "4e842cc909d848ecb50098c46508655e",
+  "widget": "global_Converter",
+  "props": {
+    "name": "GlobalConverter"
+  },
+  "children": [
+    {
+      "id": "3ff8731254ebc4e",
+      "widget": "converter",
+      "props": {
+        "name": "电影评级",
+        "ref": "FilmRating",
+        "input": "string",
+        "output": "Text",
+        "items": [
+          {
+            "source": "G",
+            "target": "适合所有人群"
+          },
+          {
+            "source": "PG",
+            "target": "需家长带领"
+          },
+          {
+            "source": "PG-13",
+            "target": "不适合13岁以下"
+          },
+          {
+            "source": "R",
+            "target": "限制级"
+          },
+          {
+            "source": "NF-17",
+            "target": "不适合17岁以下"
+          }
+        ]
+      }
+    },
+    {
+      "id": "e31faa2af38afc5",
+      "widget": "converter",
+      "props": {
+        "name": "电影评级",
+        "ref": "RatingColor",
+        "input": "string",
+        "output": "Color",
+        "items": [
+          {
+            "source": "G",
+            "target": "#06AF41FF"
+          },
+          {
+            "source": "PG",
+            "target": "#C790F7FF"
+          },
+          {
+            "source": "PG-13",
+            "target": "#F7EA9AFF"
+          },
+          {
+            "source": "R",
+            "target": "#FD0505FF"
+          },
+          {
+            "source": "NF-17",
+            "target": "#FF0303FF"
+          }
+        ]
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

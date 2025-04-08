@@ -1,0 +1,456 @@
+﻿{
+  "id": "4c1cd62d65f54e0b9b2dd264639fd731_api",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "Country",
+    "description": "Country",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "47191da05fb744cabec939299189eecc_add_func",
+      "widget": "function",
+      "props": {
+        "name": "Add",
+        "openApi": true,
+        "requestMethod": "POST",
+        "route": "Add"
+      },
+      "children": [
+        {
+          "id": "5f2c7fbbc86649bf95ed2abccba7021e",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[1beb9f5f83494b06acb063a01ee3ba7a]"
+          },
+          "children": [
+            {
+              "id": "47191da05fb744cabec939299189eecc_add_params",
+              "widget": "field",
+              "props": {
+                "name": "country",
+                "dataType": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "1beb9f5f83494b06acb063a01ee3ba7a",
+          "widget": "insert",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "新增",
+            "next": "$(self)[47191da05fb744cabec939299189eecc_add_end]",
+            "source": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]",
+            "sourceValue": "$(self)[5f2c7fbbc86649bf95ed2abccba7021e].[47191da05fb744cabec939299189eecc_add_params]"
+          }
+        },
+        {
+          "id": "47191da05fb744cabec939299189eecc_add_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[1beb9f5f83494b06acb063a01ee3ba7a].result.[1beb9f5f83494b06acb063a01ee3ba7a_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "47191da05fb744cabec939299189eecc_del_func",
+      "widget": "function",
+      "props": {
+        "name": "Delete",
+        "openApi": true,
+        "requestMethod": "DELETE",
+        "route": "Delete"
+      },
+      "children": [
+        {
+          "id": "adcb0b898a3b415dac61188290d825f2",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[931087b7be024b94b2bb71cdcf5b265c]"
+          },
+          "children": [
+            {
+              "id": "47191da05fb744cabec939299189eecc_del_params_1",
+              "widget": "field",
+              "props": {
+                "name": "countryId",
+                "dataType": "Int32",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "931087b7be024b94b2bb71cdcf5b265c",
+          "widget": "delete",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "删除",
+            "next": "$(self)[47191da05fb744cabec939299189eecc_del_end]",
+            "source": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]",
+            "filter": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "14f335bc4055403d9b12cbdba15adfc5",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[931087b7be024b94b2bb71cdcf5b265c].filter.[3a4cd5c073d541ab9d69bdbe5ade3350]",
+                "type": "Field",
+                "value": "&(self)[adcb0b898a3b415dac61188290d825f2].[47191da05fb744cabec939299189eecc_del_params_1]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "47191da05fb744cabec939299189eecc_del_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[931087b7be024b94b2bb71cdcf5b265c].result.[931087b7be024b94b2bb71cdcf5b265c_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "47191da05fb744cabec939299189eecc_update_func",
+      "widget": "function",
+      "props": {
+        "name": "Update",
+        "openApi": true,
+        "requestMethod": "PUT",
+        "route": "Update"
+      },
+      "children": [
+        {
+          "id": "ac412de596d54b65903ddc4fa6b899fc",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[b27d0c009d364a3c84ec95e9dec484fb]"
+          },
+          "children": [
+            {
+              "id": "47191da05fb744cabec939299189eecc_update_params",
+              "widget": "field",
+              "props": {
+                "name": "country",
+                "dataType": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b27d0c009d364a3c84ec95e9dec484fb",
+          "widget": "update",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "更新",
+            "next": "$(self)[47191da05fb744cabec939299189eecc_update_end]",
+            "source": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]",
+            "sourceValue": "$(self)[ac412de596d54b65903ddc4fa6b899fc].[47191da05fb744cabec939299189eecc_update_params]",
+            "filter": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "62c04d74ec3d48e0935caf73e6057f39",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[b27d0c009d364a3c84ec95e9dec484fb].source.[b241ea9095704bf3baf1c0b01a27df0a]",
+                "type": "Field",
+                "value": "&(self)[ac412de596d54b65903ddc4fa6b899fc].[47191da05fb744cabec939299189eecc_update_params].[b241ea9095704bf3baf1c0b01a27df0a]"
+              }
+            },
+            {
+              "id": "5cede9b43c0043f5a3598f6165bab48c",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[b27d0c009d364a3c84ec95e9dec484fb].filter.[3a4cd5c073d541ab9d69bdbe5ade3350]",
+                "type": "Field",
+                "value": "&(self)[ac412de596d54b65903ddc4fa6b899fc].[47191da05fb744cabec939299189eecc_update_params].[3a4cd5c073d541ab9d69bdbe5ade3350]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "47191da05fb744cabec939299189eecc_update_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[b27d0c009d364a3c84ec95e9dec484fb].result.[b27d0c009d364a3c84ec95e9dec484fb_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "47191da05fb744cabec939299189eecc_get_func",
+      "widget": "function",
+      "props": {
+        "name": "Get",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "Get"
+      },
+      "children": [
+        {
+          "id": "da3f115614aa40f293d1a6e595704a63",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[f7ca2b4adf724d5d80241422358eb3ac]"
+          },
+          "children": [
+            {
+              "id": "47191da05fb744cabec939299189eecc_get_params_1",
+              "widget": "field",
+              "props": {
+                "name": "countryId",
+                "dataType": "Int32",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "f7ca2b4adf724d5d80241422358eb3ac",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "strategy": "first",
+            "next": "$(self)[47191da05fb744cabec939299189eecc_get_end]",
+            "filter": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "cb26b351a534422696a632d27d0d9c2c",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "ebb5d844fbbd48f1ad1186ca6b680d15",
+                    "type": "table",
+                    "name": "Country",
+                    "target": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "3f34c2f4ca844dbe97b71333d9777af3",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[f7ca2b4adf724d5d80241422358eb3ac].filter.[3a4cd5c073d541ab9d69bdbe5ade3350]",
+                "type": "Field",
+                "value": "&(self)[da3f115614aa40f293d1a6e595704a63].[47191da05fb744cabec939299189eecc_get_params_1]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "47191da05fb744cabec939299189eecc_get_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[f7ca2b4adf724d5d80241422358eb3ac].result.[47191da05fb744cabec939299189eecc]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "47191da05fb744cabec939299189eecc_list_func",
+      "widget": "function",
+      "props": {
+        "name": "GetList",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetList"
+      },
+      "children": [
+        {
+          "id": "ccec4b71d1ce4d2499324903c124636e",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[02ecc83db14a4209b5409d89ff53a42b]"
+          }
+        },
+        {
+          "id": "02ecc83db14a4209b5409d89ff53a42b",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "strategy": "list",
+            "next": "$(self)[47191da05fb744cabec939299189eecc_list_end]"
+          },
+          "children": [
+            {
+              "id": "b92cdf58bdbf4da3bebcc003b80dd432",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "171ca66a9c504c1986241d908af27fec",
+                    "type": "table",
+                    "name": "Country",
+                    "target": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "47191da05fb744cabec939299189eecc_list_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[02ecc83db14a4209b5409d89ff53a42b].result.[47191da05fb744cabec939299189eecc]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "47191da05fb744cabec939299189eecc_page_func",
+      "widget": "function",
+      "props": {
+        "name": "GetPage",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetPage"
+      },
+      "children": [
+        {
+          "id": "6d6566bfb1ad4a11ad87b66f6c1cc29e",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[d5cf2292706747949ccf327b6293e925]"
+          },
+          "children": [
+            {
+              "id": "47191da05fb744cabec939299189eecc_page_params",
+              "widget": "field",
+              "props": {
+                "name": "pageParameter",
+                "dataType": "$(ref)eb31f6fb87db44b690cdac9d3939b0b4",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "d5cf2292706747949ccf327b6293e925",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "strategy": "page",
+            "next": "$(self)[47191da05fb744cabec939299189eecc_page_end]",
+            "filter": "none",
+            "enableTotal": true,
+            "pageNum": "&(self)[6d6566bfb1ad4a11ad87b66f6c1cc29e].[47191da05fb744cabec939299189eecc_page_params].[62475dd3f2df4135a8d31830e5aab9ed]",
+            "pageSize": "&(self)[6d6566bfb1ad4a11ad87b66f6c1cc29e].[47191da05fb744cabec939299189eecc_page_params].[6162f2cbdcea40ee9f5845791dd9359c]"
+          },
+          "children": [
+            {
+              "id": "749d05f6f5cd46b8b8ec8675443b4c65",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "73c2686fea4c43d2bd003e3f694433eb",
+                    "type": "table",
+                    "name": "Country",
+                    "target": "$(ref)ec32bc91675145299e38dd933922742b.[47191da05fb744cabec939299189eecc]"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "47191da05fb744cabec939299189eecc_page_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "conditionType": "Expression",
+            "type": "Field",
+            "isPageResult": true,
+            "result": "$(ref)0ce80b6564684a48930e2c599e419b4f",
+            "genericsConstraint": "&(self)[d5cf2292706747949ccf327b6293e925].result.[47191da05fb744cabec939299189eecc]"
+          },
+          "children": [
+            {
+              "id": "fe579d0996f3456ca854dbdff81fcc90",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[47191da05fb744cabec939299189eecc_page_end].result.[4be4523a12d6413f8bacb065db44fb22]",
+                "type": "Field",
+                "value": "&(self)[d5cf2292706747949ccf327b6293e925].result.[47191da05fb744cabec939299189eecc]"
+              }
+            },
+            {
+              "id": "d469441ab93d4d3bbeed8c0b097ce9a9",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[47191da05fb744cabec939299189eecc_page_end].result.[b04e0619191b412baf363228d2347a6a]",
+                "type": "Field",
+                "value": "&(self)[d5cf2292706747949ccf327b6293e925].result.[d5cf2292706747949ccf327b6293e925_total]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "eb31f6fb87db44b690cdac9d3939b0b4": "$(global)PageParameter.json",
+    "0ce80b6564684a48930e2c599e419b4f": "$(global)PageResult.json",
+    "ec32bc91675145299e38dd933922742b": "..\\Pagila.sde"
+  }
+}

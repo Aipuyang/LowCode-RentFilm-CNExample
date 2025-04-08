@@ -1,0 +1,34 @@
+﻿{
+  "id": "e0ed5655b70b4f6e9927906be7a51869",
+  "widget": "model",
+  "props": {
+    "displayName": "绑定演员",
+    "name": "FilmActorBind"
+  },
+  "children": [
+    {
+      "id": "da40dfb44f474471ba5505be923917f6",
+      "widget": "field",
+      "props": {
+        "displayName": "FilmId",
+        "name": "FilmId",
+        "dataType": "Int32",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "e86ae45b26b943248166d0a08498ae5e",
+      "widget": "field",
+      "props": {
+        "displayName": "ActorIds",
+        "name": "ActorIds",
+        "dataType": "Int32",
+        "nullable": false,
+        "defaultValueType": "Value",
+        "isCollection": true
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

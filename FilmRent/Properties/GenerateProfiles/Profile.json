@@ -1,0 +1,16 @@
+﻿{
+  "isActive": true,
+  "isSystemTemlate": true,
+  "templateProject": "Templates.ltproj",
+  "targetDirectory": "..\\SourceCode",
+  "writingPolicy": "",
+  "dbSettings": {
+    "8dd55881d950d47": {
+      "dbType": "PostgreSQL",
+      "connectionString": "Host=172.25.25.4;Database=pagila;Username=postgres;Password=Appeon321;Connection Lifetime=0;Target Session Attributes=any"
+    }
+  },
+  "templateSettings": {
+    "31d1981e8e344f2e8b59e12ec5717b95": true
+  }
+}

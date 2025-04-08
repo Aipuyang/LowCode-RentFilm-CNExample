@@ -1,0 +1,646 @@
+﻿{
+  "id": "page_2c117cce8e264ded9a165c5439fa476f",
+  "widget": "page",
+  "props": {
+    "ref": "page_2c117cce8e264ded9a165c5439fa476f",
+    "name": "StaffDetail",
+    "title": "StaffDetail",
+    "params": [
+      {
+        "id": "f9a3f5ca44de4dda858552f106077a0a",
+        "widget": "parameter",
+        "props": {
+          "name": "staffId",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "descriptions_987b41305b2d4317831e4f731b8801ca",
+      "widget": "descriptions",
+      "props": {
+        "ref": "descriptions_987b41305b2d4317831e4f731b8801ca",
+        "model": {
+          "data": "&(ref)8dd55881d950d47.[9ceaa3a233c9458ba7efcdf115827385]"
+        },
+        "title": [
+          {
+            "id": "space_5fbd86b174114ead9f14af062db5c191",
+            "widget": "space",
+            "props": {
+              "style": {
+                "height": "40px"
+              },
+              "ref": "space_5fbd86b174114ead9f14af062db5c191",
+              "align": "end",
+              "direction": "horizontal",
+              "size": 8
+            },
+            "children": [
+              {
+                "id": "title_03e7df6d14554d1d87a8b5b3e8761bb0",
+                "widget": "title",
+                "props": {
+                  "ref": "title_03e7df6d14554d1d87a8b5b3e8761bb0",
+                  "value": "Staff",
+                  "level": 4,
+                  "style": {
+                    "display": "inline"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "bordered": true,
+        "column": 3,
+        "layout": "vertical",
+        "descriptionsItems": [
+          {
+            "id": "descriptionsItem_09d6109aa1354d4098245fe64b0effc7",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_09d6109aa1354d4098245fe64b0effc7",
+              "label": "StaffId",
+              "span": 1,
+              "hide": true
+            },
+            "children": [
+              {
+                "id": "text_428501df0e00483f990872886eb6ebe8",
+                "widget": "text",
+                "props": {
+                  "ref": "text_428501df0e00483f990872886eb6ebe8",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[ae0767c2708a40e5a478db22655e4010]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_40a3573aaba549e99cd4cd8d47bddd11",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_40a3573aaba549e99cd4cd8d47bddd11",
+              "label": "Picture",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "image_12f5a50b3d7442a68a3e88038e693233",
+                "widget": "image",
+                "props": {
+                  "ref": "image_12f5a50b3d7442a68a3e88038e693233",
+                  "width": 64,
+                  "height": 64,
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[c6f2cb5c82bd4bc6a46d654de47beff1]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_c0e10ee2043d4d2093d9a68f58ba1328",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_c0e10ee2043d4d2093d9a68f58ba1328",
+              "label": "FirstName",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_17a470230e00428f921fbdff0370888c",
+                "widget": "text",
+                "props": {
+                  "ref": "text_17a470230e00428f921fbdff0370888c",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[a9f39c5b91b242a99837acbf17dc79b2]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_b4405a7bbf6548e3b3350ea352044d54",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_b4405a7bbf6548e3b3350ea352044d54",
+              "label": "LastName",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_b88ef2e618ac45e9b6f6218c4f0d83ba",
+                "widget": "text",
+                "props": {
+                  "ref": "text_b88ef2e618ac45e9b6f6218c4f0d83ba",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[d2e7536ad72a4699aad3c5bb4a30691d]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_f9fc2fb3dd16484",
+            "widget": "descriptionsItem",
+            "props": {
+              "style": {},
+              "ref": "descriptionsItem_a40f6516dca2f4b",
+              "label": "国家"
+            },
+            "children": [
+              {
+                "id": "text_2e8e34f2937cf0d",
+                "widget": "text",
+                "props": {
+                  "style": {},
+                  "ref": "text_721ed695d384989",
+                  "textType": {
+                    "custom": false,
+                    "type": "default"
+                  },
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[5cb3f1f95f2f4e97aa07d66c0bdccc4a_f31c4e6929ba48549be57ab018931886_principal].[47191da05fb744cabec939299189eecc_807a3bcc323e4775b7f1821cddfb77f4_principal].[3965c7d88fe1488fb1a728050c0bb4c6]"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_4d8932789af0447",
+            "widget": "descriptionsItem",
+            "props": {
+              "style": {},
+              "ref": "descriptionsItem_d930c6151de3453",
+              "label": "城市"
+            },
+            "children": [
+              {
+                "id": "text_808459bcd911565",
+                "widget": "text",
+                "props": {
+                  "style": {},
+                  "ref": "text_28b1d1c328fc94a",
+                  "textType": {
+                    "custom": false,
+                    "type": "default"
+                  },
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[5cb3f1f95f2f4e97aa07d66c0bdccc4a_f31c4e6929ba48549be57ab018931886_principal].[90c16e6802614d73965bb7998cca74a3]"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_3350de2add264a84b9b493a9cd9c08d8",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_3350de2add264a84b9b493a9cd9c08d8",
+              "label": "地址",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_90be31a75f6a4414a4c07b85be92067a",
+                "widget": "text",
+                "props": {
+                  "ref": "text_90be31a75f6a4414a4c07b85be92067a",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[adb2296176464501998d93110099f78f]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_755f2bc1b207939",
+            "widget": "descriptionsItem",
+            "props": {
+              "style": {},
+              "ref": "descriptionsItem_c1172694632e881",
+              "label": "商店"
+            },
+            "children": [
+              {
+                "id": "text_4bb8bfad00df576",
+                "widget": "text",
+                "props": {
+                  "style": {},
+                  "ref": "text_988852612287633",
+                  "textType": {
+                    "custom": false,
+                    "type": "default"
+                  },
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[dc5241d1f74446d88be2beff59d20167_b7bc81a687144c98a6370d7e5bb41748_principal].[177b46ae6b9647e197c0188165720a1a_6d4486c977744506aa5c7fdd6b2dc615_principal].[adb2296176464501998d93110099f78f]"
+                  }
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_4717aedab4244febb74391fbf1af19ca",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_4717aedab4244febb74391fbf1af19ca",
+              "label": "邮箱",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_77e9a9ab43734579abeb7318f537db07",
+                "widget": "text",
+                "props": {
+                  "ref": "text_77e9a9ab43734579abeb7318f537db07",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[1c7921d940444858b74be09830e2fbd5]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_6776321b4b33489b88a2c8705b8a7508",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_6776321b4b33489b88a2c8705b8a7508",
+              "label": "Active",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "tag_26a84f1ecc294ddca154bcee0995dc49",
+                "widget": "tag",
+                "props": {
+                  "ref": "tag_26a84f1ecc294ddca154bcee0995dc49",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[d9d3f3a1db664bc581983835bf3d96cb]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_429ba71ce4bb424e9ad459033b66fcbe",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_429ba71ce4bb424e9ad459033b66fcbe",
+              "label": "Username",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_fc5d424b55ce4ef09b7da9e9953a5830",
+                "widget": "text",
+                "props": {
+                  "ref": "text_fc5d424b55ce4ef09b7da9e9953a5830",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[6e77d318df05488c85651a9fba53131b]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_4a0a7b86d58246fdbe07da3b8777faf0",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_4a0a7b86d58246fdbe07da3b8777faf0",
+              "label": "Password",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_d6089e13a4b0475e9782e84f57e19da9",
+                "widget": "text",
+                "props": {
+                  "ref": "text_d6089e13a4b0475e9782e84f57e19da9",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[2abae654025244e0b3ab25f0bb7184c6]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_6c2f18d6c4534b57a6fb50c320492124",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_6c2f18d6c4534b57a6fb50c320492124",
+              "label": "LastUpdate",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_26ad458fa186484993340d4dea31af9b",
+                "widget": "text",
+                "props": {
+                  "ref": "text_26ad458fa186484993340d4dea31af9b",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[2d9282fc8550468aaffddd49174a33ae]"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "hideActions": true,
+        "dataSource": {
+          "id": "function_5d5dc4e27435e2b",
+          "widget": "function",
+          "children": [
+            {
+              "id": "action_42bc0a5c2bc7063",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)f4994f40b4e44d26af958306305b5bc5.[9ceaa3a233c9458ba7efcdf115827385_get_func]",
+                "params": [
+                  {
+                    "id": "assign_param_6e0946b60181075",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_42bc0a5c2bc7063].target.params.[9ceaa3a233c9458ba7efcdf115827385_get_params_1]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_2c117cce8e264ded9a165c5439fa476f].params.[f9a3f5ca44de4dda858552f106077a0a]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "action_7717bbc96a71521",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "assign_param_dade1627366ddde",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_42bc0a5c2bc7063].target.result"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        }
+      },
+      "children": [
+        {
+          "id": "card_f0f7511ed409411eb838b1bac3b379ae",
+          "widget": "card",
+          "props": {
+            "style": {
+              "marginTop": "20px"
+            },
+            "ref": "card_f0f7511ed409411eb838b1bac3b379ae",
+            "dataSource": {
+              "id": "function_6c61d516b3c24aaba6739f5f133a4dec",
+              "widget": "function",
+              "children": [],
+              "props": {}
+            },
+            "extra": [],
+            "hideActions": true,
+            "title": "Address"
+          },
+          "children": [
+            {
+              "id": "descriptionList_4253eb79eff8462696ddbacd99981167",
+              "widget": "descriptionList",
+              "props": {
+                "style": {},
+                "ref": "descriptionList_4253eb79eff8462696ddbacd99981167",
+                "descriptionsItems": [
+                  {
+                    "id": "descriptionsItem_65d8bcc470fc42c59cb83457d534af90",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_65d8bcc470fc42c59cb83457d534af90",
+                      "label": "AddressId",
+                      "span": 1,
+                      "hide": true
+                    },
+                    "children": [
+                      {
+                        "id": "text_09b70ed12c144c8f945d3a783eabbf99",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_09b70ed12c144c8f945d3a783eabbf99",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[c0a282dc2199480385001e179fcf8420]"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "descriptionsItem_3fed30690e844b1485b3bb781ed01901",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_3fed30690e844b1485b3bb781ed01901",
+                      "label": "Address",
+                      "span": 1
+                    },
+                    "children": [
+                      {
+                        "id": "text_5a31bd9a16784d83868cf64bde98e298",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_5a31bd9a16784d83868cf64bde98e298",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[adb2296176464501998d93110099f78f]"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "descriptionsItem_3c59a0f60f194998a41784be0f9b5a6b",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_3c59a0f60f194998a41784be0f9b5a6b",
+                      "label": "Address2",
+                      "span": 1
+                    },
+                    "children": [
+                      {
+                        "id": "text_737de8399c9a4f1c9a5c9ed9645842d9",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_737de8399c9a4f1c9a5c9ed9645842d9",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[b5e19300c10c470398fe87f67d938444]"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "descriptionsItem_d6fbbcfaee434d0eb492d86f44366b0c",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_d6fbbcfaee434d0eb492d86f44366b0c",
+                      "label": "District",
+                      "span": 1
+                    },
+                    "children": [
+                      {
+                        "id": "text_35a75dbf645f40cba2efc8ac82187d5a",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_35a75dbf645f40cba2efc8ac82187d5a",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[9c536acf8b0c48d18666040c8d19c36a]"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "descriptionsItem_d88dcea6c4534c1088d0f75e3058d66f",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_d88dcea6c4534c1088d0f75e3058d66f",
+                      "label": "城市",
+                      "span": 1
+                    },
+                    "children": [
+                      {
+                        "id": "text_faffc1ae228542008340b07e3eead24f",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_faffc1ae228542008340b07e3eead24f",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[5cb3f1f95f2f4e97aa07d66c0bdccc4a_f31c4e6929ba48549be57ab018931886_principal].[90c16e6802614d73965bb7998cca74a3]"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "descriptionsItem_839f5f8e70354f1cbda7acd69e8c63f5",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_839f5f8e70354f1cbda7acd69e8c63f5",
+                      "label": "PostalCode",
+                      "span": 1
+                    },
+                    "children": [
+                      {
+                        "id": "text_9b9daee6fc694607a2ba99070261299e",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_9b9daee6fc694607a2ba99070261299e",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[408da8cfcbf54dfcbe7644019027cd9b]"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "descriptionsItem_428c3bccfd1d40b3abad48596cab7089",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_428c3bccfd1d40b3abad48596cab7089",
+                      "label": "Phone",
+                      "span": 1
+                    },
+                    "children": [
+                      {
+                        "id": "text_4c8a76b802bc468ca2ea44ea2f1d982f",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_4c8a76b802bc468ca2ea44ea2f1d982f",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[83e4f768677c4b6ebc922add7272f941]"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "descriptionsItem_2cfed0509dec4db08c2c1e07ff47bc00",
+                    "widget": "descriptionsItem",
+                    "props": {
+                      "ref": "descriptionsItem_2cfed0509dec4db08c2c1e07ff47bc00",
+                      "label": "LastUpdate",
+                      "span": 1
+                    },
+                    "children": [
+                      {
+                        "id": "text_53687cddea8c40ff81bb0a347f618c60",
+                        "widget": "text",
+                        "props": {
+                          "ref": "text_53687cddea8c40ff81bb0a347f618c60",
+                          "value": {
+                            "kind": "Field",
+                            "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal].[5ab6379437f84a639776002cb16cbd3a]"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[descriptions_987b41305b2d4317831e4f731b8801ca].dataSource.[action_7717bbc96a71521].[assign_param_dade1627366ddde].[177b46ae6b9647e197c0188165720a1a_212dd662907d4364abfc9f4eeae60a6c_principal]"
+                }
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "f4994f40b4e44d26af958306305b5bc5": "..\\..\\Logics\\Staff.sdlg",
+    "8dd55881d950d47": "..\\..\\Pagila.sde"
+  },
+  "version": "1.0.0"
+}

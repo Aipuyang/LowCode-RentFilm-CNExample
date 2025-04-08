@@ -1,0 +1,44 @@
+﻿{
+  "id": "4d025d5d085a4a9eae994badba8e909a",
+  "widget": "model",
+  "props": {
+    "name": "FilmCategoryPayedModel",
+    "displayName": "FilmCategoryPayedModel"
+  },
+  "children": [
+    {
+      "id": "5e5f2a5def0441528ddb892d29f31f95",
+      "widget": "field",
+      "props": {
+        "displayName": "分类",
+        "name": "Category",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "a066f25d22234defa086d78780e33c5c",
+      "widget": "field",
+      "props": {
+        "displayName": "销售次数",
+        "name": "PayCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "18a1247500d74bf6951d90ff7971ff15",
+      "widget": "field",
+      "props": {
+        "displayName": "销售额",
+        "name": "PayAmout",
+        "dataType": "Decimal",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "version": "1.0.0"
+}

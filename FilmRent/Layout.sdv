@@ -1,0 +1,194 @@
+﻿{
+  "id": "pageLayout_379933242290688",
+  "widget": "page_layout",
+  "props": {
+    "ref": "pageLayout_379933242290688",
+    "title": "FilmRent",
+    "logo": "/static/images/logo.svg",
+    "name": "Layout",
+    "footer": [
+      {
+        "id": "row_785889769637224",
+        "widget": "row",
+        "props": {
+          "ref": "row_785889769637224"
+        },
+        "children": [
+          {
+            "id": "col_658544221124687",
+            "widget": "col",
+            "props": {
+              "ref": "col_658544221124687"
+            },
+            "children": [
+              {
+                "id": "text_220103309678592",
+                "widget": "text",
+                "props": {
+                  "ref": "text_220103309678592",
+                  "value": "Copyright © 2024-present, Your Company"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "menu": {
+      "type": "group",
+      "items": [
+        {
+          "id": "layoutMenuItem_275152020376780",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layoutMenuItem_275152020376780",
+            "label": "首页",
+            "icon": "antdv://HomeFilled",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)3d6cf0a4e6734f8697c3319794a4c1c2"
+            },
+            "hide": false
+          }
+        },
+        {
+          "id": "layout_menuItem_a14008603f70735",
+          "widget": "layout_menuItem",
+          "props": {
+            "style": {},
+            "ref": "layout_menuItem_ed5a7ebf84265c8",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)e998a297dd4e40d69e49b0b70f3e633c"
+            },
+            "label": "会员",
+            "icon": "antdv://UserOutlined"
+          }
+        },
+        {
+          "id": "layout_menuItem_5b96cc84f423071",
+          "widget": "layout_menuItem",
+          "props": {
+            "style": {},
+            "ref": "layout_menuItem_c80bee2312947c8",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)24534f2b761a45a4a498f5f7db722b72"
+            },
+            "label": "电影",
+            "icon": "antdv://SoundOutlined"
+          }
+        },
+        {
+          "id": "layout_menuItem_db773f6f1b17e3b",
+          "widget": "layout_menuItem",
+          "props": {
+            "style": {},
+            "ref": "layout_menuItem_4f981be6605f005",
+            "page": {
+              "kind": "Document",
+              "value": ""
+            },
+            "label": "库存",
+            "icon": "antdv://HddFilled"
+          },
+          "children": [
+            {
+              "id": "layout_menuItem_82e31a02cf97325",
+              "widget": "layout_menuItem",
+              "props": {
+                "style": {},
+                "ref": "layout_menuItem_4171276f07b658a",
+                "page": {
+                  "kind": "Document",
+                  "value": "$(ref)48c565e3933143ed8b1258743b08b9d3"
+                },
+                "label": "员工",
+                "icon": "antdv://UsergroupDeleteOutlined"
+              }
+            },
+            {
+              "id": "layout_menuItem_48f14d2d54faab9",
+              "widget": "layout_menuItem",
+              "props": {
+                "style": {},
+                "ref": "layout_menuItem_0ee3d1559abb3da",
+                "page": {
+                  "kind": "Document",
+                  "value": "$(ref)8f64fc99d8e44933a0925fe95c9b90f6"
+                },
+                "label": "商店",
+                "icon": "antdv://MoneyCollectOutlined"
+              }
+            },
+            {
+              "id": "layout_menuItem_48c1990cf1f85de",
+              "widget": "layout_menuItem",
+              "props": {
+                "style": {},
+                "ref": "layout_menuItem_b7f277501821e0d",
+                "page": {
+                  "kind": "Document",
+                  "value": "$(ref)0308d6a91e7143358b1e17e9c6f90d43"
+                },
+                "label": "库存",
+                "icon": "antdv://BankFilled"
+              }
+            }
+          ]
+        },
+        {
+          "id": "layout_menuItem_573dd0641762053",
+          "widget": "layout_menuItem",
+          "props": {
+            "style": {},
+            "ref": "layout_menuItem_8156b244e5354e6",
+            "label": "配置",
+            "icon": "antdv://SettingOutlined"
+          },
+          "children": [
+            {
+              "id": "layout_menuItem_82c1b104126d93b",
+              "widget": "layout_menuItem",
+              "props": {
+                "style": {},
+                "ref": "layout_menuItem_d2865e246c35462",
+                "label": "地址",
+                "page": {
+                  "kind": "Document",
+                  "value": "$(ref)7f2a0e8fac9445cfad19301333d0e190"
+                },
+                "icon": "antdv://DatabaseOutlined"
+              }
+            },
+            {
+              "id": "layout_menuItem_0f72b21b3a930b8",
+              "widget": "layout_menuItem",
+              "props": {
+                "style": {},
+                "ref": "layout_menuItem_b5c14bf448e5699",
+                "label": "其它",
+                "icon": "antdv://FileProtectOutlined",
+                "page": {
+                  "kind": "Document",
+                  "value": "$(ref)0b0442726b804ed09df2527627c63027"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "references": {
+    "7f2a0e8fac9445cfad19301333d0e190": "Views\\Basics\\AddressManager.sdv",
+    "0b0442726b804ed09df2527627c63027": "Views\\Basics\\OtherConfigures.sdv",
+    "24534f2b761a45a4a498f5f7db722b72": "Views\\Films\\FilmManager.sdv",
+    "48c565e3933143ed8b1258743b08b9d3": "Views\\Inventories\\SaffList.sdv",
+    "0308d6a91e7143358b1e17e9c6f90d43": "Views\\Inventories\\InventList.sdv",
+    "e998a297dd4e40d69e49b0b70f3e633c": "Views\\Rents\\CustomerManager.sdv",
+    "8f64fc99d8e44933a0925fe95c9b90f6": "Views\\Inventories\\StoreList.sdv",
+    "3d6cf0a4e6734f8697c3319794a4c1c2": "Views\\Statics\\PgStaticViews.sdv"
+  },
+  "version": "1.0.0"
+}

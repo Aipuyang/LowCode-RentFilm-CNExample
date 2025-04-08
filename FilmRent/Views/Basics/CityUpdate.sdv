@@ -1,0 +1,276 @@
+﻿{
+  "id": "page_94032d923c1e45e0a483aa7b87a53f91",
+  "widget": "page",
+  "props": {
+    "ref": "page_94032d923c1e45e0a483aa7b87a53f91",
+    "name": "CityUpdate",
+    "title": "",
+    "params": [
+      {
+        "id": "6e091c3b170e44c794b94902d1b21a9f",
+        "widget": "parameter",
+        "props": {
+          "name": "cityId",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ],
+    "rules": [],
+    "exposes": [
+      {
+        "id": "06c590a530bc47ebb5f7d9a341fd4f9a",
+        "target": "&(self)[button_0894079cfc3f426f84bd244c9d875f77].onClick"
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "card_372bda75620941c08b2eeaad37fc76c9",
+      "widget": "card",
+      "props": {
+        "ref": "card_372bda75620941c08b2eeaad37fc76c9",
+        "title": "",
+        "extra": [],
+        "hideActions": true
+      },
+      "children": [
+        {
+          "id": "formContainer_cb50fb7342b14a74b2ef03f18ccb5425",
+          "widget": "formContainer",
+          "props": {
+            "ref": "formContainer_cb50fb7342b14a74b2ef03f18ccb5425",
+            "labelAlign": "left",
+            "layout": "horizontal",
+            "colon": false,
+            "labelCol": {
+              "width": {
+                "kind": "span",
+                "value": 4
+              }
+            },
+            "model": {
+              "formModel": "&(ref)8dd55881d950d47.[5cb3f1f95f2f4e97aa07d66c0bdccc4a]"
+            },
+            "set": {
+              "id": "function_b9e0bef8c0f7448980e28ee17d49e6aa",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_177b31a9b5c944babcc66ca28ac12637",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)c0b028230caa40d9abf1af66b03c844a.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_func]"
+                  }
+                }
+              ],
+              "props": {}
+            },
+            "dataSource": {
+              "id": "function_8a1d9760e47beea",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_6f7aaf64e3b1178",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)c0b028230caa40d9abf1af66b03c844a.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_get_func]",
+                    "params": [
+                      {
+                        "id": "assign_param_8230cdd5fe96b31",
+                        "widget": "assign_param",
+                        "props": {
+                          "name": {
+                            "kind": "Parameter",
+                            "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].dataSource.[action_6f7aaf64e3b1178].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_get_params_1]"
+                          },
+                          "value": {
+                            "kind": "Props",
+                            "value": "$(self)[page_94032d923c1e45e0a483aa7b87a53f91].params.[6e091c3b170e44c794b94902d1b21a9f]"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                },
+                {
+                  "id": "action_ce80c881dc5e244",
+                  "widget": "action_adapter",
+                  "children": [
+                    {
+                      "id": "assign_param_1c6f60a2c050395",
+                      "widget": "assign_param",
+                      "props": {
+                        "name": {
+                          "kind": "Members",
+                          "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].formModel"
+                        },
+                        "value": {
+                          "kind": "Field",
+                          "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].dataSource.[action_6f7aaf64e3b1178].target.result"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ],
+              "props": {}
+            }
+          },
+          "children": [
+            {
+              "id": "formItem_ca598ed51f9d4047979784d5f5ae20a6",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_ca598ed51f9d4047979784d5f5ae20a6",
+                "label": "CityId",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[dd218ff484d9424d963cfe20b81034bf]"
+                },
+                "hide": true
+              },
+              "children": [
+                {
+                  "id": "numberInput_3c718d338faa4909b40bd87bafc20cd0",
+                  "widget": "numberInput",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "numberInput_3c718d338faa4909b40bd87bafc20cd0",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[dd218ff484d9424d963cfe20b81034bf]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_bf332c10193247ccb218e50150d62bfc",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_bf332c10193247ccb218e50150d62bfc",
+                "label": "城市",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[90c16e6802614d73965bb7998cca74a3]"
+                }
+              },
+              "children": [
+                {
+                  "id": "input_4172a31852df4fcab968fd28b5e52990",
+                  "widget": "input",
+                  "props": {
+                    "size": "middle",
+                    "ref": "input_4172a31852df4fcab968fd28b5e52990",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[90c16e6802614d73965bb7998cca74a3]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_37b8df125e8e4ee2a74da5ab60950c0d",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_37b8df125e8e4ee2a74da5ab60950c0d",
+                "label": "CountryId",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[d32ed87cce8c4b42927ce06189a59545]"
+                },
+                "hide": true
+              },
+              "children": [
+                {
+                  "id": "numberInput_a46866d5aae5414baece877245105264",
+                  "widget": "numberInput",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "numberInput_a46866d5aae5414baece877245105264",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[d32ed87cce8c4b42927ce06189a59545]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_3658c0f1faa741c9b579ddc7ea665a8e",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_3658c0f1faa741c9b579ddc7ea665a8e",
+                "label": "LastUpdate",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[eda69188fe83493794d1296806e70198]"
+                },
+                "hide": true
+              },
+              "children": [
+                {
+                  "id": "datePicker_1b2fd10bad7d4e0a9f3e4890241e0f16",
+                  "widget": "datePicker",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "format": "YYYY-MM-DD HH:mm:ss",
+                    "valueFormat": "YYYY-MM-DDTHH:mm:ss",
+                    "ref": "datePicker_1b2fd10bad7d4e0a9f3e4890241e0f16",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_cb50fb7342b14a74b2ef03f18ccb5425].set.[action_177b31a9b5c944babcc66ca28ac12637].target.params.[5cb3f1f95f2f4e97aa07d66c0bdccc4a_update_params].[eda69188fe83493794d1296806e70198]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "flex_a1815e3dd9264e0d9871a746e3d5db2a",
+              "widget": "flex",
+              "props": {
+                "ref": "flex_a1815e3dd9264e0d9871a746e3d5db2a",
+                "justify": "end"
+              },
+              "children": [
+                {
+                  "id": "button_0894079cfc3f426f84bd244c9d875f77",
+                  "widget": "button",
+                  "props": {
+                    "style": {
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                      "flexBasis": "auto"
+                    },
+                    "ref": "button_Submit",
+                    "htmlType": "submit",
+                    "label": "提交",
+                    "type": "primary"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "c0b028230caa40d9abf1af66b03c844a": "..\\..\\Logics\\City.sdlg",
+    "8dd55881d950d47": "..\\..\\Pagila.sde"
+  },
+  "version": "1.0.0"
+}
