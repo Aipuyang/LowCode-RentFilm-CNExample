@@ -70,4 +70,5 @@ FilmRent 示例使用 SnapDevelop 2026 开发，展示如何通过其可视化�
 
 ## 更多信息
 
+如需下载最新版本的 SnapDevelop, 欢迎访问：https://www.aipuyang.com。
 如需了解更多关于 SnapDevelop 的使用信息，欢迎访问：https://docs.aipuyang.com.
