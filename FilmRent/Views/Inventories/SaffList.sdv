@@ -742,7 +742,7 @@
     "92c56d2bfe2842df84a7cde7cb42ef7b": "..\\..\\Logics\\Staff.sdlg",
     "8dec03697f244c7fbaca75e6b1d6bb59": "StaffDetail.sdv",
     "85cf8985eea34d48979ef800b76ddff4": "StaffCreate.sdv",
-    "Staff9ceaa3a233c9458ba7efcdf115827385": "..\\..\\Pagila.sde"
+    "Staff9ceaa3a233c9458ba7efcdf115827385": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

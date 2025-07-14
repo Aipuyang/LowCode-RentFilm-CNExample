@@ -640,7 +640,7 @@
   ],
   "references": {
     "f4994f40b4e44d26af958306305b5bc5": "..\\..\\Logics\\Staff.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

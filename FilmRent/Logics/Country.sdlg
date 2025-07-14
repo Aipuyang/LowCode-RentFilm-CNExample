@@ -451,6 +451,6 @@
   "references": {
     "eb31f6fb87db44b690cdac9d3939b0b4": "$(global)PageParameter.json",
     "0ce80b6564684a48930e2c599e419b4f": "$(global)PageResult.json",
-    "ec32bc91675145299e38dd933922742b": "..\\Pagila.sde"
+    "ec32bc91675145299e38dd933922742b": "..\\Entities\\Pagila.sde"
   }
 }

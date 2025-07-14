@@ -441,8 +441,8 @@
         "openApi": true,
         "requestMethod": "GET",
         "route": "GetPage",
-        "x": -78,
-        "y": 140
+        "x": -270.7151999999999,
+        "y": 78.25759999999961
       },
       "children": [
         {
@@ -637,7 +637,7 @@
           "props": {
             "x": 165,
             "y": 591,
-            "name": "遍历",
+            "name": "遍历租赁数据",
             "strategy": "Iterate",
             "sourceType": "Field",
             "next": "$(self)[8d661c77d8b54396bdb8560840fdea84_page_end]",
@@ -694,7 +694,7 @@
                           "props": {
                             "x": 447,
                             "y": 777.4,
-                            "name": "数据适配",
+                            "name": "设置已支付",
                             "next": "$(self)[18796435590c4f07b134dfe87c40705d]"
                           },
                           "children": [
@@ -726,7 +726,7 @@
                           "props": {
                             "x": 855,
                             "y": 777.4,
-                            "name": "数据适配1",
+                            "name": "设置未支付",
                             "next": "$(self)[18796435590c4f07b134dfe87c40705d]"
                           },
                           "children": [
@@ -894,6 +894,6 @@
   "references": {
     "b05ef66f88ec43beac601efbd0162235": "$(global)PageParameter.json",
     "4e70d608ff604684b386b1f46446dbe3": "$(global)PageResult.json",
-    "43552879cbb541d0b8ea81ba11515842": "..\\Pagila.sde"
+    "43552879cbb541d0b8ea81ba11515842": "..\\Entities\\Pagila.sde"
   }
 }

@@ -270,7 +270,7 @@
   ],
   "references": {
     "c0b028230caa40d9abf1af66b03c844a": "..\\..\\Logics\\City.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

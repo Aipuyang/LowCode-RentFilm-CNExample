@@ -49,7 +49,27 @@
             "next": "$(self)[9ceaa3a233c9458ba7efcdf115827385_add_end]",
             "source": "$(ref)cf9ed1e360c047bcb12966934a3133d1.[9ceaa3a233c9458ba7efcdf115827385]",
             "sourceValue": "$(self)[16ce36355cb24bd1b192e5d86e478dfd].[9ceaa3a233c9458ba7efcdf115827385_add_params]"
-          }
+          },
+          "children": [
+            {
+              "id": "a69ad897bdda419c9a16341474e219e7",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[de617861051c4e78921ca6f55b64b119].source.[d9d3f3a1db664bc581983835bf3d96cb]",
+                "type": "Value",
+                "value": "true"
+              }
+            },
+            {
+              "id": "5135f6ae7936456ea97a0f095f02baa0",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[de617861051c4e78921ca6f55b64b119].source.[2d9282fc8550468aaffddd49174a33ae]",
+                "type": "Expression",
+                "value": "$(exp)Now()"
+              }
+            }
+          ]
         },
         {
           "id": "9ceaa3a233c9458ba7efcdf115827385_add_end",
@@ -586,6 +606,6 @@
   "references": {
     "f48e4fd70e5a4d41abefe9a985c9f6c6": "$(global)PageParameter.json",
     "7b36891daa4544838da5b758238a631e": "$(global)PageResult.json",
-    "cf9ed1e360c047bcb12966934a3133d1": "..\\Pagila.sde"
+    "cf9ed1e360c047bcb12966934a3133d1": "..\\Entities\\Pagila.sde"
   }
 }

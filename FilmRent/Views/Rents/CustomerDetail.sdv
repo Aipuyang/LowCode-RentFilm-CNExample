@@ -319,7 +319,7 @@
   ],
   "references": {
     "23c145da0f484bf1b2303b1af5c1a0a3": "..\\..\\Logics\\Customer.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

@@ -87,6 +87,105 @@
       ]
     },
     {
+      "id": "bc3c41c573634d57b0497d28fae55c1c",
+      "widget": "filter",
+      "props": {
+        "displayName": "RentTimeFilter",
+        "name": "RentTimeFilter",
+        "sources": [
+          {
+            "id": "f7ee6d37111148a1a20493bb7a5d547f",
+            "type": "table",
+            "name": "Rental",
+            "target": "$(ref)332553cf781a4eb0a50d9d8d25a72e0e.[8d661c77d8b54396bdb8560840fdea84]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "be7c2686dce046c490435f362d8f5d29",
+          "widget": "field",
+          "props": {
+            "displayName": "BeginDate",
+            "name": "BeginDate",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "476e8c6bc9524d598aaf9279f3de6b7c",
+          "widget": "field",
+          "props": {
+            "displayName": "EndDate",
+            "name": "EndDate",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "de0e6b9d2416402ea4b6cef6b8a6d935",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "GTEQ",
+            "parameter": "&(self)[be7c2686dce046c490435f362d8f5d29]",
+            "field": "&(self)[bc3c41c573634d57b0497d28fae55c1c].sources.[f7ee6d37111148a1a20493bb7a5d547f].[be8e7bb5a049451ab8203ac5e090af8f]"
+          }
+        },
+        {
+          "id": "0b5b3c38cc444c72bba31f49fbb9ad41",
+          "widget": "condition",
+          "props": {
+            "relation": "And",
+            "type": "Field",
+            "operator": "LTEQ",
+            "parameter": "&(self)[476e8c6bc9524d598aaf9279f3de6b7c]",
+            "field": "&(self)[bc3c41c573634d57b0497d28fae55c1c].sources.[f7ee6d37111148a1a20493bb7a5d547f].[be8e7bb5a049451ab8203ac5e090af8f]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "50066f7def1e4c83bebe982e26724cee",
+      "widget": "filter",
+      "props": {
+        "displayName": "YearFilter",
+        "name": "YearFilter",
+        "sources": [
+          {
+            "id": "a56286bbd61c4b368b0d60d7e24d7602",
+            "type": "table",
+            "name": "Rental",
+            "target": "$(ref)332553cf781a4eb0a50d9d8d25a72e0e.[8d661c77d8b54396bdb8560840fdea84]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "10da481c5d164f74857ca2e154be2fb8",
+          "widget": "field",
+          "props": {
+            "displayName": "Year",
+            "name": "Year",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "8feeab12c21a41da84a53a5d0fe82b2c",
+          "widget": "condition",
+          "props": {
+            "type": "Expression",
+            "operator": "None",
+            "expression": "$(exp)Year(&(self)[50066f7def1e4c83bebe982e26724cee].sources.[a56286bbd61c4b368b0d60d7e24d7602].[f55901363bc447a3b5fce0c0b4c72ad8]) == &(self)[50066f7def1e4c83bebe982e26724cee].[10da481c5d164f74857ca2e154be2fb8]"
+          }
+        }
+      ]
+    },
+    {
       "id": "83bbc8118fc044138de24423161b50ed",
       "widget": "function",
       "props": {
@@ -318,6 +417,11 @@
                   }
                 }
               ]
+            },
+            {
+              "id": "fe02ff6479bc4638ab3822ea7896c9e8",
+              "widget": "query_adapter",
+              "props": {}
             }
           ]
         },
@@ -835,6 +939,11 @@
                   }
                 }
               ]
+            },
+            {
+              "id": "529a4af903f545699f2bc45f0c9bcc07",
+              "widget": "query_adapter",
+              "props": {}
             }
           ]
         },
@@ -1682,12 +1791,647 @@
           }
         }
       ]
+    },
+    {
+      "id": "8cea7ed996b74d70a3956ded139910ec",
+      "widget": "function",
+      "props": {
+        "name": "GetRentCountByCustomers",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetRentCountByCustomers",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "ed7ec811ea8647c4ba4b2ab5f4a4ad10",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[43297f6a1c514134bd92384fcea5897e]"
+          },
+          "children": [
+            {
+              "id": "e5b1eb9d01bb46e987aaec5d968a10cc",
+              "widget": "field",
+              "props": {
+                "displayName": "parm",
+                "name": "parm",
+                "dataType": "$(self)[bc3c41c573634d57b0497d28fae55c1c]",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            },
+            {
+              "id": "28ccf426c0ee469cbfe584c1c95a63c0",
+              "widget": "field",
+              "props": {
+                "displayName": "rentTimes",
+                "name": "rentTimes",
+                "dataType": "Int32",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "43297f6a1c514134bd92384fcea5897e",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[bc3c41c573634d57b0497d28fae55c1c]",
+            "strategy": "list",
+            "next": "$(self)[3413eff5e36342aea369ca5773ea8eea]"
+          },
+          "children": [
+            {
+              "id": "319fb1f4f4134a57b8738dda0ff10411",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "4dd98849a801461d8245cede7b17fbc5",
+                    "type": "table",
+                    "name": "Customer",
+                    "target": "$(ref)332553cf781a4eb0a50d9d8d25a72e0e.[0f7fa5d8ed5b4e5d92d308b1c7260423]"
+                  },
+                  {
+                    "id": "16d4766823394d17b8656803b12f3a3e",
+                    "type": "table",
+                    "name": "Rental",
+                    "target": "$(ref)332553cf781a4eb0a50d9d8d25a72e0e.[8d661c77d8b54396bdb8560840fdea84]"
+                  }
+                ]
+              },
+              "children": [
+                {
+                  "id": "d6e0b01d712c46d49a998ab82c64c108",
+                  "widget": "join_relationship",
+                  "props": {
+                    "left": "&(self)[319fb1f4f4134a57b8738dda0ff10411].sources.[16d4766823394d17b8656803b12f3a3e]",
+                    "right": "&(self)[319fb1f4f4134a57b8738dda0ff10411].sources.[4dd98849a801461d8245cede7b17fbc5]",
+                    "type": "RightJoin"
+                  },
+                  "children": [
+                    {
+                      "id": "2cc175547cac430cb278f68755768d00",
+                      "widget": "join_condition",
+                      "props": {
+                        "left": "&(self)[d6e0b01d712c46d49a998ab82c64c108].left.[11beda4940ea470b847a57892c3dc812]",
+                        "right": "&(self)[d6e0b01d712c46d49a998ab82c64c108].right.[c6a0e8b3a7c848e8b3042ceec615385e]",
+                        "type": "=",
+                        "leftType": "Field",
+                        "rightType": "Field"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "c15fb0c8947c4730998b0fc8209d42ed",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "6436267beb134f699fca6087f47c06f3",
+                    "type": "Field",
+                    "target": "&(self)[319fb1f4f4134a57b8738dda0ff10411].sources.[4dd98849a801461d8245cede7b17fbc5].[c6a0e8b3a7c848e8b3042ceec615385e]",
+                    "name": "&(self)[319fb1f4f4134a57b8738dda0ff10411].sources.[4dd98849a801461d8245cede7b17fbc5].[c6a0e8b3a7c848e8b3042ceec615385e].name"
+                  },
+                  {
+                    "id": "dac6bb186ae64214a003b3c092f006d1",
+                    "type": "Expression",
+                    "name": "CustomerName",
+                    "target": "$(exp)&(self)[319fb1f4f4134a57b8738dda0ff10411].sources.[4dd98849a801461d8245cede7b17fbc5].[d6c88c67fc6d46898e979a68d7b3005f] + \" \" + &(self)[319fb1f4f4134a57b8738dda0ff10411].sources.[4dd98849a801461d8245cede7b17fbc5].[66a37dba7ed94154acca708881c2b048]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "07f48396524c41a5946ec326cabce972",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[43297f6a1c514134bd92384fcea5897e].filter.[be7c2686dce046c490435f362d8f5d29]",
+                "value": "&(self)[ed7ec811ea8647c4ba4b2ab5f4a4ad10].[e5b1eb9d01bb46e987aaec5d968a10cc].[be7c2686dce046c490435f362d8f5d29]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "f65ca20991c847bd8d18249047910633",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[43297f6a1c514134bd92384fcea5897e].filter.[476e8c6bc9524d598aaf9279f3de6b7c]",
+                "value": "&(self)[ed7ec811ea8647c4ba4b2ab5f4a4ad10].[e5b1eb9d01bb46e987aaec5d968a10cc].[476e8c6bc9524d598aaf9279f3de6b7c]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "90cdf25154114128b53ab1ddf5a1cf83",
+              "widget": "query_adapter",
+              "props": {
+                "model": "$(ref)a52522bcfe2d4c3090b0190a85ddb092"
+              },
+              "children": [
+                {
+                  "id": "9f189927d0ef40d8ba5ca7f2be6565c9",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "CustomerId",
+                    "type": "Field",
+                    "value": "&(self)[c15fb0c8947c4730998b0fc8209d42ed].keys.[6436267beb134f699fca6087f47c06f3]"
+                  }
+                },
+                {
+                  "id": "e7129a4efdd243b49387799d003b8d03",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "CustomerName",
+                    "type": "Field",
+                    "value": "&(self)[c15fb0c8947c4730998b0fc8209d42ed].keys.[dac6bb186ae64214a003b3c092f006d1]"
+                  }
+                },
+                {
+                  "id": "c1ed0ea276e4410a8a512f474b4ce67e",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "RentCount",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[c15fb0c8947c4730998b0fc8209d42ed].values.[16d4766823394d17b8656803b12f3a3e].[58477a63af6d451fbe538d6fe1c73365])"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "be183a9a289b441e95aaa0f85ea29f0f",
+              "widget": "orderbys",
+              "props": {
+                "items": [
+                  {
+                    "direction": "Asc",
+                    "type": "Field",
+                    "field": "&(self)[90cdf25154114128b53ab1ddf5a1cf83].[e7129a4efdd243b49387799d003b8d03]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "3a0a0cb244b14cc89191fc3de4c7de30",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "89ff331462364524940deea609c8e102",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "908a0daadba1469bbd1696d4f928fbd0",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "1d84c96e0f6e47efa4387578be3c2553",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "a44095a30d81425eba2fe82e3e1f1dd3",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "04806f52b202483286e29cb27a894808",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "c871a4c8506241da935fedcf7b8f91dd",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "14703d29370c4197846e7c661e4ab398",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "104bceccc75d4a5e80dfd9ef0d52c9fa",
+              "widget": "query_adapter",
+              "props": {}
+            }
+          ]
+        },
+        {
+          "id": "3413eff5e36342aea369ca5773ea8eea",
+          "widget": "variable",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "过滤统计结果",
+            "next": "$(self)[cae8d95550af4012b7419cc630049d61]"
+          },
+          "children": [
+            {
+              "id": "4f36eef338254762804c9e19f4875f9a",
+              "widget": "variable_field",
+              "props": {
+                "name": "result",
+                "dataType": "$(ref)a52522bcfe2d4c3090b0190a85ddb092",
+                "type": "Expression",
+                "value": "$(exp)Where(&(self)[43297f6a1c514134bd92384fcea5897e].result.[90cdf25154114128b53ab1ddf5a1cf83_result].[bb6d00d409154dfcb8c6cf1eed318ec5] >= &(self)[ed7ec811ea8647c4ba4b2ab5f4a4ad10].[28ccf426c0ee469cbfe584c1c95a63c0])",
+                "isCollection": true
+              }
+            }
+          ]
+        },
+        {
+          "id": "cae8d95550af4012b7419cc630049d61",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 477,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[3413eff5e36342aea369ca5773ea8eea].[4f36eef338254762804c9e19f4875f9a]",
+            "isCollection": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "76886cfb21704f68b5af72fae2b4c265",
+      "widget": "function",
+      "props": {
+        "name": "GetRentCountByYear",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetRentCountByYear",
+        "authStrategy": "",
+        "x": -73,
+        "y": 37
+      },
+      "children": [
+        {
+          "id": "d91ee6e1dd1f406a9339d5263edc5e8d",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[3aa3145e941b442baf628eb02147aee2]"
+          },
+          "children": [
+            {
+              "id": "dd662998cf0a448bbde472c426230ae7",
+              "widget": "field",
+              "props": {
+                "displayName": "year",
+                "name": "year",
+                "dataType": "Int32",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "3aa3145e941b442baf628eb02147aee2",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 249,
+            "name": "查询",
+            "filter": "$(self)[50066f7def1e4c83bebe982e26724cee]",
+            "strategy": "list",
+            "next": "$(self)[21e3d078850d42a69c421079763cd502]"
+          },
+          "children": [
+            {
+              "id": "719cc04dfc824c78bee650d6c566bdc9",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "a68a68ec3f9e4767876297defb19f24d",
+                    "type": "table",
+                    "name": "Rental",
+                    "target": "$(ref)332553cf781a4eb0a50d9d8d25a72e0e.[8d661c77d8b54396bdb8560840fdea84]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "e467fe43d45b465ea3420315eede4667",
+              "widget": "groupbys",
+              "props": {
+                "keys": [
+                  {
+                    "id": "c84d03e033d74f49ac5de8c832cbe133",
+                    "type": "Expression",
+                    "name": "Key",
+                    "target": "$(exp)Month(&(self)[719cc04dfc824c78bee650d6c566bdc9].sources.[a68a68ec3f9e4767876297defb19f24d].[be8e7bb5a049451ab8203ac5e090af8f])"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "567fced761264b058aa96911f5f5e397",
+              "widget": "query_adapter",
+              "props": {
+                "model": "$(ref)18b1509b2c744dfcbfbcbf0bc69284ae"
+              },
+              "children": [
+                {
+                  "id": "c6cbc854791f498d98e19bae4c2c1959",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "Month",
+                    "type": "Field",
+                    "value": "&(self)[e467fe43d45b465ea3420315eede4667].keys.[c84d03e033d74f49ac5de8c832cbe133]"
+                  }
+                },
+                {
+                  "id": "ef390a73963647029c8a03937eb4c510",
+                  "widget": "query_adapter_field",
+                  "props": {
+                    "name": "RentCount",
+                    "type": "Expression",
+                    "value": "$(exp)Count(&(self)[e467fe43d45b465ea3420315eede4667].values.[a68a68ec3f9e4767876297defb19f24d].[58477a63af6d451fbe538d6fe1c73365])"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "38c506ad2dc944659ddcd58b789c24a7",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "38c92d8ca0004f31a287e3281d05f517",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[3aa3145e941b442baf628eb02147aee2].filter.[10da481c5d164f74857ca2e154be2fb8]",
+                "value": "&(self)[d91ee6e1dd1f406a9339d5263edc5e8d].[dd662998cf0a448bbde472c426230ae7]",
+                "type": "Field"
+              }
+            },
+            {
+              "id": "51c584153be14c1695ba2f04d512dd88",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "9ab52434ea9e4573a82b3a5760eef53e",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "4c681dae9caf43ffbe92483e2e2b8965",
+              "widget": "query_adapter",
+              "props": {}
+            },
+            {
+              "id": "03bc0d0019894c4db6e91dc00dba75df",
+              "widget": "query_adapter",
+              "props": {}
+            }
+          ]
+        },
+        {
+          "id": "21e3d078850d42a69c421079763cd502",
+          "widget": "variable",
+          "props": {
+            "x": 165,
+            "y": 363,
+            "name": "定义返回结果",
+            "next": "$(self)[fa6505d6955743fc83b1c3e1bb693d55]"
+          },
+          "children": [
+            {
+              "id": "0f712b4bdc074c56af1c91d39c321255",
+              "widget": "variable_field",
+              "props": {
+                "name": "result",
+                "dataType": "$(ref)18b1509b2c744dfcbfbcbf0bc69284ae",
+                "type": "Field",
+                "isCollection": true
+              }
+            },
+            {
+              "id": "056e3e24099f4a438ca652436a6c9f1f",
+              "widget": "variable_field",
+              "props": {
+                "name": "tmpResult",
+                "dataType": "$(ref)18b1509b2c744dfcbfbcbf0bc69284ae",
+                "type": "Field"
+              }
+            }
+          ]
+        },
+        {
+          "id": "fa6505d6955743fc83b1c3e1bb693d55",
+          "widget": "loop",
+          "props": {
+            "x": 165,
+            "y": 477,
+            "name": "遍历一年的月份",
+            "strategy": "Step",
+            "countType": "Ascending",
+            "initValueType": "Value",
+            "next": "$(self)[4fc54d1e6e754c79a5ddbeb5c01318c5]",
+            "terminateType": "Value",
+            "initValue": "1",
+            "seed": 1,
+            "terminate": "12"
+          },
+          "children": [
+            {
+              "id": "f14655cb4ecc428fa6fb2a1d80527501",
+              "widget": "loop_var",
+              "props": {
+                "name": "当前项",
+                "next": "$(self)[177fa54ba32c44d8b14d6bc93b1f32fa]"
+              },
+              "children": [
+                {
+                  "id": "177fa54ba32c44d8b14d6bc93b1f32fa",
+                  "widget": "if",
+                  "props": {
+                    "x": 651,
+                    "y": 559.4,
+                    "name": "该月有租赁记录",
+                    "next": "$(self)[de301dec42574d4ca0d2c91e3754357a]"
+                  },
+                  "children": [
+                    {
+                      "id": "8cfcae402e274e6e936dd03a651ddd11",
+                      "widget": "if_conditions",
+                      "props": {},
+                      "children": [
+                        {
+                          "id": "aee6e266ca5f41dcad4d6cdf200a8a97",
+                          "widget": "if_condition",
+                          "props": {
+                            "expression": "$(exp)CountIf(&(self)[3aa3145e941b442baf628eb02147aee2].result.[567fced761264b058aa96911f5f5e397_result], &(self)[3aa3145e941b442baf628eb02147aee2].result.[567fced761264b058aa96911f5f5e397_result].[77f5f496f7064d5395e303fc071ecbc2] == &(self)[fa6505d6955743fc83b1c3e1bb693d55].[f14655cb4ecc428fa6fb2a1d80527501]) > 0",
+                            "type": "Expression",
+                            "operator": "EQ"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "aad15af2228f4622bf73aa1cac98e684",
+                      "widget": "if_branch",
+                      "props": {
+                        "name": "True",
+                        "next": "$(self)[1abb1ea08d1847a0893c170ccc35188d]",
+                        "type": true
+                      },
+                      "children": [
+                        {
+                          "id": "1abb1ea08d1847a0893c170ccc35188d",
+                          "widget": "adapter",
+                          "props": {
+                            "x": 447,
+                            "y": 663.4,
+                            "name": "设置已有数据",
+                            "next": "$(self)[d1ff679e034f451293631797bd6e9fd6]"
+                          },
+                          "children": [
+                            {
+                              "id": "70a53b8fb2634e988e7a1dc3fac39007",
+                              "widget": "assign_field",
+                              "props": {
+                                "type": "Expression",
+                                "field": "&(self)[21e3d078850d42a69c421079763cd502].[056e3e24099f4a438ca652436a6c9f1f]",
+                                "value": "$(exp)FirstIf(&(self)[3aa3145e941b442baf628eb02147aee2].result.[567fced761264b058aa96911f5f5e397_result], &(self)[3aa3145e941b442baf628eb02147aee2].result.[567fced761264b058aa96911f5f5e397_result].[77f5f496f7064d5395e303fc071ecbc2] == &(self)[fa6505d6955743fc83b1c3e1bb693d55].[f14655cb4ecc428fa6fb2a1d80527501])"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "ffda09333ebe45d0a510c83e1ceb79ff",
+                      "widget": "if_branch",
+                      "props": {
+                        "name": "False",
+                        "next": "$(self)[4f90644f747845da808ce81cdac746a9]",
+                        "type": false
+                      },
+                      "children": [
+                        {
+                          "id": "4f90644f747845da808ce81cdac746a9",
+                          "widget": "adapter",
+                          "props": {
+                            "x": 855,
+                            "y": 663.4,
+                            "name": "设置默认数据",
+                            "next": "$(self)[d1ff679e034f451293631797bd6e9fd6]"
+                          },
+                          "children": [
+                            {
+                              "id": "feacf81ffe95422f91a1fcb5890f0545",
+                              "widget": "assign_field",
+                              "props": {
+                                "type": "Field",
+                                "field": "&(self)[21e3d078850d42a69c421079763cd502].[056e3e24099f4a438ca652436a6c9f1f]"
+                              },
+                              "children": [
+                                {
+                                  "id": "58a641c6a07e43c5941e81d613598ca1",
+                                  "widget": "assign_field",
+                                  "props": {
+                                    "field": "&(self)[feacf81ffe95422f91a1fcb5890f0545].field.[77f5f496f7064d5395e303fc071ecbc2]",
+                                    "value": "&(self)[fa6505d6955743fc83b1c3e1bb693d55].[f14655cb4ecc428fa6fb2a1d80527501]",
+                                    "type": "Field"
+                                  }
+                                },
+                                {
+                                  "id": "5b29cf223e0c4b049232a150333b92c6",
+                                  "widget": "assign_field",
+                                  "props": {
+                                    "field": "&(self)[feacf81ffe95422f91a1fcb5890f0545].field.[56f306d750df4022ad34c5a69da6735b]",
+                                    "type": "Value",
+                                    "value": "0"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "d1ff679e034f451293631797bd6e9fd6",
+                      "widget": "back",
+                      "props": {
+                        "x": 729.5,
+                        "y": 911.4
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "de301dec42574d4ca0d2c91e3754357a",
+                  "widget": "collection_accessor",
+                  "props": {
+                    "x": 651,
+                    "y": 1015.4,
+                    "name": "添加到结果集",
+                    "next": "$(self)[9920bccdd18541fb96a4f40e340e63f8]"
+                  },
+                  "children": [
+                    {
+                      "id": "81968bb732b24c3484728a4e19c4281a",
+                      "widget": "collection_accessor_field",
+                      "props": {
+                        "operator": "Add",
+                        "type": "Field",
+                        "source": "&(self)[21e3d078850d42a69c421079763cd502].[0f712b4bdc074c56af1c91d39c321255]",
+                        "data": "&(self)[21e3d078850d42a69c421079763cd502].[056e3e24099f4a438ca652436a6c9f1f]"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "9920bccdd18541fb96a4f40e340e63f8",
+                  "widget": "back",
+                  "props": {
+                    "next": "$(self)[fa6505d6955743fc83b1c3e1bb693d55]"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "4fc54d1e6e754c79a5ddbeb5c01318c5",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 1263.4,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[21e3d078850d42a69c421079763cd502].[0f712b4bdc074c56af1c91d39c321255]",
+            "isCollection": false
+          }
+        }
+      ]
     }
   ],
   "references": {
-    "332553cf781a4eb0a50d9d8d25a72e0e": "..\\Pagila.sde",
+    "332553cf781a4eb0a50d9d8d25a72e0e": "..\\Entities\\Pagila.sde",
     "13514836494148119f523d356c9fb307": "..\\Properties\\DataStructures\\FilmCategoryPayedModel.json",
     "8698b234c2984d71bb000f80fd77121d": "..\\Properties\\DataStructures\\CategoryStaticModel.json",
-    "399e30008fe24421b66540f32adf3cd4": "..\\Properties\\DataStructures\\RentalStatics.json"
+    "399e30008fe24421b66540f32adf3cd4": "..\\Properties\\DataStructures\\RentalStatics.json",
+    "a52522bcfe2d4c3090b0190a85ddb092": "..\\Properties\\DataStructures\\CustomRentCountStatics.json",
+    "18b1509b2c744dfcbfbcbf0bc69284ae": "..\\Properties\\DataStructures\\RentCountForMonthStatics.json"
   }
 }

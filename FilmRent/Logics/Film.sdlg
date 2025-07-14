@@ -373,6 +373,42 @@
                 "source": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[e743c54648cc4aa6a60e2657505072d3_e9f884fb9e5449bfa1b4e37364063239_principal]",
                 "sourceValue": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[e743c54648cc4aa6a60e2657505072d3_e9f884fb9e5449bfa1b4e37364063239_principal]"
               }
+            },
+            {
+              "id": "5418d3cd4aca4cde83aafd3d21b6da5b",
+              "widget": "assign_cascade_field",
+              "props": {
+                "source": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[4a1fdaadb30b484bbb0b1d0f6996bdcc_fb9595a889c642a4b66edc0982030d17_dependency]",
+                "sourceValue": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[4a1fdaadb30b484bbb0b1d0f6996bdcc_fb9595a889c642a4b66edc0982030d17_dependency]"
+              },
+              "children": [
+                {
+                  "id": "4c62b0606865438992da1ef3438769d6",
+                  "widget": "assign_cascade_field",
+                  "props": {
+                    "source": "&(self)[5418d3cd4aca4cde83aafd3d21b6da5b].source.[aed740da02474d42a326ed73292981e6_d3fdff2de1ae46a984fa666747f7f67d_principal]",
+                    "sourceValue": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[4a1fdaadb30b484bbb0b1d0f6996bdcc_fb9595a889c642a4b66edc0982030d17_dependency].[aed740da02474d42a326ed73292981e6_d3fdff2de1ae46a984fa666747f7f67d_principal]"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "5af6f43009984d41989985eb3b070f01",
+              "widget": "assign_cascade_field",
+              "props": {
+                "source": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[169f7e7c6da94b2a94116a91f4c49798_b733325dc1a2455f844db28073b563c6_dependency]",
+                "sourceValue": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[169f7e7c6da94b2a94116a91f4c49798_b733325dc1a2455f844db28073b563c6_dependency]"
+              },
+              "children": [
+                {
+                  "id": "2113c68d5999479c9311eb429542089e",
+                  "widget": "assign_cascade_field",
+                  "props": {
+                    "source": "&(self)[5af6f43009984d41989985eb3b070f01].source.[e966734c54904dbb8a2603132f94be69_1d2adf6611ec48cd88be03e19040ee9a_principal]",
+                    "sourceValue": "&(self)[b8396f2218a7479ba74401b15ff259c0].sources.[a16421c3ab3a40bdbc08492fe84c2af9].[169f7e7c6da94b2a94116a91f4c49798_b733325dc1a2455f844db28073b563c6_dependency].[e966734c54904dbb8a2603132f94be69_1d2adf6611ec48cd88be03e19040ee9a_principal]"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -559,6 +595,6 @@
   "references": {
     "28925564f0e44e16891858c6c64206fb": "$(global)PageParameter.json",
     "620b0e52a40f4fb6b28140112038564c": "$(global)PageResult.json",
-    "70ea95b38b154b1a9e191e065f512e9b": "..\\Pagila.sde"
+    "70ea95b38b154b1a9e191e065f512e9b": "..\\Entities\\Pagila.sde"
   }
 }

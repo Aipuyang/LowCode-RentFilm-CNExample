@@ -534,6 +534,6 @@
   "references": {
     "68de2570a1524abd802693c43cd2b9ee": "$(global)PageParameter.json",
     "f57dd514bc6d404cb34dea7e04464ad6": "$(global)PageResult.json",
-    "93a98c885d574b0fa3ebd83d7b90c9fc": "..\\Pagila.sde"
+    "93a98c885d574b0fa3ebd83d7b90c9fc": "..\\Entities\\Pagila.sde"
   }
 }

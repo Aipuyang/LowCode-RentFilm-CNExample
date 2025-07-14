@@ -751,15 +751,442 @@
           ]
         }
       ]
+    },
+    {
+      "id": "grid_d0ef037a6391629",
+      "widget": "grid",
+      "props": {
+        "ref": "grid1",
+        "rowNum": 1
+      },
+      "children": [
+        {
+          "id": "row_f0f90093dd9b520",
+          "widget": "row",
+          "props": {
+            "ref": "row1",
+            "gutter": {
+              "enabled": true,
+              "value": [
+                10,
+                0
+              ]
+            },
+            "grid": true
+          },
+          "children": [
+            {
+              "id": "col_d62ba1afa9b1b40",
+              "widget": "col",
+              "props": {
+                "ref": "col3",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
+              },
+              "children": [
+                {
+                  "id": "card_58d8ef7229ac913",
+                  "widget": "card",
+                  "props": {
+                    "ref": "card1",
+                    "extra": [],
+                    "title": [
+                      {
+                        "id": "flex_ffb25296788987a",
+                        "widget": "flex",
+                        "props": {
+                          "ref": "flex1",
+                          "gap": {
+                            "custom": false,
+                            "type": "middle"
+                          },
+                          "align": "start"
+                        },
+                        "children": [
+                          {
+                            "id": "rangePicker_7c41da2ac419a66",
+                            "widget": "rangePicker",
+                            "props": {
+                              "style": {
+                                "width": "300px"
+                              },
+                              "ref": "rangePicker1",
+                              "startDefault": "2022-07-01",
+                              "endDefault": "2022-07-31",
+                              "valueFormat": "YYYY-MM-DD"
+                            },
+                            "children": []
+                          },
+                          {
+                            "id": "numberInput_d3f6fcb8079e67c",
+                            "widget": "numberInput",
+                            "props": {
+                              "style": {
+                                "width": "150px"
+                              },
+                              "ref": "numberInput1",
+                              "placeholder": "租赁次数>=",
+                              "default": 10
+                            },
+                            "children": []
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "id": "bar_b21c2be48d016ce",
+                      "widget": "bar",
+                      "props": {
+                        "ref": "bar1",
+                        "xAxis": {
+                          "data": {
+                            "kind": "Field",
+                            "value": "&(self)[bar_b21c2be48d016ce].dataSource.[action_768c6e66e583a20].[assign_param_6eb334522ff931d].[7b6d3b7d17fb4ea18d62fe3062bc224e]"
+                          },
+                          "name": "",
+                          "nameLocation": "end",
+                          "axisLine": true,
+                          "axisTick": true,
+                          "splitLine": false,
+                          "boundaryGap": true,
+                          "labelFontSize": 12
+                        },
+                        "yAxis": [
+                          {
+                            "data": {
+                              "kind": "Field",
+                              "value": "&(self)[bar_b21c2be48d016ce].dataSource.[action_768c6e66e583a20].[assign_param_6eb334522ff931d].[bb6d00d409154dfcb8c6cf1eed318ec5]"
+                            },
+                            "name": "租赁次数"
+                          }
+                        ],
+                        "title": {
+                          "text": "客户租赁次数",
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
+                        },
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
+                        },
+                        "legend": {
+                          "show": true,
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
+                        },
+                        "seriesLabel": {
+                          "show": true,
+                          "position": "inside",
+                          "fontSize": 12
+                        },
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
+                        },
+                        "color": [
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
+                        ],
+                        "model": {
+                          "data": "&(ref)4bbf26eb43844e19b87d9c588d722f83.[4bbf26eb43844e19b87d9c588d722f83]"
+                        },
+                        "dataSource": {
+                          "id": "function_8aa98c9f1555697",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_1ca590f319e6098",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)d09d7badcd614b93afb9ca02a7da4add.[8cea7ed996b74d70a3956ded139910ec]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_19ee88b8d1f3cde",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[bar_b21c2be48d016ce].dataSource.[action_1ca590f319e6098].target.params.[e5b1eb9d01bb46e987aaec5d968a10cc]"
+                                      }
+                                    },
+                                    "children": [
+                                      {
+                                        "id": "assign_param_d78ad6885151a53",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[bar_b21c2be48d016ce].dataSource.[action_1ca590f319e6098].target.params.[e5b1eb9d01bb46e987aaec5d968a10cc].[be7c2686dce046c490435f362d8f5d29]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[card_58d8ef7229ac913].title.[rangePicker_7c41da2ac419a66].startDate"
+                                          }
+                                        }
+                                      },
+                                      {
+                                        "id": "assign_param_fbc3352c9e4e398",
+                                        "widget": "assign_param",
+                                        "props": {
+                                          "name": {
+                                            "kind": "Parameter",
+                                            "value": "&(self)[bar_b21c2be48d016ce].dataSource.[action_1ca590f319e6098].target.params.[e5b1eb9d01bb46e987aaec5d968a10cc].[476e8c6bc9524d598aaf9279f3de6b7c]"
+                                          },
+                                          "value": {
+                                            "kind": "Members",
+                                            "value": "&(self)[card_58d8ef7229ac913].title.[rangePicker_7c41da2ac419a66].endDate"
+                                          }
+                                        }
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "id": "assign_param_598898fcce13e9f",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[bar_b21c2be48d016ce].dataSource.[action_1ca590f319e6098].target.params.[28ccf426c0ee469cbfe584c1c95a63c0]"
+                                      },
+                                      "value": {
+                                        "kind": "Members",
+                                        "value": "&(self)[card_58d8ef7229ac913].title.[numberInput_d3f6fcb8079e67c].value"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_768c6e66e583a20",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_6eb334522ff931d",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[bar_b21c2be48d016ce].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[bar_b21c2be48d016ce].dataSource.[action_1ca590f319e6098].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "col_f10b8e2f66b2416",
+              "widget": "col",
+              "props": {
+                "ref": "col4",
+                "width": {
+                  "kind": "flex",
+                  "value": 1
+                }
+              },
+              "children": [
+                {
+                  "id": "card_33d27e016791cb5",
+                  "widget": "card",
+                  "props": {
+                    "ref": "card2",
+                    "extra": [],
+                    "title": [
+                      {
+                        "id": "datePicker_dbbae56662986f6",
+                        "widget": "datePicker",
+                        "props": {
+                          "style": {
+                            "width": "200px"
+                          },
+                          "ref": "datePicker1",
+                          "format": "YYYY",
+                          "valueFormat": "YYYY",
+                          "picker": "year",
+                          "default": "2024"
+                        },
+                        "children": []
+                      }
+                    ]
+                  },
+                  "children": [
+                    {
+                      "id": "bar_165e0f6f8d30421",
+                      "widget": "bar",
+                      "props": {
+                        "ref": "bar2",
+                        "xAxis": {
+                          "data": {
+                            "kind": "Field",
+                            "value": "&(self)[bar_165e0f6f8d30421].dataSource.[action_adapter_ef1545c6773b9bf].[assign_param_32cc9ce41b60e50].[50d796d6cec84ddfb0088cb523f8a999]"
+                          },
+                          "name": "",
+                          "nameLocation": "end",
+                          "axisLine": true,
+                          "axisTick": true,
+                          "splitLine": false,
+                          "boundaryGap": true,
+                          "labelFontSize": 12
+                        },
+                        "yAxis": [
+                          {
+                            "data": {
+                              "kind": "Field",
+                              "value": "&(self)[bar_165e0f6f8d30421].dataSource.[action_adapter_ef1545c6773b9bf].[assign_param_32cc9ce41b60e50].[56f306d750df4022ad34c5a69da6735b]"
+                            },
+                            "name": "租赁次数"
+                          }
+                        ],
+                        "title": {
+                          "text": "每月租赁次数",
+                          "subtext": "",
+                          "textFontSize": 18,
+                          "subtextFontSize": 12
+                        },
+                        "titlePosition": {
+                          "type": "options",
+                          "options": "top/center",
+                          "top": "",
+                          "left": "",
+                          "textAlign": "left"
+                        },
+                        "legend": {
+                          "show": true,
+                          "position": "top/right/vertical",
+                          "itemWidth": 20,
+                          "itemHeight": 12,
+                          "textFontSize": 12,
+                          "icon": "roundRect"
+                        },
+                        "seriesLabel": {
+                          "show": true,
+                          "position": "inside",
+                          "fontSize": 12
+                        },
+                        "tooltip": {
+                          "show": true,
+                          "textFontSize": 12
+                        },
+                        "color": [
+                          "#1677FF",
+                          "#91CC75",
+                          "#FAC858",
+                          "#EE6666",
+                          "#73C0DE",
+                          "#5470C6",
+                          "#3BA272",
+                          "#FC8452",
+                          "#9A60B4",
+                          "#EA7CCC"
+                        ],
+                        "model": {
+                          "data": "&(ref)ffdad6a7783946aaaa0ea891ec1cbe9d.[ffdad6a7783946aaaa0ea891ec1cbe9d]"
+                        },
+                        "dataSource": {
+                          "id": "function_4fa54baba220555",
+                          "widget": "function",
+                          "children": [
+                            {
+                              "id": "action_api_8122f68d85fdd04",
+                              "widget": "action_api",
+                              "props": {
+                                "target": "&(ref)d09d7badcd614b93afb9ca02a7da4add.[76886cfb21704f68b5af72fae2b4c265]",
+                                "params": [
+                                  {
+                                    "id": "assign_param_ad77445af6b1884",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[bar_165e0f6f8d30421].dataSource.[action_api_8122f68d85fdd04].target.params.[dd662998cf0a448bbde472c426230ae7]"
+                                      },
+                                      "value": {
+                                        "kind": "Members",
+                                        "value": "&(self)[card_33d27e016791cb5].title.[datePicker_dbbae56662986f6].value"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            },
+                            {
+                              "id": "action_adapter_ef1545c6773b9bf",
+                              "widget": "action_adapter",
+                              "children": [
+                                {
+                                  "id": "assign_param_32cc9ce41b60e50",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[bar_165e0f6f8d30421].data"
+                                    },
+                                    "value": {
+                                      "kind": "Field",
+                                      "value": "&(self)[bar_165e0f6f8d30421].dataSource.[action_api_8122f68d85fdd04].target.result"
+                                    }
+                                  }
+                                }
+                              ],
+                              "props": {}
+                            }
+                          ],
+                          "props": {}
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "references": {
     "d09d7badcd614b93afb9ca02a7da4add": "..\\..\\Logics\\PigilaStatics.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde",
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde",
     "a6da5100755a4b369d9a411d52e42c2a": "..\\..\\Logics\\Address.sdlg",
     "4766d423ef1f4255be7d37570f97f341": "..\\..\\Logics\\Category.sdlg",
     "a5909b22fb794436bc25bde12a62673c": "..\\..\\Properties\\DataStructures\\CategoryStaticModel.json",
-    "18ef5ab465c34b0fa07b1e105f17a98e": "..\\..\\Properties\\DataStructures\\RentalStatics.json"
+    "18ef5ab465c34b0fa07b1e105f17a98e": "..\\..\\Properties\\DataStructures\\RentalStatics.json",
+    "4bbf26eb43844e19b87d9c588d722f83": "..\\..\\Properties\\DataStructures\\CustomRentCountStatics.json",
+    "ffdad6a7783946aaaa0ea891ec1cbe9d": "..\\..\\Properties\\DataStructures\\RentCountForMonthStatics.json"
   },
   "version": "1.0.0"
 }

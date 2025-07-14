@@ -375,7 +375,7 @@
   ],
   "references": {
     "1b6ea06808b84989877a8f8a381bea19": "..\\..\\Logics\\Address.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

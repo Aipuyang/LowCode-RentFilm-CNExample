@@ -547,7 +547,7 @@
   "references": {
     "1e605e811ac545328d3cfd452065f71d": "..\\..\\Logics\\Inventory.sdlg",
     "25751113ba6646ad9aacfc4f086edb36": "..\\Rents\\RentCreate.sdv",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

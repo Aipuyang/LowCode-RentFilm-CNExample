@@ -898,7 +898,7 @@
   "references": {
     "18159a66ef4a4fe5b4c30c458f4584f6": "$(global)PageParameter.json",
     "76d231335331492da9b1a55faf13c037": "$(global)PageResult.json",
-    "766606bba81b4d0fb55b91f4a4135d56": "..\\Pagila.sde",
+    "766606bba81b4d0fb55b91f4a4135d56": "..\\Entities\\Pagila.sde",
     "f2af34516f834da3b1fe2360445ab8eb": "..\\Properties\\DataStructures\\StoreDetail.json"
   }
 }

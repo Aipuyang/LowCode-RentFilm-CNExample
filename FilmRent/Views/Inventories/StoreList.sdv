@@ -685,7 +685,7 @@
     "dc44ccb50c1d4ccc8389362bb3b6e997": "..\\..\\Properties\\DataStructures\\StoreDetail.json",
     "1e6c5b44cbfd49eea3893c0797a596bd": "StoreCreate.sdv",
     "306af7bc067445bdbce0172c1c56b045": "..\\..\\Logics\\Store.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

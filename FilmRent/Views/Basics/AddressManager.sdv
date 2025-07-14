@@ -1489,7 +1489,7 @@
     "52af45a6f34c41f1bcafcb791b572cfd": "..\\..\\Logics\\Address.sdlg",
     "5e139f7c54344e80a61aa94fa2498330": "AddressEdit.sdv",
     "47689146c61c4bffb520dae135abd08b": "AddressAdd.sdv",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

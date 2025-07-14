@@ -544,7 +544,7 @@
   "references": {
     "4b6f5de0f7124b89ab2c4092b1ee9a9f": "..\\..\\Logics\\Actor.sdlg",
     "f88e0c73db124fa6bfa9f70d113f72da": "ActorCreate.sdv",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

@@ -555,7 +555,7 @@
     "306199fe7df649d8bb16cb72deef4e37": "..\\..\\Logics\\Address.sdlg",
     "7eccb291b2684e66b7ef96252caf3767": "..\\..\\Logics\\Store.sdlg",
     "7025c9c4ae314a8ab9d32b900173e971": "..\\..\\Logics\\Staff.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

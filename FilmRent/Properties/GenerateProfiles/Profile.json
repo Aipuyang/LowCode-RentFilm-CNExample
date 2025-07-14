@@ -3,7 +3,7 @@
   "isSystemTemlate": true,
   "templateProject": "Templates.ltproj",
   "targetDirectory": "..\\SourceCode",
-  "writingPolicy": "",
+  "writingPolicy": "Override",
   "dbSettings": {
     "8dd55881d950d47": {
       "dbType": "PostgreSQL",

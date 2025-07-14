@@ -1557,7 +1557,7 @@
   "references": {
     "f2919b5ef4e045db86365611d7f5fe61": "$(global)PageParameter.json",
     "d6b6804500d74e89a82ae5b67618f824": "$(global)PageResult.json",
-    "c79f4e4f30b94384980690e962ee3099": "..\\Pagila.sde",
+    "c79f4e4f30b94384980690e962ee3099": "..\\Entities\\Pagila.sde",
     "9240b7705a434302aa406a7a4ec143cf": "..\\Properties\\DataStructures\\FilmActorBind.json",
     "1c5f7f0806d645a29f0dedc3fa887cbc": "..\\Properties\\DataStructures\\CusFilmModel.json"
   }

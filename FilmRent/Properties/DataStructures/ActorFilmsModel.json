@@ -1,0 +1,55 @@
+﻿{
+  "id": "2ab822b254f8417bbc9c6dd41b1e5f05",
+  "widget": "model",
+  "props": {
+    "name": "ActorFilmsModel",
+    "displayName": "ActorFilmsModel"
+  },
+  "children": [
+    {
+      "id": "9d033949daea495299c0df35f5f5ac7c",
+      "widget": "field",
+      "props": {
+        "displayName": "ActorId",
+        "name": "ActorId",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "37c64d9c78944933abc49f2c3f6e9078",
+      "widget": "field",
+      "props": {
+        "displayName": "FirstName",
+        "name": "FirstName",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "99dac6d635604e8d91e3c89459a1ae20",
+      "widget": "field",
+      "props": {
+        "displayName": "LastName",
+        "name": "LastName",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "c237a7ee97de47779102e876531a9d76",
+      "widget": "field",
+      "props": {
+        "displayName": "Films",
+        "name": "Films",
+        "dataType": "Film",
+        "nullable": true,
+        "isCollection": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ]
+}

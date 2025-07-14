@@ -766,6 +766,6 @@
   "references": {
     "b5799453c6184892a358712c4d44dcfd": "$(global)PageParameter.json",
     "3e91261d96854f42913d281669951bf0": "$(global)PageResult.json",
-    "af99e82e1cb446909a2e2a21ec9a816e": "..\\Pagila.sde"
+    "af99e82e1cb446909a2e2a21ec9a816e": "..\\Entities\\Pagila.sde"
   }
 }

@@ -1,0 +1,43 @@
+﻿{
+  "id": "4bbf26eb43844e19b87d9c588d722f83",
+  "widget": "model",
+  "props": {
+    "name": "CustomRentCountStatics",
+    "displayName": "CustomRentCountStatics"
+  },
+  "children": [
+    {
+      "id": "9cd94376633a4e9b993bd42ee72d0776",
+      "widget": "field",
+      "props": {
+        "displayName": "CustomerId",
+        "name": "CustomerId",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "7b6d3b7d17fb4ea18d62fe3062bc224e",
+      "widget": "field",
+      "props": {
+        "displayName": "CustomerName",
+        "name": "CustomerName",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "bb6d00d409154dfcb8c6cf1eed318ec5",
+      "widget": "field",
+      "props": {
+        "displayName": "RentCount",
+        "name": "RentCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ]
+}

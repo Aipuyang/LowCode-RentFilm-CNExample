@@ -5,8 +5,8 @@
     "name": "Pagila",
     "dbType": "PostgreSQL",
     "connectionString": "Host=YourHost;Database=pagila;Username=YourUser;Password=YourPassword;Connection Lifetime=0;Target Session Attributes=any",
-    "x": 659,
-    "y": -80
+    "x": 686,
+    "y": -128
   },
   "children": [
     {
@@ -109,14 +109,16 @@
         },
         {
           "id": "169f7e7c6da94b2a94116a91f4c49798_1d2adf6611ec48cd88be03e19040ee9a_dependency",
+          "widget": "field",
           "props": {
+            "displayName": "FilmActors",
             "name": "FilmActors",
             "dataType": "$(self)[169f7e7c6da94b2a94116a91f4c49798]",
             "nullable": true,
             "isCollection": true,
+            "defaultValueType": "Value",
             "isRelationship": true
-          },
-          "widget": "field"
+          }
         }
       ]
     },
@@ -494,13 +496,15 @@
         },
         {
           "id": "47191da05fb744cabec939299189eecc_807a3bcc323e4775b7f1821cddfb77f4_principal",
+          "widget": "field",
           "props": {
+            "displayName": "Country",
             "name": "Country",
             "dataType": "$(self)[47191da05fb744cabec939299189eecc]",
             "nullable": true,
+            "defaultValueType": "Value",
             "isRelationship": true
-          },
-          "widget": "field"
+          }
         }
       ]
     },
@@ -568,14 +572,16 @@
         },
         {
           "id": "5cb3f1f95f2f4e97aa07d66c0bdccc4a_807a3bcc323e4775b7f1821cddfb77f4_dependency",
+          "widget": "field",
           "props": {
+            "displayName": "Cities",
             "name": "Cities",
             "dataType": "$(self)[5cb3f1f95f2f4e97aa07d66c0bdccc4a]",
             "nullable": true,
             "isCollection": true,
+            "defaultValueType": "Value",
             "isRelationship": true
-          },
-          "widget": "field"
+          }
         }
       ]
     },
@@ -1033,37 +1039,6 @@
           "widget": "column"
         },
         {
-          "id": "e743c54648cc4aa6a60e2657505072d3_e9f884fb9e5449bfa1b4e37364063239_principal",
-          "props": {
-            "name": "Language",
-            "dataType": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
-            "nullable": true,
-            "isRelationship": true
-          },
-          "widget": "field"
-        },
-        {
-          "id": "e743c54648cc4aa6a60e2657505072d3_a3bc980155434b6a9a6efc474564e0d6_principal",
-          "props": {
-            "name": "Language1",
-            "dataType": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
-            "nullable": true,
-            "isRelationship": true
-          },
-          "widget": "field"
-        },
-        {
-          "id": "169f7e7c6da94b2a94116a91f4c49798_b733325dc1a2455f844db28073b563c6_dependency",
-          "props": {
-            "name": "FilmActors",
-            "dataType": "$(self)[169f7e7c6da94b2a94116a91f4c49798]",
-            "nullable": true,
-            "isCollection": true,
-            "isRelationship": true
-          },
-          "widget": "field"
-        },
-        {
           "id": "4a1fdaadb30b484bbb0b1d0f6996bdcc_fb9595a889c642a4b66edc0982030d17_dependency",
           "props": {
             "name": "FilmCategories",
@@ -1084,6 +1059,43 @@
             "isRelationship": true
           },
           "widget": "field"
+        },
+        {
+          "id": "e743c54648cc4aa6a60e2657505072d3_e9f884fb9e5449bfa1b4e37364063239_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Language",
+            "name": "Language",
+            "dataType": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "e743c54648cc4aa6a60e2657505072d3_a3bc980155434b6a9a6efc474564e0d6_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Language1",
+            "name": "Language1",
+            "dataType": "$(self)[e743c54648cc4aa6a60e2657505072d3]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "169f7e7c6da94b2a94116a91f4c49798_b733325dc1a2455f844db28073b563c6_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "FilmActors",
+            "name": "FilmActors",
+            "dataType": "$(self)[169f7e7c6da94b2a94116a91f4c49798]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
         }
       ]
     },
@@ -1190,24 +1202,28 @@
           "widget": "column"
         },
         {
-          "id": "2bc2243cb1c5400bbafbf348b6d61072_b733325dc1a2455f844db28073b563c6_principal",
-          "props": {
-            "name": "Film",
-            "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
-            "nullable": true,
-            "isRelationship": true
-          },
-          "widget": "field"
-        },
-        {
           "id": "e966734c54904dbb8a2603132f94be69_1d2adf6611ec48cd88be03e19040ee9a_principal",
+          "widget": "field",
           "props": {
+            "displayName": "Actor",
             "name": "Actor",
             "dataType": "$(self)[e966734c54904dbb8a2603132f94be69]",
             "nullable": true,
+            "defaultValueType": "Value",
             "isRelationship": true
-          },
-          "widget": "field"
+          }
+        },
+        {
+          "id": "2bc2243cb1c5400bbafbf348b6d61072_b733325dc1a2455f844db28073b563c6_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Film",
+            "name": "Film",
+            "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
         }
       ]
     },
@@ -1564,25 +1580,29 @@
         },
         {
           "id": "2bc2243cb1c5400bbafbf348b6d61072_e9f884fb9e5449bfa1b4e37364063239_dependency",
+          "widget": "field",
           "props": {
+            "displayName": "Films",
             "name": "Films",
             "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
             "nullable": true,
             "isCollection": true,
+            "defaultValueType": "Value",
             "isRelationship": true
-          },
-          "widget": "field"
+          }
         },
         {
           "id": "2bc2243cb1c5400bbafbf348b6d61072_a3bc980155434b6a9a6efc474564e0d6_dependency",
+          "widget": "field",
           "props": {
-            "name": "Films1",
+            "displayName": "Films1s",
+            "name": "Films1s",
             "dataType": "$(self)[2bc2243cb1c5400bbafbf348b6d61072]",
             "nullable": true,
             "isCollection": true,
+            "defaultValueType": "Value",
             "isRelationship": true
-          },
-          "widget": "field"
+          }
         }
       ]
     },
@@ -1594,8 +1614,8 @@
         "displayName": "Payment",
         "schema": "public",
         "tableName": "payment",
-        "x": 180,
-        "y": 1542
+        "x": 242,
+        "y": 1284
       },
       "children": [
         {

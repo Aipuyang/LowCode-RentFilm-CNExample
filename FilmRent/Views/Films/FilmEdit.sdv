@@ -509,7 +509,7 @@
   "references": {
     "120b610fc6f5426cb1691babccc5c502": "..\\..\\Logics\\Film.sdlg",
     "2aea746e37414ad9a9e97ceeec6f89a2": "..\\..\\Logics\\Language.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

@@ -1,0 +1,46 @@
+﻿{
+  "id": "ffdad6a7783946aaaa0ea891ec1cbe9d",
+  "widget": "model",
+  "props": {
+    "name": "RentCountForMonthStatics",
+    "displayName": "RentCountForMonthStatics"
+  },
+  "children": [
+    {
+      "id": "77f5f496f7064d5395e303fc071ecbc2",
+      "widget": "field",
+      "props": {
+        "displayName": "Month",
+        "name": "Month",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "56f306d750df4022ad34c5a69da6735b",
+      "widget": "field",
+      "props": {
+        "displayName": "RentCount",
+        "name": "RentCount",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "50d796d6cec84ddfb0088cb523f8a999",
+      "widget": "field",
+      "props": {
+        "displayName": "MonthName",
+        "name": "MonthName",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value",
+        "computed": true,
+        "computedType": "Expression",
+        "expression": "$(exp)&(self)[ffdad6a7783946aaaa0ea891ec1cbe9d].[77f5f496f7064d5395e303fc071ecbc2] + \"月\""
+      }
+    }
+  ]
+}

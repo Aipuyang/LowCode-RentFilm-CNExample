@@ -574,6 +574,54 @@
                                         "children": []
                                       }
                                     ]
+                                  },
+                                  {
+                                    "id": "button_d8dec6ffd44844b",
+                                    "widget": "button",
+                                    "props": {
+                                      "ref": "button_8c7732b080f378b",
+                                      "size": "small",
+                                      "label": "",
+                                      "icon": "antdv://UnorderedListOutlined",
+                                      "tooltipText": "详情",
+                                      "events": {
+                                        "onClick": {
+                                          "id": "event_c8cac455966afb0",
+                                          "widget": "event",
+                                          "children": [
+                                            {
+                                              "widget": "action_frame",
+                                              "id": "action_8b28725c28b978f",
+                                              "props": {
+                                                "target": "navigator.go",
+                                                "params": [
+                                                  {
+                                                    "id": "assign_param_571c9fc7e5b5a36",
+                                                    "widget": "assign_param",
+                                                    "props": {
+                                                      "name": {
+                                                        "kind": "VParameter",
+                                                        "value": "&(ref)3f68f62d676b4ca4a77f941262deb028.[page_b472b8d754ac412a9216bf9ed43ea256].params.[7e36b41d5ac24f068635826631e5715a]"
+                                                      },
+                                                      "value": {
+                                                        "kind": "Members",
+                                                        "value": "&(self)[tableContainer_7681fc5bcb21ae9].currentRow.[eabcac6dec7b48b5bc1c0596337a252c]"
+                                                      }
+                                                    }
+                                                  }
+                                                ],
+                                                "link": {
+                                                  "kind": "Document",
+                                                  "value": "$(ref)3f68f62d676b4ca4a77f941262deb028"
+                                                }
+                                              }
+                                            }
+                                          ],
+                                          "props": {}
+                                        }
+                                      }
+                                    },
+                                    "children": []
                                   }
                                 ]
                               }
@@ -1077,7 +1125,8 @@
     "5ee74693266d4f8798a4b3db00a550ad": "..\\..\\Logics\\Store.sdlg",
     "f7c8c61761de455eb0c3ff2e241694b3": "..\\..\\Logics\\Inventory.sdlg",
     "f3744691d7b14b52a1b102d477cd8cc6": "..\\..\\Properties\\DataStructures\\CusFilmModel.json",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde",
+    "3f68f62d676b4ca4a77f941262deb028": "FilmDetail.sdv"
   },
   "version": "1.0.0"
 }

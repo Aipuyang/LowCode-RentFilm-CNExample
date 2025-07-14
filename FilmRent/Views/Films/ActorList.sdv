@@ -473,7 +473,7 @@
   "references": {
     "20bfbf8970c44454b5d3f6bcb388e9d2": "..\\..\\Logics\\Actor.sdlg",
     "fa90a5d7e841490eaf5d93ed1db69a9d": "ActorSelect.sdv",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

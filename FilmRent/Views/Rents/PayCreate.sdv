@@ -407,7 +407,7 @@
     "78468a25b0c24b12b3e04a6f2b2d1b7e": "..\\..\\Logics\\Payment.sdlg",
     "643cda03c6074a4c9d62bee8b51ddd8e": "..\\..\\Logics\\Staff.sdlg",
     "f836a6827bd44be1b793819f7b89451c": "..\\..\\Logics\\Customer.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

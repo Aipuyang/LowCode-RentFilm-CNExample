@@ -1010,7 +1010,7 @@
     "77135d7aea0a49fdadcd6e6162b99a58": "..\\..\\Logics\\Category.sdlg",
     "f8567e7ad13e408ca59c8576e170ba9b": "LanguageCreate.sdv",
     "1254905d79334915b07eb4ac7f6c17b4": "CategoryCreate.sdv",
-    "Languagee743c54648cc4aa6a60e2657505072d3": "..\\..\\Pagila.sde"
+    "Languagee743c54648cc4aa6a60e2657505072d3": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

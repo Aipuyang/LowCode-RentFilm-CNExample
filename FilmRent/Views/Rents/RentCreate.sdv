@@ -396,7 +396,7 @@
     "a31f4f5931ba40d7aea35df5f27f39a5": "..\\..\\Logics\\Rental.sdlg",
     "9c42a1f62e564ddbbf8158b54c3e49e5": "..\\..\\Logics\\Customer.sdlg",
     "d007ed8ccc2c44c0ac14881cc38a5d1e": "..\\..\\Logics\\Staff.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde"
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde"
   },
   "version": "1.0.0"
 }

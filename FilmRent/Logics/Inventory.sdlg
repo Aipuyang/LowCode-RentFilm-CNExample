@@ -413,8 +413,8 @@
         "openApi": true,
         "requestMethod": "GET",
         "route": "GetPage",
-        "x": -117.5,
-        "y": 155.5
+        "x": -118.5,
+        "y": 132.5
       },
       "children": [
         {
@@ -917,6 +917,6 @@
   "references": {
     "3b525141f2684a6d90a3f34a162c5a0c": "$(global)PageParameter.json",
     "c9d08e33165e44feacfe2dc2e6e21b6e": "$(global)PageResult.json",
-    "384cf57c96dd4128891334f909698393": "..\\Pagila.sde"
+    "384cf57c96dd4128891334f909698393": "..\\Entities\\Pagila.sde"
   }
 }

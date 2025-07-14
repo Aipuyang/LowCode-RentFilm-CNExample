@@ -1291,7 +1291,7 @@
     "676c3d98ed1040c4869296d78ecc1063": "CustomerDetail.sdv",
     "03b23fa5dcdc4a3eaab1cd8c7fab90e1": "..\\Inventories\\InventList.sdv",
     "55f58130691e43a5aa517f9b0f86470c": "..\\..\\Logics\\PigilaStatics.sdlg",
-    "8dd55881d950d47": "..\\..\\Pagila.sde",
+    "8dd55881d950d47": "..\\..\\Entities\\Pagila.sde",
     "4051c0f84cd04c1c8834cd0c65efe39d": "..\\..\\Logics\\Customer.sdlg"
   },
   "version": "1.0.0"

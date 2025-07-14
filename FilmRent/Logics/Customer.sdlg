@@ -207,24 +207,6 @@
               }
             },
             {
-              "id": "0964535350954744a7c3675431b9c6f3",
-              "widget": "assign_field",
-              "props": {
-                "field": "&(self)[29f70a5a96574ed9a47290a11f21e41a].source.[d6c88c67fc6d46898e979a68d7b3005f]",
-                "type": "Field",
-                "value": "&(self)[8e8056a91faf487abc7b34d2b9e5b51b].[0f7fa5d8ed5b4e5d92d308b1c7260423_update_params].[d6c88c67fc6d46898e979a68d7b3005f]"
-              }
-            },
-            {
-              "id": "c6cf9fa2faf145a6807219f770b114fa",
-              "widget": "assign_field",
-              "props": {
-                "field": "&(self)[29f70a5a96574ed9a47290a11f21e41a].source.[66a37dba7ed94154acca708881c2b048]",
-                "type": "Field",
-                "value": "&(self)[8e8056a91faf487abc7b34d2b9e5b51b].[0f7fa5d8ed5b4e5d92d308b1c7260423_update_params].[66a37dba7ed94154acca708881c2b048]"
-              }
-            },
-            {
               "id": "2603eb7a9b574088a434a860c77c0b3f",
               "widget": "assign_field",
               "props": {
@@ -579,6 +561,6 @@
   "references": {
     "10635cc0621d4c9d9db0bea8fec67e9b": "$(global)PageParameter.json",
     "f7cf888975c6496596ed6a57589c890d": "$(global)PageResult.json",
-    "76985eeb20b04bd293dc7e3e419b2b94": "..\\Pagila.sde"
+    "76985eeb20b04bd293dc7e3e419b2b94": "..\\Entities\\Pagila.sde"
   }
 }
